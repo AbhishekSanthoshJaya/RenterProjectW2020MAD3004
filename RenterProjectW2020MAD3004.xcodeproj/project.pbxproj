@@ -15,6 +15,7 @@
 		BD09D8C323F4F8200039A0A2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C223F4F8200039A0A2 /* Address.swift */; };
 		BD09D8C523F4FA1B0039A0A2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C423F4FA1B0039A0A2 /* Owner.swift */; };
 		BD09D8C723F4FD230039A0A2 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C623F4FD230039A0A2 /* Customer.swift */; };
+		BD09D8C923F4FE7E0039A0A2 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C823F4FE7E0039A0A2 /* Driver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		BD09D8C223F4F8200039A0A2 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		BD09D8C423F4FA1B0039A0A2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		BD09D8C623F4FD230039A0A2 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		BD09D8C823F4FE7E0039A0A2 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
 				BD09D8BC23F4DB080039A0A2 /* Person.swift */,
 				BD09D8C223F4F8200039A0A2 /* Address.swift */,
+				BD09D8C823F4FE7E0039A0A2 /* Driver.swift */,
 				BD09D8C023F4F7240039A0A2 /* Contact.swift */,
 				BD09D8C423F4FA1B0039A0A2 /* Owner.swift */,
 				9B98782123F4C49200ECCBD5 /* Vehicle.swift */,
@@ -147,6 +150,7 @@
 				BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */,
 				BD09D8C723F4FD230039A0A2 /* Customer.swift in Sources */,
 				BD09D8C323F4F8200039A0A2 /* Address.swift in Sources */,
+				BD09D8C923F4FE7E0039A0A2 /* Driver.swift in Sources */,
 				BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */,
 				9B98781923F4BD1D00ECCBD5 /* main.swift in Sources */,
 			);
