@@ -9,7 +9,7 @@
 import Foundation
 
 import Foundation
-public class MotorCycle: Vehicle{
+class MotorCycle: Vehicle{
   private var topSpeed: Int = 0
   private var mileage: Int = 0
    
