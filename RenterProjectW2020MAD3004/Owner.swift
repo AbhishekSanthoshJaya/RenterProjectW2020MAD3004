@@ -13,5 +13,6 @@ public class Owner : Person
     private var companyTitle: String
     private var landLineNumber: String
     private var url: String
-    
+    //todo - add a dictionary for vehicle list after the vehicle class is completed
+
 }
