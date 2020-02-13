@@ -10,7 +10,5 @@ import Foundation
 
 public enum Gender
 {
-case MALE,
-     FEMALE,
-     OTHER
+    case MALE, FEMALE,OTHER
 }
