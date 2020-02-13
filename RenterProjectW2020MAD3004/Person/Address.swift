@@ -16,5 +16,17 @@ public class Address
     private var pincode: String
     private var latitude: String
     private var longitude: String
-      private var streetName: String
+    private var streetName: String
+    
+    internal init(country: String, province: String, city: String, pincode: String, latitude: String, longitude: String, streetName: String)
+    {
+        self.country = country
+        self.province = province
+        self.city = city
+        self.pincode = pincode
+        self.latitude = latitude
+        self.longitude = longitude
+        self.streetName = streetName
+    }
+
 }
