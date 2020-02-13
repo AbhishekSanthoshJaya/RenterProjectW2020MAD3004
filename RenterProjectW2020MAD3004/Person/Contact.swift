@@ -11,13 +11,17 @@ import Foundation
 
 public class Contact
 {
-    internal init(mobileNumber: String, emailId: String)
-    {
-        self.mobileNumber = mobileNumber
-        self.emailId = emailId
-    }
-    
     private var mobileNumber: String
     private var emailId: String
-    //private var address: Address
+    private var address: Address
+    
+    internal init(mobileNumber: String, emailId: String, address: Address)
+       {
+           self.mobileNumber = mobileNumber
+           self.emailId = emailId
+        self.address = address
+       }
+
+        
 }
+
