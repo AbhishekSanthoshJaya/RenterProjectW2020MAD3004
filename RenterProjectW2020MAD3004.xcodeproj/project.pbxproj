@@ -13,6 +13,7 @@
 		BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8BC23F4DB080039A0A2 /* Person.swift */; };
 		BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C023F4F7240039A0A2 /* Contact.swift */; };
 		BD09D8C323F4F8200039A0A2 /* Address .swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C223F4F8200039A0A2 /* Address .swift */; };
+		BD09D8C523F4FA1B0039A0A2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C423F4FA1B0039A0A2 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		BD09D8BC23F4DB080039A0A2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BD09D8C023F4F7240039A0A2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		BD09D8C223F4F8200039A0A2 /* Address .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address .swift"; sourceTree = "<group>"; };
+		BD09D8C423F4FA1B0039A0A2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				BD09D8BC23F4DB080039A0A2 /* Person.swift */,
 				BD09D8C223F4F8200039A0A2 /* Address .swift */,
 				BD09D8C023F4F7240039A0A2 /* Contact.swift */,
+				BD09D8C423F4FA1B0039A0A2 /* Owner.swift */,
 				9B98782123F4C49200ECCBD5 /* Vehicle.swift */,
 			);
 			path = RenterProjectW2020MAD3004;
@@ -137,6 +140,7 @@
 			files = (
 				9B98782223F4C49200ECCBD5 /* Vehicle.swift in Sources */,
 				9B98782023F4C09C00ECCBD5 /* IDisplay.swift in Sources */,
+				BD09D8C523F4FA1B0039A0A2 /* Owner.swift in Sources */,
 				BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */,
 				BD09D8C323F4F8200039A0A2 /* Address .swift in Sources */,
 				BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */,
