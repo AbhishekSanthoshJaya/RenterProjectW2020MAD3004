@@ -15,4 +15,11 @@ public class Owner : Person
     private var url: String
     //todo - add a dictionary for vehicle list after the vehicle class is completed
 
+    internal init(companyTitle: String, landLineNumber: String, url: String)
+    {
+    self.companyTitle = companyTitle
+    self.landLineNumber = landLineNumber
+    self.url = url
+    }
+    
 }
