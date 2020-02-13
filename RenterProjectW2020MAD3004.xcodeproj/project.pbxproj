@@ -10,6 +10,7 @@
 		9B98781923F4BD1D00ECCBD5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98781823F4BD1D00ECCBD5 /* main.swift */; };
 		9B98782023F4C09C00ECCBD5 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */; };
 		9B98782223F4C49200ECCBD5 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98782123F4C49200ECCBD5 /* Vehicle.swift */; };
+		BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8BC23F4DB080039A0A2 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		9B98781823F4BD1D00ECCBD5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		9B98782123F4C49200ECCBD5 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		BD09D8BC23F4DB080039A0A2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				9B98781823F4BD1D00ECCBD5 /* main.swift */,
 				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
+				BD09D8BC23F4DB080039A0A2 /* Person.swift */,
 				9B98782123F4C49200ECCBD5 /* Vehicle.swift */,
 			);
 			path = RenterProjectW2020MAD3004;
@@ -128,6 +131,7 @@
 			files = (
 				9B98782223F4C49200ECCBD5 /* Vehicle.swift in Sources */,
 				9B98782023F4C09C00ECCBD5 /* IDisplay.swift in Sources */,
+				BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */,
 				9B98781923F4BD1D00ECCBD5 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
