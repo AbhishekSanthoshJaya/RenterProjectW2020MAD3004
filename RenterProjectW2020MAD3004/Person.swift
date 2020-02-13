@@ -24,5 +24,6 @@ class Person : IDisplayDelegate
     private var userName :String
     private var password: String
     private var contact: Contact
+    private var address: Address
 
 }
