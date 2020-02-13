@@ -10,20 +10,36 @@ import Foundation
 
 public enum Gender
 {
-    case MALE, FEMALE,OTHER
+    case MALE,FEMALE,OTHER
 }
  
 class Person : IDisplayDelegate
 {
+    func display()
+    {
+        //todo Write code for display function
+    }
     private var id: String
     private var firstName: String
     private var lastName: String
     private var gender: Gender
     private var birthDate: Date?
     private var age: Int
-    private var userName :String
+    private var userName: String
     private var password: String
     private var contact: Contact
     private var address: Address
+    
+    internal init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+       {
+           self.id = id
+           self.firstName = firstName
+           self.lastName = lastName
+           self.gender = gender
+           self.birthDate = birthDate
+           self.age = age
+           self.userName = userName
+           self.password = password
 
+       }
 }
