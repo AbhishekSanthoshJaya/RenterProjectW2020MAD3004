@@ -11,6 +11,7 @@ import Foundation
  * Protocol containing one method to  display()
  */
 
-protocol IDisplayDelegate {
+protocol IDisplayDelegate
+{
      func display();
 }
