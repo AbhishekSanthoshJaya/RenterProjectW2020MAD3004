@@ -15,14 +15,14 @@ public enum Gender
  
 class Person : IDisplayDelegate
 {
-    private var id:String
-    private var firstName:String
-    private var lastName:String
+    private var id: String
+    private var firstName: String
+    private var lastName: String
     private var gender: Gender
-    private var birthDate:Date?
-    private var age:Int
-    private var userName:String
-    private var password:String
-    //private var contact: Contact
+    private var birthDate: Date?
+    private var age: Int
+    private var userName :String
+    private var password: String
+    private var contact: Contact
 
 }
