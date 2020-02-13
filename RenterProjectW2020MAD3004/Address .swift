@@ -13,5 +13,8 @@ public class Address
     private var country: String
     private var province: String
     private var city: String
-   
+    private var pincode: String
+    private var latitude: String
+    private var longitude: String
+    private var streetName: String
 }
