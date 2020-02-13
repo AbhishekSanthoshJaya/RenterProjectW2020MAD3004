@@ -1,5 +1,5 @@
 //
-//  Contact.swift
+//  Customer .swift
 //  RenterProjectW2020MAD3004
 //
 //  Created by Raghav Bobal on 2020-02-12.
@@ -8,11 +8,7 @@
 
 import Foundation
 
-
-public class Contact
+public class Customer : Person
 {
-
-    private var mobileNumber: String
-    private var emailId: String
-    //private var address: Address
+    //ToDo add a dictionary for the vehicle rent
 }

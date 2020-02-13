@@ -16,5 +16,5 @@ public class Address
     private var pincode: String
     private var latitude: String
     private var longitude: String
-    private var streetName: String
+      private var streetName: String
 }
