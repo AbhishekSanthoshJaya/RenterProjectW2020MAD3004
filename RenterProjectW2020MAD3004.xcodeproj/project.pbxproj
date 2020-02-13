@@ -11,7 +11,6 @@
 		9B98782023F4C09C00ECCBD5 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */; };
 		9B98782223F4C49200ECCBD5 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98782123F4C49200ECCBD5 /* Vehicle.swift */; };
 		BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8BC23F4DB080039A0A2 /* Person.swift */; };
-		BD09D8BF23F4DCD50039A0A2 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8BE23F4DCD50039A0A2 /* Gender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,7 +31,6 @@
 		9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		9B98782123F4C49200ECCBD5 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		BD09D8BC23F4DB080039A0A2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		BD09D8BE23F4DCD50039A0A2 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				9B98781823F4BD1D00ECCBD5 /* main.swift */,
-				BD09D8BE23F4DCD50039A0A2 /* Gender.swift */,
 				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
 				BD09D8BC23F4DB080039A0A2 /* Person.swift */,
 				9B98782123F4C49200ECCBD5 /* Vehicle.swift */,
@@ -133,7 +130,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B98782223F4C49200ECCBD5 /* Vehicle.swift in Sources */,
-				BD09D8BF23F4DCD50039A0A2 /* Gender.swift in Sources */,
 				9B98782023F4C09C00ECCBD5 /* IDisplay.swift in Sources */,
 				BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */,
 				9B98781923F4BD1D00ECCBD5 /* main.swift in Sources */,

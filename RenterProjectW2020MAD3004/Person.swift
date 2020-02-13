@@ -8,6 +8,11 @@
 
 import Foundation
 
+public enum Gender
+{
+    case MALE, FEMALE,OTHER
+}
+ 
 class Person : IDisplayDelegate
 {
     private var id:String
