@@ -13,4 +13,12 @@ public class Driver : Person
     private var drivingLicenceNumber: String
     private var isDrivingHistoryClean: String
     private var salary: Float
+    
+    internal init(drivingLicenceNumber: String, isDrivingHistoryClean: String, salary: Float)
+    {
+        self.drivingLicenceNumber = drivingLicenceNumber
+        self.isDrivingHistoryClean = isDrivingHistoryClean
+        self.salary = salary
+    }
+
 }
