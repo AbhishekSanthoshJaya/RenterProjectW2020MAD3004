@@ -15,11 +15,11 @@ public class Bus: Vehicle{
    
   init(vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, busType: String, accessibilityServices: Bool, wifiAvailability: Bool, standingCapacity: Int)
   {
-    super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, isSelfDrive: isSelfDrive,isInsured:isInsured,insuranceProviderName: insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
     self.busType = busType
     self.accessibilityServices = accessibilityServices
     self.wifiAvailability = wifiAvailability
     self.standingCapacity = standingCapacity
+    super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, isSelfDrive: isSelfDrive,isInsured:isInsured,insuranceProviderName: insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
   }
    
 }
