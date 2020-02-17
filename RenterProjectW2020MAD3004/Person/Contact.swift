@@ -17,8 +17,8 @@ public class Contact
     
     internal init(mobileNumber: String, emailId: String, address: Address)
        {
-           self.mobileNumber = mobileNumber
-           self.emailId = emailId
+        self.mobileNumber = mobileNumber
+        self.emailId = emailId
         self.address = address
        }
 
