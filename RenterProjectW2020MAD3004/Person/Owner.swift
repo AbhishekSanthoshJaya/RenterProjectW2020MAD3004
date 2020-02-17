@@ -15,8 +15,10 @@ public class Owner : Person
     private var url: String
     //todo - add a dictionary for vehicle list after the vehicle class is completed
 
-    internal init(companyTitle: String, landLineNumber: String, url: String)
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address, companyTitle: String, landLineNumber: String, url: String)
+    
     {
+    super.init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
     self.companyTitle = companyTitle
     self.landLineNumber = landLineNumber
     self.url = url

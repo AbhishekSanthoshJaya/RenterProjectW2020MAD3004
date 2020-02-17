@@ -14,8 +14,9 @@ public class Driver : Person
     private var isDrivingHistoryClean: String
     private var salary: Float
     
-    internal init(drivingLicenceNumber: String, isDrivingHistoryClean: String, salary: Float)
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address, drivingLicenceNumber: String, isDrivingHistoryClean: String, salary: Float)
     {
+        super.init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
         self.drivingLicenceNumber = drivingLicenceNumber
         self.isDrivingHistoryClean = isDrivingHistoryClean
         self.salary = salary

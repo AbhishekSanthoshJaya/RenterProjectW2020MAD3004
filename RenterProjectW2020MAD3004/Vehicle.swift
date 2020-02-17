@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Vehicle {
-    internal init(vehicleId: String, description: String?, manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float) {
+class Vehicle: IDisplayDelegate {
+     init(vehicleId: String, description: String?, manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float) {
         self.vehicleId = vehicleId
         self.description = description
         self.manufacturer = manufacturer
@@ -28,7 +28,7 @@ class Vehicle {
     private var isInsured: Bool
     private var insuranceProviderName: String?
     private var numberOfSeat: Int
-    //private fuelType: FuelType
+    private fuelType: FuelType
     private var baseRate: Float
     private var perKmRate: Float
     

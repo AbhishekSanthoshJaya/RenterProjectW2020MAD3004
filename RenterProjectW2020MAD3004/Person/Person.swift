@@ -30,7 +30,7 @@ class Person : IDisplayDelegate
     private var contact: Contact
     private var address: Address
     
-    internal init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
        {
            self.id = id
            self.firstName = firstName
