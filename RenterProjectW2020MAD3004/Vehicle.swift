@@ -8,7 +8,21 @@
 
 import Foundation
 
-class Vehicle: IDisplayDelegate {
+public class Vehicle: IDisplayDelegate {
+    
+    func display() {
+        
+        print("\nVehicle Id             : \(vehicleId)")
+        print("Description              : \(description)")
+        print("Manufacturer             : \(manufacturer)")
+        print("Selfdrive?               : \(isSelfDrive)")
+        print("Insurance Provider Name  : \(insuranceProviderName)")
+        print("Number of Seats          : \(numberOfSeat)")
+        print("Fuel Type                : \(fuelType)")
+        print("Base Rate                : \(baseRate)")
+        print("Rate/KM                  : \(perKmRate)")
+    }
+    
      init(vehicleId: String, description: String?, manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float) {
         self.vehicleId = vehicleId
         self.description = description
@@ -28,7 +42,7 @@ class Vehicle: IDisplayDelegate {
     private var isInsured: Bool
     private var insuranceProviderName: String?
     private var numberOfSeat: Int
-    private fuelType: FuelType
+    private var fuelType: FuelType
     private var baseRate: Float
     private var perKmRate: Float
     

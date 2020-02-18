@@ -9,8 +9,8 @@
 import Foundation
 
 class Car: Vehicle{
-  private var carType: String = " "
-  private var carColor: String = " "
+  private var carType: String
+  private var carColor: String
    
   init(vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, carType: String, carColor: String)
   {
