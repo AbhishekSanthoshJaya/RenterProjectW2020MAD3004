@@ -64,6 +64,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B7B1B2B23FCBBFE0054DA26 /* Vehicles */ = {
+			isa = PBXGroup;
+			children = (
+				9B98782123F4C49200ECCBD5 /* Vehicle.swift */,
+				9B7B1B2923FCB6CD0054DA26 /* FuelType.swift */,
+				9B88229023F5F7D000A80D1C /* Car.swift */,
+				9B023FA223F608480086B6F1 /* Bus.swift */,
+				9B023FA023F608250086B6F1 /* MotorCycle.swift */,
+			);
+			path = Vehicles;
+			sourceTree = "<group>";
+		};
 		9B98780C23F4BD1D00ECCBD5 = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +95,10 @@
 		9B98781723F4BD1D00ECCBD5 /* RenterProjectW2020MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
-				BD09D8CA23F4FFC10039A0A2 /* Person */,
-				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
-				9B023FA023F608250086B6F1 /* MotorCycle.swift */,
-				9B023FA223F608480086B6F1 /* Bus.swift */,
-				9B88229023F5F7D000A80D1C /* Car.swift */,
-				9B98782123F4C49200ECCBD5 /* Vehicle.swift */,
 				9B98781823F4BD1D00ECCBD5 /* main.swift */,
+				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
+				BD09D8CA23F4FFC10039A0A2 /* Person */,
+				9B7B1B2B23FCBBFE0054DA26 /* Vehicles */,
 			);
 			path = RenterProjectW2020MAD3004;
 			sourceTree = "<group>";
@@ -103,7 +112,6 @@
 				BD09D8C423F4FA1B0039A0A2 /* Owner.swift */,
 				BD09D8BC23F4DB080039A0A2 /* Person.swift */,
 				9B7B1B2723FCB69B0054DA26 /* Gender.swift */,
-				9B7B1B2923FCB6CD0054DA26 /* FuelType.swift */,
 				BD09D8C823F4FE7E0039A0A2 /* Driver.swift */,
 			);
 			path = Person;

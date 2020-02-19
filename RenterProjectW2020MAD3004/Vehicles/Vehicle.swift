@@ -35,7 +35,6 @@ public class Vehicle: IDisplayDelegate {
     }
     
     func display() {
-        
         print("\nVehicle Id             : \(vehicleId)")
         print("Description              : \(description ?? "None")")
         print("Manufacturer             : \(manufacturer)")
