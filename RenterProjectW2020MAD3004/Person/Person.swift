@@ -8,33 +8,19 @@
 
 import Foundation
  
-class Person : IDisplayDelegate
+protocol Person : IDisplayDelegate
 {
-    func display()
-    {
-        //todo Write code for display function
-    }
-    private var id: String
-    private var firstName: String
-    private var lastName: String
-    private var gender: Gender.Type
-    private var birthDate: Date?
-    private var age: Int
-    private var userName: String
-    private var password: String
-    private var contact: Contact
-    private var address: Address
+     func display()
+     var id: String {get set}
+     var firstName: String {get set}
+     var lastName: String {get set}
+     var gender: Gender.Type {get set}
+     var birthDate: Date? {get set}
+     var age: Int {get set}
+     var userName: String {get set}
+     var password: String {get set}
+     var contact: Contact {get set}
+     var address: Address {get set}
     
     init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
-       {
-           self.id = id
-           self.firstName = firstName
-           self.lastName = lastName
-           self.gender = gender
-           self.birthDate = birthDate
-           self.age = age
-           self.userName = userName
-           self.password = password
-
-       }
 }
