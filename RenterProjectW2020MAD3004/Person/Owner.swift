@@ -8,20 +8,20 @@
 
 import Foundation
 
-public class Owner : Person
+class Owner : Person
 {
     private var companyTitle: String
     private var landLineNumber: String
     private var url: String
-    //todo - add a dictionary for vehicle list after the vehicle class is completed
+    private var vehicleList = [String: Vehicle]()
 
     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address, companyTitle: String, landLineNumber: String, url: String)
     
     {
-    super.init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
     self.companyTitle = companyTitle
     self.landLineNumber = landLineNumber
     self.url = url
+    super.init(id: id, firstName: firstName, lastName: lastName, gender: gender, birthDate: birthDate, age: age, userName: userName, password: password, contact: contact, address : address)
     }
     
 }

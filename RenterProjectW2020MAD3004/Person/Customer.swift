@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class Customer : Person
+class Customer : Person
 {
- private lazy var vehicleRents: [String: Vehicle]()
+    private lazy var vehicleRents = [String: Vehicle]()
 
- init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address) 
+ override init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
  {
-   super.init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+   super.init(id: id, firstName: firstName, lastName: lastName, gender: gender, birthDate: birthDate, age: age, userName: userName, password: password, contact: contact, address : address)
  }
     //ToDo add a dictionary for the vehicle rent
 }
