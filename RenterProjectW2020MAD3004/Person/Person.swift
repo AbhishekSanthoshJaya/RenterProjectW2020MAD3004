@@ -7,11 +7,6 @@
 //
 
 import Foundation
-
-public enum Gender
-{
-    case MALE,FEMALE,OTHER
-}
  
 class Person : IDisplayDelegate
 {
@@ -22,7 +17,7 @@ class Person : IDisplayDelegate
     private var id: String
     private var firstName: String
     private var lastName: String
-    private var gender: Gender
+    private var gender: Gender.Type
     private var birthDate: Date?
     private var age: Int
     private var userName: String
@@ -30,7 +25,7 @@ class Person : IDisplayDelegate
     private var contact: Contact
     private var address: Address
     
-     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+    init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
        {
            self.id = id
            self.firstName = firstName
