@@ -9,19 +9,48 @@
 import Foundation
 
 class Owner : Person
-{
-    private var companyTitle: String
-    private var landLineNumber: String
-    private var url: String
-    private var vehicleList = [String: Vehicle]()
+{    
+    var id: String
+    var firstName: String
+    var lastName: String
+    var gender: Gender.Type
+    var birthDate: Date?
+    var age: Int
+    var userName: String
+    var password: String
+    var contact: Contact
+    var address: Address
+    var companyTitle: String
+    var landLineNumber: String
+    var url: String
+    var vehicleList = [String: Vehicle]()
 
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address, companyTitle: String, landLineNumber: String, url: String)
+    required init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address, companyTitle: String, landLineNumber: String, url: String)
     
     {
-    self.companyTitle = companyTitle
-    self.landLineNumber = landLineNumber
-    self.url = url
-    super.init(id: id, firstName: firstName, lastName: lastName, gender: gender, birthDate: birthDate, age: age, userName: userName, password: password, contact: contact, address : address)
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.gender = gender
+        self.birthDate = birthDate
+        self.age = age
+        self.userName = userName
+        self.password = password
+        self.contact = contact
+        self.address = address
+        self.companyTitle = companyTitle
+        self.landLineNumber = landLineNumber
+        self.url = url
     }
     
+    func display() {
+        print("\nID           : \(id)")
+        print("First Name     : \(firstName)")
+        print("Last Name      : \(lastName)")
+        print("Gender         : \(gender)")
+        print("Date of Birth  : \(birthDate ?? Date())")
+        print("Age            : \(age)")
+        print("Username       : \(userName)")
+
+    }
 }
