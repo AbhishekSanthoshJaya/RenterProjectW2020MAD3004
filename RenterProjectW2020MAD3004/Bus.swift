@@ -21,5 +21,4 @@ public class Bus: Vehicle{
     self.standingCapacity = standingCapacity
     super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, isSelfDrive: isSelfDrive,isInsured:isInsured,insuranceProviderName: insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
   }
-   
 }

@@ -37,10 +37,10 @@ public class Vehicle: IDisplayDelegate {
     func display() {
         
         print("\nVehicle Id             : \(vehicleId)")
-        print("Description              : \(description)")
+        print("Description              : \(description ?? "None")")
         print("Manufacturer             : \(manufacturer)")
         print("Selfdrive?               : \(isSelfDrive)")
-        print("Insurance Provider Name  : \(insuranceProviderName)")
+        print("Insurance Provider Name  : \(insuranceProviderName ?? "None")")
         print("Number of Seats          : \(numberOfSeat)")
         print("Fuel Type                : \(fuelType)")
         print("Base Rate                : \(baseRate)")

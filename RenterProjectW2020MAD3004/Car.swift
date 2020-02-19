@@ -16,7 +16,8 @@ class Car: Vehicle{
   {
     self.carType = carType
     self.carColor = carColor
-    super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, isSelfDrive: isSelfDrive,isInsured:isInsured,insuranceProviderName: insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
+    super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, fuelType: <#FuelType.Type#>, isSelfDrive:
+        isSelfDrive,isInsured:isInsured,insuranceProviderName: insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
   }
    
 }
