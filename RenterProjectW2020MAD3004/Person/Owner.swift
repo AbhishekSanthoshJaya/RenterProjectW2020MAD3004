@@ -9,24 +9,8 @@
 import Foundation
 
 class Owner : Person
-{    
-    var id: String
-    var firstName: String
-    var lastName: String
-    var gender: Gender.Type
-    var birthDate: Date?
-    var age: Int
-    var userName: String
-    var password: String
-    var contact: Contact
-    var address: Address
-    var companyTitle: String
-    var landLineNumber: String
-    var url: String
-    var vehicleList = [String: Vehicle]()
-
-    required init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address, companyTitle: String, landLineNumber: String, url: String)
-    
+{
+    required init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address: Address, companyTitle: String, landLineNumber: String, url: String)
     {
         self.id = id
         self.firstName = firstName
@@ -43,7 +27,23 @@ class Owner : Person
         self.url = url
     }
     
-    func display() {
+    var id: String
+    var firstName: String
+    var lastName: String
+    var gender: Gender.Type
+    var birthDate: Date?
+    var age: Int
+    var userName: String
+    var password: String
+    var contact: Contact
+    var address: Address
+    var companyTitle: String
+    var landLineNumber: String
+    var url: String
+    var vehicleList = [String: Vehicle]()
+    
+    func display()
+    {
         print("\nID           : \(id)")
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")

@@ -22,5 +22,5 @@ protocol Person : IDisplayDelegate
      var contact: Contact {get set}
      var address: Address {get set}
     
-    init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+    //init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
 }
