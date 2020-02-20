@@ -8,16 +8,38 @@
 
 import Foundation
 
-class Car: Vehicle{
-  private var carType: String
-  private var carColor: String
+class Car: Vehicle
+{
+    required init() {}
+    var vehicleId: String
+    var description: String?
+    var manufacturer: String
+    var isSelfDrive: Bool
+    var isInsured: Bool
+    var insuranceProviderName: String?
+    var numberOfSeat: Int
+    var fuelType: FuelType
+    var baseRate: Float
+    var perKmRate: Float
+    var carType: String
+    var carColor: String
    
-  init(vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, carType: String, carColor: String)
+   init(carType: String, carColor: String)
   {
-    self.carType = carType
-    self.carColor = carColor
-    super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, fuelType: <#FuelType.Type#>, isSelfDrive:
-        isSelfDrive,isInsured:isInsured,insuranceProviderName: insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
+ 
+    self.carType=carType
+    self.carColor=carColor
   }
    
+    func display()
+    {
+        print("\n Vehicle ID           : \(vehicleId)")
+        print("Description             : \(String(describing: description))")
+        print("manufacturer            : \(manufacturer)")
+        print("Type of fuel            : \(fuelType)")
+        print("Car Type                : \(carType)")
+        print("Car Color                     : \(carColor)")
+
+    }
+    
 }
