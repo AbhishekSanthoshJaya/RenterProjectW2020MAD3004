@@ -38,7 +38,7 @@ class Car: Vehicle
         print("manufacturer            : \(manufacturer)")
         print("Type of fuel            : \(fuelType)")
         print("Car Type                : \(carType)")
-        print("Car Color                     : \(carColor)")
+        print("Car Color               : \(carColor)")
 
     }
     

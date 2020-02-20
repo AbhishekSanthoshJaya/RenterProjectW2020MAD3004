@@ -13,15 +13,27 @@ import Foundation
 class MotorCycle: Vehicle
 
 {
-  private var topSpeed: Int = 0
-  private var mileage: Int = 0
+    var vehicleId: String
+    var description: String?
+    var manufacturer: String
+    var isSelfDrive: Bool
+    var isInsured: Bool
+    var insuranceProviderName: String?
+    var numberOfSeat: Int
+    var fuelType: FuelType.Type
+    var baseRate: Float
+    var perKmRate: Float
+    var topSpeed: Int = 0
+    var mileage: Int = 0
    
   init(vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, topSpeed: Int, mileage: Int)
   {
     self.topSpeed = topSpeed
     self.mileage = mileage
-    super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, isSelfDrive: isSelfDrive,isInsured:isInsured,insuranceProviderName:
-        insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
   }
+    func display()
+    {
+        <#code#>
+    }
    
 }

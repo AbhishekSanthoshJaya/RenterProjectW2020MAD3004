@@ -10,10 +10,10 @@ import Foundation
 
 class Customer : Person
 {
+    var gender: Gender
     var id: String
     var firstName: String
     var lastName: String
-    var gender: Gender.Type
     var birthDate: Date?
     var age: Int
     var userName: String
@@ -22,7 +22,7 @@ class Customer : Person
     var address: Address
     private lazy var vehicleRents = [String: Vehicle]()
 
-    required init(id: String, firstName: String, lastName: String, gender: Gender.Type,birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+    required init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
     {
         self.id = id
         self.firstName = firstName
@@ -36,7 +36,8 @@ class Customer : Person
         self.address = address
     }
     
-    func display() {
+    func display()
+    {
         print("\nID           : \(id)")
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")
