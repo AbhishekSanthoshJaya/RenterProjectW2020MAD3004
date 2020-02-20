@@ -18,7 +18,7 @@ protocol Vehicle: IDisplayDelegate
      var isInsured: Bool{ get set}
      var insuranceProviderName: String?{ get set}
      var numberOfSeat: Int{ get set}
-     var fuelType: FuelType.Type {get set}
+     var fuelType: FuelType {get set}
      var baseRate: Float{ get set}
      var perKmRate: Float{ get set}
      init ()
@@ -26,7 +26,7 @@ protocol Vehicle: IDisplayDelegate
 
 extension Vehicle
 {
-    init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType.Type, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
+    init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
     {
         self.vehicleId = vehicleId
         self.description = description

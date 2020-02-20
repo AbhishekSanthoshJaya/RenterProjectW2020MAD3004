@@ -7,20 +7,35 @@
 //
 
 import Foundation
- 
+
 protocol Person : IDisplayDelegate
 {
      func display()
      var id: String {get set}
      var firstName: String {get set}
      var lastName: String {get set}
-     var gender: Gender.Type {get set}
+     var gender: Gender {get set}
      var birthDate: Date? {get set}
      var age: Int {get set}
      var userName: String {get set}
      var password: String {get set}
      var contact: Contact {get set}
      var address: Address {get set}
-    
-    //init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+     init()
+}
+ extension Person
+ {
+    init(id:String,firstName:String,lastName:String,gender:Gender,birthDate:Date?,age: Int,userName:String,password:String,contact:Contact,address:Address)
+    {
+        self.id=id
+        self.firstName=firstName
+        self.lastName=lastName
+        self.gender=gender
+        self.birthDate=birthDate
+        self.age=age
+        self.userName=userName
+        self.password=password
+        self.contact=contact
+        self.address=address
+   }
 }
