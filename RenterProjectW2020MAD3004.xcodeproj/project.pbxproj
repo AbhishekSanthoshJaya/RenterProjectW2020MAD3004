@@ -106,11 +106,11 @@
 		BD09D8CA23F4FFC10039A0A2 /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				BD09D8BC23F4DB080039A0A2 /* Person.swift */,
 				BD09D8C623F4FD230039A0A2 /* Customer.swift */,
 				BD09D8C223F4F8200039A0A2 /* Address.swift */,
 				BD09D8C023F4F7240039A0A2 /* Contact.swift */,
 				BD09D8C423F4FA1B0039A0A2 /* Owner.swift */,
-				BD09D8BC23F4DB080039A0A2 /* Person.swift */,
 				9B7B1B2723FCB69B0054DA26 /* Gender.swift */,
 				BD09D8C823F4FE7E0039A0A2 /* Driver.swift */,
 			);

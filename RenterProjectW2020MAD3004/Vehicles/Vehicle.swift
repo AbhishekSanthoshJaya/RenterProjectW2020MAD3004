@@ -8,41 +8,30 @@
 
 import Foundation
 
-public class Vehicle: IDisplayDelegate {
+protocol Vehicle: IDisplayDelegate
+{
+     func display()
+     var vehicleId: String{ get set}
+     var description: String?{ get set}
+     var manufacturer:String{ get set}
+     var isSelfDrive: Bool{ get set}
+     var isInsured: Bool{ get set}
+     var insuranceProviderName: String?{ get set}
+     var numberOfSeat: Int{ get set}
+     var fuelType: FuelType.Type {get set}
+     var baseRate: Float{ get set}
+     var perKmRate: Float{ get set}
     
-    private var vehicleId: String
-    private var description: String?
-    private var manufacturer:String
-    private var isSelfDrive: Bool
-    private var isInsured: Bool
-    private var insuranceProviderName: String?
-    private var numberOfSeat: Int
-    private var fuelType: FuelType.Type
-    private var baseRate: Float
-    private var perKmRate: Float
+//  init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType.Type, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float) {
+//        self.vehicleId = vehicleId
+//        self.description = description
+//        self.manufacturer = manufacturer
+//        self.fuelType = fuelType
+//        self.isSelfDrive = isSelfDrive
+//        self.isInsured = isInsured
+//        self.insuranceProviderName = insuranceProviderName
+//        self.numberOfSeat = numberOfSeat
+//        self.baseRate = baseRate
+//        self.perKmRate = perKmRate
+//    }
     
-    init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType.Type, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float) {
-        self.vehicleId = vehicleId
-        self.description = description
-        self.manufacturer = manufacturer
-        self.fuelType = fuelType
-        self.isSelfDrive = isSelfDrive
-        self.isInsured = isInsured
-        self.insuranceProviderName = insuranceProviderName
-        self.numberOfSeat = numberOfSeat
-        self.baseRate = baseRate
-        self.perKmRate = perKmRate
-    }
-    
-    func display() {
-        print("\nVehicle Id             : \(vehicleId)")
-        print("Description              : \(description ?? "None")")
-        print("Manufacturer             : \(manufacturer)")
-        print("Selfdrive?               : \(isSelfDrive)")
-        print("Insurance Provider Name  : \(insuranceProviderName ?? "None")")
-        print("Number of Seats          : \(numberOfSeat)")
-        print("Fuel Type                : \(fuelType)")
-        print("Base Rate                : \(baseRate)")
-        print("Rate/KM                  : \(perKmRate)")
-    }
-}
