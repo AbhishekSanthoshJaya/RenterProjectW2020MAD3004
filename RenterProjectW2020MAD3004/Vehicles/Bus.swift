@@ -7,18 +7,32 @@
 //
 import Foundation
 
-public class Bus: Vehicle{
-  private var busType: String = ""
-  private var accessibilityServices: Bool
-  private var wifiAvailability: Bool
-  private var standingCapacity: Int = 0
+public class Bus: Vehicle
+{
+    var vehicleId: String
+    var description: String?
+    var manufacturer: String
+    var isSelfDrive: Bool
+    var isInsured: Bool
+    var insuranceProviderName: String?
+    var numberOfSeat: Int
+    var fuelType: FuelType.Type
+    var baseRate: Float
+    var perKmRate: Float
+    var busType: String = ""
+    var accessibilityServices: Bool
+    var wifiAvailability: Bool
+    var standingCapacity: Int = 0
    
-  init(vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, busType: String, accessibilityServices: Bool, wifiAvailability: Bool, standingCapacity: Int)
+   init(vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, busType: String, accessibilityServices: Bool, wifiAvailability: Bool, standingCapacity: Int)
   {
     self.busType = busType
     self.accessibilityServices = accessibilityServices
     self.wifiAvailability = wifiAvailability
     self.standingCapacity = standingCapacity
-    super.init(vehicleId: vehicleId, description: description, manufacturer: manufacturer, isSelfDrive: isSelfDrive,isInsured:isInsured,insuranceProviderName: insuranceProviderName, numberOfSeat: numberOfSeat, baseRate: baseRate, perKmRate: perKmRate)
-  }
+    }
+func display()
+{}
+//{to do later}
 }
+

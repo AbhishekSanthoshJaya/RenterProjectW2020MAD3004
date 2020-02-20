@@ -21,7 +21,7 @@ protocol Vehicle: IDisplayDelegate
      var fuelType: FuelType.Type {get set}
      var baseRate: Float{ get set}
      var perKmRate: Float{ get set}
-    
+}
 //  init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType.Type, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float) {
 //        self.vehicleId = vehicleId
 //        self.description = description
