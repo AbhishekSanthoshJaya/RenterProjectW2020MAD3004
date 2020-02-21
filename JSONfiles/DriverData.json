@@ -1,0 +1,111 @@
+[{
+  "id": 1,
+  "firstName": "Vassili",
+  "lastName": "Yesenev",
+  "gender": "Male",
+  "birthDate": "1970-05-07",
+  "userName": "vyesenev0",
+  "address":
+    {
+      "country": "Poland",
+      "city": "Chociwel",
+      "streetName": "Schlimgen",
+      "pincode": "73-120"
+    }
+  ,
+  "contact":
+    {
+      "mobileNumber": "814-183-6135",
+      "emailId": "idameisele0@newyorker.com"
+    }
+  ,
+  "password": "7Ff9UW"
+}, {
+  "id": 2,
+  "firstName": "Hetty",
+  "lastName": "Arrigucci",
+  "gender": "Female",
+  "birthDate": "1979-06-29",
+  "userName": "harrigucci1",
+  "address":
+    {
+      "country": "Indonesia",
+      "city": "Jungutbatu Kaja Dua",
+      "streetName": "Clove",
+      "pincode": "233-12"
+    }
+  ,
+  "contact":
+    {
+      "mobileNumber": "982-378-5419",
+      "emailId": "dposkitt0@intel.com"
+    }
+  ,
+  "password": "lQbGkVLaosf"
+}, {
+  "id": 3,
+  "firstName": "Merralee",
+  "lastName": "Spinks",
+  "gender": "Female",
+  "birthDate": "1952-12-07",
+  "userName": "mspinks2",
+  "address":
+    {
+      "country": "China",
+      "city": "Hongshi",
+      "streetName": "Crescent Oaks",
+      "pincode": "73-122"
+    }
+  ,
+  "contact":
+    {
+      "mobileNumber": "884-654-6258",
+      "emailId": "vwallsworth0@auda.org.au"
+    }
+  ,
+  "password": "FTpo3Nvn"
+}, {
+  "id": 4,
+  "firstName": "Yorgos",
+  "lastName": "Torbard",
+  "gender": "Male",
+  "birthDate": "1959-03-31",
+  "userName": "ytorbard3",
+  "address":
+    {
+      "country": "Poland",
+      "city": "Parczew",
+      "streetName": "Mesta",
+      "pincode": "21-200"
+    }
+  ,
+  "contact":
+    {
+      "mobileNumber": "252-552-6309",
+      "emailId": "nmackiewicz0@senate.gov"
+    }
+  ,
+  "password": "HKtACf"
+}, {
+  "id": 5,
+  "firstName": "Norby",
+  "lastName": "Bools",
+  "gender": "Male",
+  "birthDate": "1965-12-04",
+  "userName": "nbools4",
+  "address":
+    {
+      "country": "Czech Republic",
+      "city": "Znojmo",
+      "streetName": "Starling",
+      "pincode": "671 81"
+    }
+  ,
+  "contact":
+    {
+      "mobileNumber": "987-647-2091",
+      "emailId": "lfifield0@amazon.de"
+    }
+  ,
+  "password": "rnRzKagxDqLV"
+}]
