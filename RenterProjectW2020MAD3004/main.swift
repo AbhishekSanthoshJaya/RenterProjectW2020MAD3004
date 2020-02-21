@@ -21,7 +21,7 @@ if let motorCyclesArray = motercyleReader.read(){
             print("*****")
         }
         catch JsonValidationError.isNotValidInput(let msgg){
-            print(" Couldnot create object")
+            print(" Couldnot create object. Error while reading from json: ")
             print(msgg)
         }
         
