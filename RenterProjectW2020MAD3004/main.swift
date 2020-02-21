@@ -16,12 +16,12 @@ if let motorCyclesArray = motercyleReader.read(){
     for motorCycleDict in motorCyclesArray{
         
         do{
-            var mm = try MotorCycle(motorCycleDict: motorCycleDict)
+            let mm = try MotorCycle(motorCycleDict: motorCycleDict)
             mm.display()
             print("*****")
         }
         catch JsonValidationError.isNotValidInput(let msgg){
-            print(" Couldnot create object. Error while reading from json: ")
+            print("Could not create object. Error while reading from json: ")
             print(msgg)
         }
         

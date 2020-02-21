@@ -25,24 +25,14 @@ class MotorCycle: Vehicle
     var perKmRate: Float
     var topSpeed: Int = 0
     var mileage: Int = 0
-   
-    init(){
-        self.fuelType = FuelType.PETROL
-        self.vehicleId = "1"
-        self.manufacturer = "toyota"
-        self.isSelfDrive = true
-        self.isInsured = true
-        self.numberOfSeat = 2
-        self.baseRate = 40
-        self.perKmRate = 5
-    }
     
-   init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
+    init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, topSpeed: Int,  isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
   {
     self.vehicleId = vehicleId
     self.description = description
     self.manufacturer = manufacturer
     self.fuelType = fuelType
+    self.topSpeed = topSpeed
     self.isSelfDrive = isSelfDrive
     self.isInsured = isInsured
     self.insuranceProviderName = insuranceProviderName
@@ -58,7 +48,6 @@ class MotorCycle: Vehicle
                 className: String(describing:type(of: self)),
                 memberName: "vehicleId")
         }
-        
         
         guard let description = motorCycleDict["description"] as? String else {
             throw JsonValidationError.isNotValidInput(
@@ -79,8 +68,11 @@ class MotorCycle: Vehicle
         }
         let fuelType = FuelType.getFuelType(fuelString: fuelTypeString)
         
-        
-        
+        guard let topSpeed = motorCycleDict["topSpeed"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "topSpeed")
+        }
         guard let isSelfDriveInt = motorCycleDict["isSelfDrive"] as? Int else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
@@ -124,6 +116,7 @@ class MotorCycle: Vehicle
                   description: description,
                   manufacturer: manufacturer,
                    fuelType: fuelType,
+                   topSpeed: topSpeed,
                    isSelfDrive: isSelfDrive,
                    isInsured: isInsured,
                    insuranceProviderName: insuranceProviderName ,
@@ -135,7 +128,7 @@ class MotorCycle: Vehicle
     
       func display()
     {
-        print("\n Vehicle ID           : \(vehicleId)")
+        print("\nVehicle ID              : \(vehicleId)")
         print("Description             : \(String(describing: description))")
         print("Manufacturer            : \(manufacturer)")
         print("Type Of Fuel            : \(fuelType)")
