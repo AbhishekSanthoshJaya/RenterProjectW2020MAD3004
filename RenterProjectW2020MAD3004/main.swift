@@ -43,3 +43,18 @@ if let busArray = busReader.read(){
     }
 }
 
+var carReader = JsonHandler(fileName:"CarData")
+var carArray = carReader.read()
+
+if let carArray = carReader.read(){
+    for carDict in carArray {
+        do {
+            let c = try Car(carDict: carDict)
+            c.display()
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+    }
+}
