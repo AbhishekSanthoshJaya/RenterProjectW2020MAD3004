@@ -59,16 +59,77 @@ class MotorCycle: Vehicle
                 memberName: "vehicleId")
         }
         
+        
+        guard let description = motorCycleDict["description"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "description")
+        }
+        
+        guard let manufacturer = motorCycleDict["manufacturer"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "manufacturer")
+        }
+        
+        guard let fuelTypeString =  motorCycleDict["fuelType"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "fuelType")
+        }
+        let fuelType = FuelType.getFuelType(fuelString: fuelTypeString)
+        
+        
+        
+        guard let isSelfDriveInt = motorCycleDict["isSelfDrive"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "isSelfDrive")
+        }
+        let isSelfDrive = isSelfDriveInt == 1
+        
+        guard let isInsuredInt = motorCycleDict["isInsured"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "isInsured")
+        }
+        let isInsured = isInsuredInt == 1
+        
+        guard let insuranceProviderName = motorCycleDict["insuranceProviderName"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "insuranceProviderName")
+        }
+        
+        guard let numberOfSeat = motorCycleDict["numberOfSeat"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "numberOfSeat")
+        }
+        
+        guard let baseRate = motorCycleDict["baseRate"] as? Float else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "baseRate")
+        }
+        
+        guard let perKmRate = motorCycleDict["perKmRate"] as? Float else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "perKmRate")
+        }
+        
       
         self.init(vehicleId: vehicleId ,
-                  description: motorCycleDict["description"] as? String, manufacturer: motorCycleDict["manufacturer"] as! String,
-                   fuelType: FuelType.getFuelType(fuelString: motorCycleDict["fuelType"] as! String ),
-                   isSelfDrive: motorCycleDict["isSelfDrive"] as! Int == 1,
-                   isInsured: motorCycleDict["isInsured"] as! Int   == 1,
-                   insuranceProviderName: motorCycleDict["insuranceProviderName"] as? String ,
-                   numberOfSeat: motorCycleDict["numberOfSeat"] as! Int ,
-                   baseRate: motorCycleDict["baseRate"] as! Float ,
-                   perKmRate: motorCycleDict["perKmRate"] as! Float
+                  description: description,
+                  manufacturer: manufacturer,
+                   fuelType: fuelType,
+                   isSelfDrive: isSelfDrive,
+                   isInsured: isInsured,
+                   insuranceProviderName: insuranceProviderName ,
+                   numberOfSeat: numberOfSeat ,
+                   baseRate: baseRate ,
+                   perKmRate: perKmRate
                     )
     }
     
