@@ -21,6 +21,7 @@
 		9BC009DF23FF680C009EE5A5 /* BusData.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BC009DE23FF67B3009EE5A5 /* BusData.json */; };
 		9BC009E223FF68BF009EE5A5 /* MotorCycleData.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BC009E123FF6856009EE5A5 /* MotorCycleData.json */; };
 		ABFCF0AC24003D6000B29A2D /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0AB24003D6000B29A2D /* FileHandler.swift */; };
+		ABFCF0AF2400801F00B29A2D /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0AE2400801F00B29A2D /* Validations.swift */; };
 		BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8BC23F4DB080039A0A2 /* Person.swift */; };
 		BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C023F4F7240039A0A2 /* Contact.swift */; };
 		BD09D8C323F4F8200039A0A2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C223F4F8200039A0A2 /* Address.swift */; };
@@ -75,6 +76,7 @@
 		9BC009DE23FF67B3009EE5A5 /* BusData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BusData.json; sourceTree = "<group>"; };
 		9BC009E123FF6856009EE5A5 /* MotorCycleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MotorCycleData.json; sourceTree = "<group>"; };
 		ABFCF0AB24003D6000B29A2D /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
+		ABFCF0AE2400801F00B29A2D /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		BD09D8BC23F4DB080039A0A2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BD09D8C023F4F7240039A0A2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		BD09D8C223F4F8200039A0A2 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		9B98781723F4BD1D00ECCBD5 /* RenterProjectW2020MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
+				ABFCF0AD24007FB500B29A2D /* Exceptions */,
 				9B98781823F4BD1D00ECCBD5 /* main.swift */,
 				BD54FBF623FF680E00282AD5 /* Util */,
 				BD09D8CA23F4FFC10039A0A2 /* Person */,
@@ -148,6 +151,14 @@
 				9BC009E123FF6856009EE5A5 /* MotorCycleData.json */,
 			);
 			path = JSONfiles;
+			sourceTree = "<group>";
+		};
+		ABFCF0AD24007FB500B29A2D /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				ABFCF0AE2400801F00B29A2D /* Validations.swift */,
+			);
+			path = Exceptions;
 			sourceTree = "<group>";
 		};
 		BD09D8CA23F4FFC10039A0A2 /* Person */ = {
@@ -246,6 +257,7 @@
 				9B98782023F4C09C00ECCBD5 /* IDisplay.swift in Sources */,
 				9B88229123F5F7D000A80D1C /* Car.swift in Sources */,
 				BD09D8C523F4FA1B0039A0A2 /* Owner.swift in Sources */,
+				ABFCF0AF2400801F00B29A2D /* Validations.swift in Sources */,
 				BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */,
 				9B7B1B2A23FCB6CD0054DA26 /* FuelType.swift in Sources */,
 				ABFCF0AC24003D6000B29A2D /* FileHandler.swift in Sources */,
