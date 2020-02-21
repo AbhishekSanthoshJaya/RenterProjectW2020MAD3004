@@ -134,13 +134,12 @@ class Car: Vehicle
     
     func display()
     {
-        print("\n Vehicle ID           : \(vehicleId)")
+        print("\nVehicle ID              : \(vehicleId)")
         print("Description             : \(String(describing: description))")
         print("manufacturer            : \(manufacturer)")
         print("Type of fuel            : \(fuelType)")
         print("Car Type                : \(carType)")
         print("Car Color               : \(carColor)")
-
     }
     
 }
