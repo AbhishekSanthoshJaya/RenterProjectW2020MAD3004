@@ -9,8 +9,6 @@ import Foundation
 
 public class Bus: Vehicle
 {
-    
-       required init() {}
        var vehicleId: String
        var description: String?
        var manufacturer: String
@@ -26,33 +24,35 @@ public class Bus: Vehicle
        var wifiAvailability: Bool
        var standingCapacity: Int = 0
    
-   init(busType: String, accessibilityServices: Bool, wifiAvailability: Bool, standingCapacity: Int)
+    init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float,busType: String, accessibilityServices: Bool, wifiAvailability: Bool, standingCapacity: Int)
   {
+    self.vehicleId = vehicleId
+    self.description = description
+    self.manufacturer = manufacturer
+    self.fuelType = fuelType
+    self.isSelfDrive = isSelfDrive
+    self.isInsured = isInsured
+    self.insuranceProviderName = insuranceProviderName
+    self.numberOfSeat = numberOfSeat
+    self.baseRate = baseRate
+    self.perKmRate = perKmRate
     self.busType = busType
     self.accessibilityServices = accessibilityServices
     self.wifiAvailability = wifiAvailability
     self.standingCapacity = standingCapacity
-    }
+    
+   }
 
     func display()
-    {      print("Maximum standing capacity is    : \(standingCapacity) people")
-           print("Bus type                : \(busType)")
+    {
            print("\n Vehicle ID           : \(vehicleId)")
+           print("Standing Capacity       : \(standingCapacity) people")
+           print("Bus Type                : \(busType)")
            print("Description             : \(String(describing: description))")
-           print("manufacturer            : \(manufacturer)")
-           print("Type of fuel            : \(fuelType)")
+           print("Manufacturer            : \(manufacturer)")
+           print("Type Of Fuel            : \(fuelType)")
         
     }
     
 }
 
-
-
-
-
-
-
-
-
-
-//vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float,
