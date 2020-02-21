@@ -54,9 +54,12 @@ class MotorCycle: Vehicle
     convenience init(motorCycleDict: [String: Any]) throws {
         
         guard let vehicleId = motorCycleDict["vehicleId"] as? String else {
-            throw JsonValidationError.isNotValidInput(msg: " Error while reading vehicleId column in Vehicles obj creation. passed value-> vehicleID: \(motorCycleDict["vehicleId"])")
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "vehicleId")
         }
         
+      
         self.init(vehicleId: vehicleId ,
                   description: motorCycleDict["description"] as? String, manufacturer: motorCycleDict["manufacturer"] as! String,
                    fuelType: FuelType.getFuelType(fuelString: motorCycleDict["fuelType"] as! String ),

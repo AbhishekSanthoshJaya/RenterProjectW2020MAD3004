@@ -9,5 +9,5 @@
 import Foundation
 
 public enum JsonValidationError: Error{
-    case isNotValidInput(msg: String)
+    case isNotValidInput(className: String, memberName: String)
 }
