@@ -10,7 +10,8 @@ import Foundation
 
 class Owner : Person
 {
-    required init(id: String, firstName: String, lastName: String, gender: Gender.Type, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address: Address, companyTitle: String, landLineNumber: String, url: String)
+    
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address: Address, companyTitle: String, landLineNumber: String, url: String)
     {
         self.id = id
         self.firstName = firstName
@@ -30,7 +31,7 @@ class Owner : Person
     var id: String
     var firstName: String
     var lastName: String
-    var gender: Gender.Type
+    var gender: Gender
     var birthDate: Date?
     var age: Int
     var userName: String

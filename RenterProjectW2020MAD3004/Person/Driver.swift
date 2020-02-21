@@ -13,7 +13,7 @@ class Driver : Person
      var id: String
      var firstName: String
      var lastName: String
-     var gender: Gender.Type
+     var gender: Gender
      var birthDate: Date?
      var age: Int
      var userName: String
@@ -26,6 +26,16 @@ class Driver : Person
     
     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address, drivingLicenceNumber: String, isDrivingHistoryClean: String, salary: Float)
     {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.gender = gender
+        self.birthDate = birthDate
+        self.age = age
+        self.userName = userName
+        self.password = password
+        self.contact = contact
+        self.address = address
         self.drivingLicenceNumber = drivingLicenceNumber
         self.isDrivingHistoryClean = isDrivingHistoryClean
         self.salary = salary

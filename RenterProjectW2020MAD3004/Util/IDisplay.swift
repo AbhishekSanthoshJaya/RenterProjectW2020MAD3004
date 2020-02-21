@@ -13,5 +13,5 @@ import Foundation
 
 protocol IDisplayDelegate
 {
-     func display();
+     func display()
 }
