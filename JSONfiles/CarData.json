@@ -1,0 +1,34 @@
+[{
+  "vehicleId": "SCBLF44J47C415338",
+  "description": "Sierra 3500",
+  "manufacturer": "GMC",
+  "isSelfDrive": false,
+  "isInsured": true,
+  "insuranceProviderName": "Donnelly-Batz",
+  "numberOfSeat": 2,
+  "fuelType": "Electric",
+  "baseRate": 100,
+  "perKmRate": 5
+}, {
+  "vehicleId": "YV440MBK0F1011572",
+  "description": "Bronco II",
+  "manufacturer": "Ford",
+  "isSelfDrive": false,
+  "isInsured": true,
+  "insuranceProviderName": "Mertz-Thompson",
+  "numberOfSeat": 3,
+  "fuelType": "Petrol",
+  "baseRate": 100,
+  "perKmRate": 5
+}, {
+  "vehicleId": "1D7RB1CT2BS745200",
+  "description": "Alcyone SVX",
+  "manufacturer": "Subaru",
+  "isSelfDrive": false,
+  "isInsured": false,
+  "insuranceProviderName": "Feeney-Ernser",
+  "numberOfSeat": 4,
+  "fuelType": "Diesel",
+  "baseRate": 100,
+  "perKmRate": 5
+}]

@@ -1,0 +1,34 @@
+[{
+  "vehicleId": "3VW517AT7FM076063",
+  "description": "7 Series",
+  "manufacturer": "BMW",
+  "isSelfDrive": false,
+  "isInsured": false,
+  "insuranceProviderName": "McClure-Tromp",
+  "numberOfSeat": 3,
+  "fuelType": "Diesel",
+  "baseRate": 250,
+  "perKmRate": 7
+}, {
+  "vehicleId": "WAUKF98E67A648746",
+  "description": "GS",
+  "manufacturer": "Lexus",
+  "isSelfDrive": false,
+  "isInsured": true,
+  "insuranceProviderName": "Volkman-Waelchi",
+  "numberOfSeat": 2,
+  "fuelType": "Diesel",
+  "baseRate": 250,
+  "perKmRate": 7
+}, {
+  "vehicleId": "4T1BD1EB5DU398278",
+  "description": "GTI",
+  "manufacturer": "Volkswagen",
+  "isSelfDrive": false,
+  "isInsured": true,
+  "insuranceProviderName": "Corkery-Hills",
+  "numberOfSeat": 2,
+  "fuelType": "Electric",
+  "baseRate": 250,
+  "perKmRate": 7
+}]
