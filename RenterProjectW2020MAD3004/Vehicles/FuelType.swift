@@ -11,4 +11,15 @@ import Foundation
 public enum FuelType
 {
     case PETROL,DIESEL,ELECTRIC
+    
+    static func getFuelType(fuelString: String) -> FuelType {
+        switch fuelString.lowercased() {
+            case "petrol":
+                return FuelType.PETROL
+            case "diesel":
+                return FuelType.DIESEL
+            default:
+                return FuelType.ELECTRIC
+        }
+    }
 }

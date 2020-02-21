@@ -8,45 +8,15 @@
 
 import Foundation
 
-func readJSON(fileName: String) -> [[String: Any]]?
-{
-    let filepPath = Bundle.main.url(forResource: fileName, withExtension: "json")
-    
-        guard let path = filepPath else {
-        print("Invalid File path found")
-        return nil
+
+var motercyleReader = JsonHandler(fileName:"MotorCycleData")
+var motorCyclesArray = motercyleReader.read()
+
+if let motorCyclesArray = motercyleReader.read(){
+    for motorCycleDict in motorCyclesArray{
+        var mm = MotorCycle(motorCycleDict: motorCycleDict)
+        mm.display()
+        print("*****")
     }
-    
-        guard let data = try? Data(contentsOf: path) else {
-        print("Error while read Data from URL")
-        return nil
-    }
-    
-        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
-        print("Error while reading JSON Data from file")
-        return nil
-    }
-    
-    if let objectDictionary = json as? [[String: Any]]
-        {
-            return objectDictionary
-        }
-    else
-        {
-            print("Could not form dictionary")
-            return nil
-        }
 }
-
-//var c = readJSON(fileName:"CustomerData")
-//print(c)
-
-//var o = readJSON(fileName: "OwnerData")
-//print(o)
-
-//var d = readJSON(fileName: "DriverData")
-//print(d)
-
-var d = readJSON(fileName: "MotorCycleData")
-print(d)
 

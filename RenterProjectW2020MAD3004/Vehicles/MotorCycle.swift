@@ -26,7 +26,18 @@ class MotorCycle: Vehicle
     var topSpeed: Int = 0
     var mileage: Int = 0
    
-   init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, topSpeed: Int, mileage: Int)
+    init(){
+        self.fuelType = FuelType.PETROL
+        self.vehicleId = "1"
+        self.manufacturer = "toyota"
+        self.isSelfDrive = true
+        self.isInsured = true
+        self.numberOfSeat = 2
+        self.baseRate = 40
+        self.perKmRate = 5
+    }
+    
+   init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
   {
     self.vehicleId = vehicleId
     self.description = description
@@ -38,9 +49,21 @@ class MotorCycle: Vehicle
     self.numberOfSeat = numberOfSeat
     self.baseRate = baseRate
     self.perKmRate = perKmRate
-    self.topSpeed = topSpeed
-    self.mileage = mileage
   }
+    
+    convenience init(motorCycleDict: [String: Any]) {
+        self.init(vehicleId: motorCycleDict["vehicleId"]  as! String ,
+                  description: motorCycleDict["description"] as? String, manufacturer: motorCycleDict["manufacturer"] as! String,
+                   fuelType: FuelType.getFuelType(fuelString: motorCycleDict["fuelType"] as! String ),
+                   isSelfDrive: motorCycleDict["isSelfDrive"] as! Int == 1,
+                   isInsured: motorCycleDict["isInsured"] as! Int   == 1,
+                   insuranceProviderName: motorCycleDict["insuranceProviderName"] as? String ,
+                   numberOfSeat: motorCycleDict["numberOfSeat"] as! Int ,
+                   baseRate: motorCycleDict["baseRate"] as! Float ,
+                   perKmRate: motorCycleDict["perKmRate"] as! Float
+                    )
+    }
+    
       func display()
     {
         print("\n Vehicle ID           : \(vehicleId)")
