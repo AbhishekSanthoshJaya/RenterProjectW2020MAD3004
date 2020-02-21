@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import CryptoKit
+
+
+/* Function to generate the encryption key*/
+
+func generateEncryptionKey(withPassword password:String) throws -> String
+{
+    let randomData = RNCryptor.randomData(ofLength: 32)
+    let cipherData = RNCryptor.encrypt(data: randomData, withPassword: password)
+    return cipherData.base64EncodedString()
+}
+
