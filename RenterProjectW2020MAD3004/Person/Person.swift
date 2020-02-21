@@ -21,6 +21,5 @@ protocol Person : IDisplayDelegate
      var password: String {get set}
      var contact: Contact {get set}
      var address: Address {get set}
-     init()
 }
 
