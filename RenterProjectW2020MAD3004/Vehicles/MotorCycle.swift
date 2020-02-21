@@ -13,6 +13,9 @@ import Foundation
 class MotorCycle: Vehicle
 
 {
+    required init()
+    {}
+    var fuelType: FuelType
     var vehicleId: String
     var description: String?
     var manufacturer: String
@@ -20,7 +23,6 @@ class MotorCycle: Vehicle
     var isInsured: Bool
     var insuranceProviderName: String?
     var numberOfSeat: Int
-    var fuelType: FuelType.Type
     var baseRate: Float
     var perKmRate: Float
     var topSpeed: Int = 0
@@ -31,9 +33,14 @@ class MotorCycle: Vehicle
     self.topSpeed = topSpeed
     self.mileage = mileage
   }
-    func display()
+      func display()
     {
-        <#code#>
+        print("\n Vehicle ID           : \(vehicleId)")
+        print("Description             : \(String(describing: description))")
+        print("manufacturer            : \(manufacturer)")
+        print("Type of fuel            : \(fuelType)")
+        print("Top speed               : \(topSpeed)")
+        print("Number Of seats         : \(numberOfSeat)")
     }
    
 }
