@@ -13,8 +13,6 @@ import Foundation
 class MotorCycle: Vehicle
 
 {
-    required init()
-    {}
     var fuelType: FuelType
     var vehicleId: String
     var description: String?
@@ -28,8 +26,18 @@ class MotorCycle: Vehicle
     var topSpeed: Int = 0
     var mileage: Int = 0
    
-  init(vehicleId: String, description: String? , manufacturer: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, topSpeed: Int, mileage: Int)
+   init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, topSpeed: Int, mileage: Int)
   {
+    self.vehicleId = vehicleId
+    self.description = description
+    self.manufacturer = manufacturer
+    self.fuelType = fuelType
+    self.isSelfDrive = isSelfDrive
+    self.isInsured = isInsured
+    self.insuranceProviderName = insuranceProviderName
+    self.numberOfSeat = numberOfSeat
+    self.baseRate = baseRate
+    self.perKmRate = perKmRate
     self.topSpeed = topSpeed
     self.mileage = mileage
   }
@@ -37,10 +45,10 @@ class MotorCycle: Vehicle
     {
         print("\n Vehicle ID           : \(vehicleId)")
         print("Description             : \(String(describing: description))")
-        print("manufacturer            : \(manufacturer)")
-        print("Type of fuel            : \(fuelType)")
-        print("Top speed               : \(topSpeed)")
-        print("Number Of seats         : \(numberOfSeat)")
+        print("Manufacturer            : \(manufacturer)")
+        print("Type Of Fuel            : \(fuelType)")
+        print("Top Speed               : \(topSpeed)")
+        print("Number Of Seats         : \(numberOfSeat)")
     }
    
 }
