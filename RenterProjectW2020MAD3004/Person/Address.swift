@@ -11,14 +11,11 @@ import Foundation
 public class Address
 {
     private var country: String
-    //private var province: String
     private var city: String
     private var pincode: String
-    //private var latitude: String
-    //private var longitude: String
     private var streetName: String
     
-    internal init(country: String, city: String, pincode: String, streetName: String)
+    init(country: String, city: String, pincode: String, streetName: String)
     {
         self.country = country
         self.city = city
