@@ -19,6 +19,8 @@
       "emailId": "bbuxam0@amazon.co.jp"
     }
   ,
+  "companyTitle": "Jerde LLC",
+  "url": "google.co.jp",
   "password": "BsfzUuGo"
 }, {
   "id": 2,
@@ -41,6 +43,8 @@
       "emailId": "bbaxstare0@ocn.ne.jp"
     }
   ,
+  "companyTitle": "Watsica and Sons",
+  "url": "bbc.co.uk",
   "password": "8ZNbvtze"
 }, {
   "id": 3,
@@ -63,6 +67,8 @@
       "emailId": "skitching0@jiathis.com"
     }
   ,
+  "companyTitle": "Funk-Jerde",
+  "url": "cargocollective.com",
   "password": "BksD2kjb"
 }, {
   "id": 4,
@@ -85,6 +91,8 @@
       "emailId": "ftunbridge0@reverbnation.com"
     }
   ,
+  "companyTitle": "Daniel, Dach and Jones",
+  "url": "cocolog-nifty.com",
   "password": "RuV0UO"
 }, {
   "id": 5,
@@ -107,5 +115,7 @@
       "emailId": "bdominguez0@pagesperso-orange.fr"
     }
   ,
+  "companyTitle": "Daugherty and Sons",
+  "url": "bbc.co.uk",
   "password": "sgqSRG81"
 }]
