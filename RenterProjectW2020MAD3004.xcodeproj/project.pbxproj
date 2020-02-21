@@ -16,6 +16,7 @@
 		9B98782223F4C49200ECCBD5 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98782123F4C49200ECCBD5 /* Vehicle.swift */; };
 		9BC009D423FF5DA6009EE5A5 /* CustomerData.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BC009D323FF5D85009EE5A5 /* CustomerData.json */; };
 		9BC009D723FF6312009EE5A5 /* OwnerData.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BC009D623FF626F009EE5A5 /* OwnerData.json */; };
+		9BC009DA23FF6530009EE5A5 /* DriverData.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BC009D923FF6482009EE5A5 /* DriverData.json */; };
 		BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8BC23F4DB080039A0A2 /* Person.swift */; };
 		BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C023F4F7240039A0A2 /* Contact.swift */; };
 		BD09D8C323F4F8200039A0A2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C223F4F8200039A0A2 /* Address.swift */; };
@@ -41,6 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				9BC009DA23FF6530009EE5A5 /* DriverData.json in CopyFiles */,
 				9BC009D723FF6312009EE5A5 /* OwnerData.json in CopyFiles */,
 				9BC009D423FF5DA6009EE5A5 /* CustomerData.json in CopyFiles */,
 			);

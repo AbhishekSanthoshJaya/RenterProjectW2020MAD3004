@@ -41,5 +41,9 @@ func readJSON(fileName: String) -> [[String: Any]]?
 //var c = readJSON(fileName:"CustomerData")
 //print(c)
 
-var o = readJSON(fileName: "OwnerData")
-print(o)
+//var o = readJSON(fileName: "OwnerData")
+//print(o)
+
+var d = readJSON(fileName: "DriverData")
+print(d)
+
