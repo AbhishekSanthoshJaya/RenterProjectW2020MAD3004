@@ -52,7 +52,12 @@ class MotorCycle: Vehicle
   }
     
     convenience init(motorCycleDict: [String: Any]) {
-        self.init(vehicleId: motorCycleDict["vehicleId"]  as! String ,
+        var vehicleId = ""
+        if let tempVehicleId = motorCycleDict["vehicleId"] as? String{
+            vehicleId = tempVehicleId
+        }
+        
+        self.init(vehicleId: vehicleId ,
                   description: motorCycleDict["description"] as? String, manufacturer: motorCycleDict["manufacturer"] as! String,
                    fuelType: FuelType.getFuelType(fuelString: motorCycleDict["fuelType"] as! String ),
                    isSelfDrive: motorCycleDict["isSelfDrive"] as! Int == 1,
