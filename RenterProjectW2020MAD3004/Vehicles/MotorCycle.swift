@@ -42,7 +42,7 @@ class MotorCycle: Vehicle
     self.perKmRate = perKmRate
   }
     
-    convenience init(motorCycleDict: [String: Any]) throws {
+  convenience init(motorCycleDict: [String: Any]) throws {
         
         guard let vehicleId = motorCycleDict["vehicleId"] as? String else {
             throw JsonValidationError.isNotValidInput(

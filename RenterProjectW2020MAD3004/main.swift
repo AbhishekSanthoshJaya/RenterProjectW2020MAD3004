@@ -11,21 +11,35 @@ import Foundation
 
 var motercyleReader = JsonHandler(fileName:"MotorCycleData")
 var motorCyclesArray = motercyleReader.read()
+var busReader = JsonHandler(fileName:"BusData")
+var busArray = busReader.read()
 
-if let motorCyclesArray = motercyleReader.read(){
-    for motorCycleDict in motorCyclesArray{
-        
-        do{
-            let mm = try MotorCycle(motorCycleDict: motorCycleDict)
-            mm.display()
-            print("*****")
+
+//if let motorCyclesArray = motercyleReader.read(){
+//    for motorCycleDict in motorCyclesArray{
+//
+//        do{
+//            let mm = try MotorCycle(motorCycleDict: motorCycleDict)
+//            mm.display()
+//            print("*****")
+//        }
+//        catch JsonValidationError.isNotValidInput(let msgg){
+//            print("Could not create object. Error while reading from json: ")
+//            print(msgg)
+//        }
+//    }
+//}
+
+if let busArray = busReader.read(){
+    for busDict in busArray {
+        do {
+            let b = try Bus(busDict:busDict)
+            b.display()
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
             print(msgg)
         }
-        
-        
     }
 }
 
