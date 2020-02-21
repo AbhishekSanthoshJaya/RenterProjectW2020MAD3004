@@ -91,7 +91,7 @@
 		9B98780C23F4BD1D00ECCBD5 = {
 			isa = PBXGroup;
 			children = (
-				9BC009D323FF5D85009EE5A5 /* CustomerData.json */,
+				9BC009D523FF6110009EE5A5 /* JSONfiles */,
 				9B98781723F4BD1D00ECCBD5 /* RenterProjectW2020MAD3004 */,
 				9B98781623F4BD1D00ECCBD5 /* Products */,
 			);
@@ -114,6 +114,14 @@
 				9B7B1B2B23FCBBFE0054DA26 /* Vehicles */,
 			);
 			path = RenterProjectW2020MAD3004;
+			sourceTree = "<group>";
+		};
+		9BC009D523FF6110009EE5A5 /* JSONfiles */ = {
+			isa = PBXGroup;
+			children = (
+				9BC009D323FF5D85009EE5A5 /* CustomerData.json */,
+			);
+			path = JSONfiles;
 			sourceTree = "<group>";
 		};
 		BD09D8CA23F4FFC10039A0A2 /* Person */ = {
