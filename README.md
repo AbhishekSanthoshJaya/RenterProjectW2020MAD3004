@@ -43,7 +43,7 @@ We have used the following packages and classes to implement the above given str
 
 
 ## REFERENCES
-[Medium.com](https://medium.com/@anios4991/swift-protocol-oriented-programming-acc56933d011) - Used to implement protocol classes Person and Vehicle
-[Jsonplaceholder](https://jsonplaceholder.typicode.com/) - JSON reference
-[HackingWithSwift](https://www.hackingwithswift.com/example-code/system/how-to-parse-json-using-jsonserialization) - Used to implement json file reading
-[Mockaroo](https://mockaroo.com/) - Used to generate json data
+* [Medium.com](https://medium.com/@anios4991/swift-protocol-oriented-programming-acc56933d011) - Used to implement protocol classes Person and Vehicle
+* [Jsonplaceholder](https://jsonplaceholder.typicode.com/) - JSON reference
+* [HackingWithSwift](https://www.hackingwithswift.com/example-code/system/how-to-parse-json-using-jsonserialization) - Used to implement json file reading
+* [Mockaroo](https://mockaroo.com/) - Used to generate json data
