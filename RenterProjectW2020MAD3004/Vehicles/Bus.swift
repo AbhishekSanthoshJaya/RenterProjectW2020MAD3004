@@ -151,12 +151,11 @@ public class Bus: Vehicle
     {
            print("\nVehicle ID              : \(vehicleId)")
            print("Bus Type                : \(busType)")
-           print("Description             : \(String(describing: description))")
+           print("Description             : \(String(describing: description ?? ""))")
            print("Manufacturer            : \(manufacturer)")
            print("Type Of Fuel            : \(fuelType)")
            print("Accessibility Services  : \(accessibilityServices)")
-           print("Standing Capacity       : \(standingCapacity) people")
-        
+           print("Standing Capacity       : \(standingCapacity) people")        
     }
     
 }

@@ -137,7 +137,7 @@ class MotorCycle: Vehicle
       func display()
     {
         print("\nVehicle ID              : \(vehicleId)")
-        print("Description             : \(String(describing: description))")
+        print("Description             : \(String(describing: description ?? ""))")
         print("Manufacturer            : \(manufacturer)")
         print("Type Of Fuel            : \(fuelType)")
         print("Top Speed               : \(topSpeed)")

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 var motercyleReader = JsonHandler(fileName:"MotorCycleData")
 var motorCyclesArray = motercyleReader.read()
 var busReader = JsonHandler(fileName:"BusData")
