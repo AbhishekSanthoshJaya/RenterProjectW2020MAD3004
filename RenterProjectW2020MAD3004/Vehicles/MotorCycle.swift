@@ -144,5 +144,4 @@ class MotorCycle: Vehicle
         print("Mileage                 : \(mileage)")
         print("Number Of Seats         : \(numberOfSeat)")
     }
-   
 }

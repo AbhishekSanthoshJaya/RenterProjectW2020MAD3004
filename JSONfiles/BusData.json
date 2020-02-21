@@ -7,6 +7,10 @@
   "insuranceProviderName": "McClure-Tromp",
   "numberOfSeat": 3,
   "fuelType": "Diesel",
+  "busType": "Treeflex",
+  "accessibilityServices": true,
+  "wifiAvailability": true,
+  "standingCapacity": 37,
   "baseRate": 250,
   "perKmRate": 7
 }, {
@@ -18,6 +22,10 @@
   "insuranceProviderName": "Volkman-Waelchi",
   "numberOfSeat": 2,
   "fuelType": "Diesel",
+  "busType": "Alphazap",
+  "accessibilityServices": true,
+  "wifiAvailability": true,
+  "standingCapacity": 40,
   "baseRate": 250,
   "perKmRate": 7
 }, {
@@ -29,6 +37,10 @@
   "insuranceProviderName": "Corkery-Hills",
   "numberOfSeat": 2,
   "fuelType": "Electric",
+  "busType": "Flexidy",
+  "accessibilityServices": true,
+  "wifiAvailability": false,
+  "standingCapacity": 40,
   "baseRate": 250,
   "perKmRate": 7
 }]
