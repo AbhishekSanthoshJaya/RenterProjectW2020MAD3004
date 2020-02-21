@@ -9,10 +9,9 @@
 import Foundation
 
 
-var motercyleReader = JsonHandler(fileName:"MotorCycleData")
-var motorCyclesArray = motercyleReader.read()
+var motorCyleReader = JsonHandler(fileName:"MotorCycleData")
 
-if let motorCyclesArray = motercyleReader.read(){
+if let motorCyclesArray = motorCyleReader.read(){
     for motorCycleDict in motorCyclesArray{
         
         do{
@@ -25,7 +24,25 @@ if let motorCyclesArray = motercyleReader.read(){
             print(msgg)
         }
         
+    }
+}
+
+var customerReader = JsonHandler(fileName:"CustomerData")
+
+if let customerArray = customerReader.read(){
+    for customerDict in customerArray{
+        
+        do{
+            var cc = try Customer(customerDict: customerDict)
+            cc.display()
+            print("*****")
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print(" Couldnot create object. Error while reading from json: ")
+            print(msgg)
+        }
         
     }
 }
+
 

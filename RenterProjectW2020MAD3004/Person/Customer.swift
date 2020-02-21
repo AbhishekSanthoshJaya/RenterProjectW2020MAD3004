@@ -10,31 +10,30 @@ import Foundation
 
 class Customer : Person
 {
+
+    
     
     var gender: Gender
     var id: String
     var firstName: String
     var lastName: String
     var birthDate: Date?
-    var age: Int
+    var age: Int = 0
     var userName: String
     var password: String
     var contact: Contact
-    var address: Address
     private lazy var vehicleRents = [String: Vehicle]()
 
-     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, age: Int, userName: String, password: String, contact: Contact, address : Address)
+     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, userName: String, password: String, contact: Contact)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
-        self.age = age
         self.userName = userName
         self.password = password
         self.contact = contact
-        self.address = address
     }
     
     convenience init(customerDict: [String: Any]) throws {
@@ -46,10 +45,10 @@ class Customer : Person
         }
         
         
-        guard let firtname = customerDict["firtname"] as? String else {
+        guard let firstName = customerDict["firstName"] as? String else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
-                memberName: "firtname")
+                memberName: "firtName")
         }
         
         guard let lastName = customerDict["lastName"] as? String else {
@@ -63,59 +62,59 @@ class Customer : Person
                 className: String(describing:type(of: self)),
                 memberName: "gender")
         }
-        let gender = Gender.getGenderType(genderString)
+        let gender = Gender.getGenderType(genderString: genderString)
         
         
         
-        guard let isSelfDriveInt = customerDict["isSelfDrive"] as? Int else {
+        guard let birthDateString = customerDict["birthDate"] as? String else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
-                memberName: "isSelfDrive")
+                memberName: "birthDate")
         }
-        let isSelfDrive = isSelfDriveInt == 1
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let birthDate = dateFormatter.date(from: birthDateString) else{
+            throw JsonValidationError.isNotValidInput(
+            className: String(describing:type(of: self)),
+            memberName: "birthDate")
+        }
         
-        guard let isInsuredInt = customerDict["isInsured"] as? Int else {
+        
+        guard let userName = customerDict["userName"] as? String else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
-                memberName: "isInsured")
+                memberName: "userName")
         }
-        let isInsured = isInsuredInt == 1
         
-        guard let insuranceProviderName = customerDict["insuranceProviderName"] as? String else {
+        
+        guard let password = customerDict["password"] as? String else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
-                memberName: "insuranceProviderName")
+                memberName: "password")
         }
         
-        guard let numberOfSeat = customerDict["numberOfSeat"] as? Int else {
+        guard let contact = customerDict["contact"] as? [String: String] else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
-                memberName: "numberOfSeat")
+                memberName: "contact")
         }
         
-        guard let baseRate = customerDict["baseRate"] as? Float else {
+        guard let address = customerDict["address"] as? [String: String] else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
-                memberName: "baseRate")
+                memberName: "address")
         }
         
-        guard let perKmRate = customerDict["perKmRate"] as? Float else {
-            throw JsonValidationError.isNotValidInput(
-                className: String(describing:type(of: self)),
-                memberName: "perKmRate")
-        }
-        
-      
         self.init(id: id,
-                  firstName: firtname,
+                  firstName: firstName,
                   lastName: lastName,
                   gender: gender,
                   birthDate: birthDate,
-                  age: age,
                   userName: userName,
                   password: password,
-                  contact: contact,
-                  address : address)
+                  contact: Contact(mobileNumber: "asdas", emailId: "asdas", address:
+                    Address(country: "asdas", city: "asdas", pincode: "asdas", streetName: "asdas"))
+                  )
         
     }
     
