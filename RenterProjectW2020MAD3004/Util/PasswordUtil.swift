@@ -26,9 +26,9 @@ func getSalt(withPassword userPassword:String) throws -> String
 /* Function to generated a secure password using
  genereated encryption key and user password*/
 
-func genereateSecurePassword(userPassword: String, encryptKey: String) throws -> String
+func generateSecurePassword(userPassword: String, salt: String) throws -> String
 {
-    let encryptedKey = try getSalt(withPassword: encryptKey)
+    let encryptedKey = try getSalt(withPassword: salt)
     let securePassword = userPassword.data(using: .utf8)!
     let cipherData = RNCryptor.encrypt(data: securePassword, withPassword: encryptedKey)
     return cipherData.base64EncodedString()
@@ -39,10 +39,10 @@ func genereateSecurePassword(userPassword: String, encryptKey: String) throws ->
 
 func decryptPassword(securePassword: String, encryptKey: String) throws -> String
         {
-
         let encryptedPassword = Data.init(base64Encoded: securePassword)!
         let decryptedData = try RNCryptor.decrypt(data: encryptedPassword, withPassword: encryptKey)
         let decryptedString = String(data: decryptedData, encoding: .utf8)!
         return decryptedString
         }
 }
+
