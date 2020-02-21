@@ -26,13 +26,14 @@ class MotorCycle: Vehicle
     var topSpeed: Int = 0
     var mileage: Int = 0
     
-    init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, topSpeed: Int,  isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
+    init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, topSpeed: Int, mileage: Int, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
   {
     self.vehicleId = vehicleId
     self.description = description
     self.manufacturer = manufacturer
     self.fuelType = fuelType
     self.topSpeed = topSpeed
+    self.mileage = mileage
     self.isSelfDrive = isSelfDrive
     self.isInsured = isInsured
     self.insuranceProviderName = insuranceProviderName
@@ -72,6 +73,12 @@ class MotorCycle: Vehicle
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
                 memberName: "topSpeed")
+        }
+        
+        guard let mileage = motorCycleDict["mileage"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "mileage")
         }
         guard let isSelfDriveInt = motorCycleDict["isSelfDrive"] as? Int else {
             throw JsonValidationError.isNotValidInput(
@@ -117,6 +124,7 @@ class MotorCycle: Vehicle
                   manufacturer: manufacturer,
                    fuelType: fuelType,
                    topSpeed: topSpeed,
+                   mileage: mileage,
                    isSelfDrive: isSelfDrive,
                    isInsured: isInsured,
                    insuranceProviderName: insuranceProviderName ,
@@ -133,6 +141,7 @@ class MotorCycle: Vehicle
         print("Manufacturer            : \(manufacturer)")
         print("Type Of Fuel            : \(fuelType)")
         print("Top Speed               : \(topSpeed)")
+        print("Mileage                 : \(mileage)")
         print("Number Of Seats         : \(numberOfSeat)")
     }
    
