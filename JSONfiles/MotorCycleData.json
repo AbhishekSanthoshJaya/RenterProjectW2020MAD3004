@@ -1,0 +1,34 @@
+[{
+  "vehicleId": "1GKS1CE02ER511717",
+  "description": "Accord Crosstour",
+  "manufacturer": "Honda",
+  "isSelfDrive": true,
+  "isInsured": false,
+  "insuranceProviderName": "Schumm, Beatty and Emard",
+  "numberOfSeat": 4,
+  "fuelType": "Electric",
+  "baseRate": 50,
+  "perKmRate": 1
+}, {
+  "vehicleId": "WAUVFAFH4DN164011",
+  "description": "Eurovan",
+  "manufacturer": "Volkswagen",
+  "isSelfDrive": false,
+  "isInsured": false,
+  "insuranceProviderName": "Ryan Inc",
+  "numberOfSeat": 4,
+  "fuelType": "Petrol",
+  "baseRate": 50,
+  "perKmRate": 1
+}, {
+  "vehicleId": "WBAGL83595D449282",
+  "description": "Range Rover",
+  "manufacturer": "Land Rover",
+  "isSelfDrive": false,
+  "isInsured": true,
+  "insuranceProviderName": "Leannon-Schultz",
+  "numberOfSeat": 2,
+  "fuelType": "Petrol",
+  "baseRate": 50,
+  "perKmRate": 1
+}]
