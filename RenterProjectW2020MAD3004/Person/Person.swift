@@ -23,19 +23,4 @@ protocol Person : IDisplayDelegate
      var address: Address {get set}
      init()
 }
- extension Person
- {
-    init(id:String,firstName:String,lastName:String,gender:Gender,birthDate:Date?,age: Int,userName:String,password:String,contact:Contact,address:Address)
-    {
-        self.id=id
-        self.firstName=firstName
-        self.lastName=lastName
-        self.gender=gender
-        self.birthDate=birthDate
-        self.age=age
-        self.userName=userName
-        self.password=password
-        self.contact=contact
-        self.address=address
-   }
-}
+

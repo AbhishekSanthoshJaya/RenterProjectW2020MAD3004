@@ -21,6 +21,6 @@ protocol Vehicle: IDisplayDelegate
      var fuelType: FuelType {get set}
      var baseRate: Float{ get set}
      var perKmRate: Float{ get set}
-    
+
 }
 
