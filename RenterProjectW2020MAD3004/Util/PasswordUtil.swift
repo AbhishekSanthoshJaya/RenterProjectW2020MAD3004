@@ -10,12 +10,23 @@ import Foundation
 import CryptoKit
 
 
-/* Function to generate the encryption key*/
+/* Function to generate the encryption key using User entered password*/
 
-func generateEncryptionKey(withPassword password:String) throws -> String
+func generateEncryptionKey(withPassword userPassword:String) throws -> String
 {
     let randomData = RNCryptor.randomData(ofLength: 32)
-    let cipherData = RNCryptor.encrypt(data: randomData, withPassword: password)
+    let cipherData = RNCryptor.encrypt(data: randomData, withPassword: userPassword)
+    return cipherData.base64EncodedString()
+}
+
+/* Function to generated a secure password using
+ genereated encryption key and user password*/
+
+func genereateSecurePassword(userPassword: String, encryptKey: String) throws -> String
+{
+    let encryptedKey = try generateEncryptionKey(withPassword: encryptKey)
+    let securePassword = userPassword.data(using: .utf8)!
+    let cipherData = RNCryptor.encrypt(data: securePassword, withPassword: encryptedKey)
     return cipherData.base64EncodedString()
 }
 
