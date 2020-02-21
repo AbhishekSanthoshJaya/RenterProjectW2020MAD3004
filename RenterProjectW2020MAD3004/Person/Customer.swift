@@ -37,6 +37,89 @@ class Customer : Person
         self.address = address
     }
     
+    convenience init(customerDict: [String: Any]) throws {
+        
+        guard let id = customerDict["id"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "id")
+        }
+        
+        
+        guard let firtname = customerDict["firtname"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "firtname")
+        }
+        
+        guard let lastName = customerDict["lastName"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "lastName")
+        }
+        
+        guard let genderString =  customerDict["gender"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "gender")
+        }
+        let gender = Gender.getGenderType(genderString)
+        
+        
+        
+        guard let isSelfDriveInt = customerDict["isSelfDrive"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "isSelfDrive")
+        }
+        let isSelfDrive = isSelfDriveInt == 1
+        
+        guard let isInsuredInt = customerDict["isInsured"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "isInsured")
+        }
+        let isInsured = isInsuredInt == 1
+        
+        guard let insuranceProviderName = customerDict["insuranceProviderName"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "insuranceProviderName")
+        }
+        
+        guard let numberOfSeat = customerDict["numberOfSeat"] as? Int else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "numberOfSeat")
+        }
+        
+        guard let baseRate = customerDict["baseRate"] as? Float else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "baseRate")
+        }
+        
+        guard let perKmRate = customerDict["perKmRate"] as? Float else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "perKmRate")
+        }
+        
+      
+        self.init(id: id,
+                  firstName: firtname,
+                  lastName: lastName,
+                  gender: gender,
+                  birthDate: birthDate,
+                  age: age,
+                  userName: userName,
+                  password: password,
+                  contact: contact,
+                  address : address)
+        
+    }
+    
+    
     func display()
     {
         print("\nID           : \(id)")

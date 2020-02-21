@@ -10,4 +10,15 @@ import Foundation
 public enum Gender
 {
     case MALE,FEMALE,OTHER
+    
+    static func getGenderType(genderString: String) -> Gender{
+        switch genderString.lowercased() {
+        case "female":
+            return Gender.FEMALE
+        case "male":
+            return Gender.MALE
+        default:
+            return Gender.OTHER
+        }
+    }
 }
