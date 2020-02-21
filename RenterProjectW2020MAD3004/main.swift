@@ -14,9 +14,18 @@ var motorCyclesArray = motercyleReader.read()
 
 if let motorCyclesArray = motercyleReader.read(){
     for motorCycleDict in motorCyclesArray{
-        var mm = MotorCycle(motorCycleDict: motorCycleDict)
-        mm.display()
-        print("*****")
+        
+        do{
+            var mm = try MotorCycle(motorCycleDict: motorCycleDict)
+            mm.display()
+            print("*****")
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print(" Couldnot create object")
+            print(msgg)
+        }
+        
+        
     }
 }
 

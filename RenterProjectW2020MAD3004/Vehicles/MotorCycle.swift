@@ -51,8 +51,13 @@ class MotorCycle: Vehicle
     self.perKmRate = perKmRate
   }
     
-    convenience init(motorCycleDict: [String: Any]) {
-        self.init(vehicleId: motorCycleDict["vehicleId"]  as! String ,
+    convenience init(motorCycleDict: [String: Any]) throws {
+        
+        guard let vehicleId = motorCycleDict["vehicleId"] as? String else {
+            throw JsonValidationError.isNotValidInput(msg: " Error while reading vehicleId column in Vehicles obj creation. passed value-> vehicleID: \(motorCycleDict["vehicleId"])")
+        }
+        
+        self.init(vehicleId: vehicleId ,
                   description: motorCycleDict["description"] as? String, manufacturer: motorCycleDict["manufacturer"] as! String,
                    fuelType: FuelType.getFuelType(fuelString: motorCycleDict["fuelType"] as! String ),
                    isSelfDrive: motorCycleDict["isSelfDrive"] as! Int == 1,
