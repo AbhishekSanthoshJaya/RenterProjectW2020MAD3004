@@ -21,6 +21,24 @@ public class Contact
         self.emailId = emailId
         self.address = address
        }
+    
+    
+    convenience init(contactDict: [String: String], address: Address) throws {
+        
+        guard let mobileNumber = contactDict["mobileNumber"] else {
+                   throw JsonValidationError.isNotValidInput(
+                       className: String(describing:type(of: self)),
+                       memberName: "mobileNumber")
+               }
+        
+        guard let emailId = contactDict["emailId"] else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "emailId")
+        }
+        
+        self.init(mobileNumber: mobileNumber, emailId: emailId, address: address)
+    }
 
         
 }

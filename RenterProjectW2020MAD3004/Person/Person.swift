@@ -20,6 +20,5 @@ protocol Person : IDisplayDelegate
      var userName: String {get set}
      var password: String {get set}
      var contact: Contact {get set}
-     var address: Address {get set}
 }
 
