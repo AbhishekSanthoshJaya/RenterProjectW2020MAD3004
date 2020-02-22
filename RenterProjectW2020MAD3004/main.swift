@@ -83,3 +83,23 @@ if let ownerArray = ownerReader.read(){
         }
     }
 }
+
+
+//-------------  ARRAY OF OWNER OBJECTS -------------
+var driverReader = JsonHandler(fileName:"DriverData")
+var driverArray = driverReader.read()
+
+var driverObjects = Array<Driver>()
+if let driverArray = driverReader.read(){
+    for driverDict in driverArray {
+        do {
+            let o = try Driver(driverDict: driverDict)
+            driverObjects.append(o)
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+    }
+}
+
