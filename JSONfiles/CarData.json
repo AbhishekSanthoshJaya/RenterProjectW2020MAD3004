@@ -7,6 +7,8 @@
   "insuranceProviderName": "Donnelly-Batz",
   "numberOfSeat": 2,
   "fuelType": "Electric",
+  "carType": "Satterfield-Toy",
+  "carColor": "Crimson",
   "baseRate": 100,
   "perKmRate": 5
 }, {
@@ -18,6 +20,8 @@
   "insuranceProviderName": "Mertz-Thompson",
   "numberOfSeat": 3,
   "fuelType": "Petrol",
+  "carType": "McKenzie-Schulist",
+  "carColor": "Maroon",
   "baseRate": 100,
   "perKmRate": 5
 }, {
@@ -29,6 +33,8 @@
   "insuranceProviderName": "Feeney-Ernser",
   "numberOfSeat": 4,
   "fuelType": "Diesel",
+  "carType": "Mraz, Stark and Heathcote",
+  "carColor": "Mauv",
   "baseRate": 100,
   "perKmRate": 5
 }]

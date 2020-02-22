@@ -19,6 +19,9 @@
       "emailId": "idameisele0@newyorker.com"
     }
   ,
+  "isDrivingHistoryClean": true,
+  "drivingLicenseNumber": "WBA3B1C56EF689600",
+  "salary": 1679,
   "password": "7Ff9UW"
 }, {
   "id": 2,
@@ -41,6 +44,9 @@
       "emailId": "dposkitt0@intel.com"
     }
   ,
+  "isDrivingHistoryClean": true,
+  "drivingLicenseNumber": "5N1AR1NB8BC297459",
+  "salary": 1231,
   "password": "lQbGkVLaosf"
 }, {
   "id": 3,
@@ -63,6 +69,9 @@
       "emailId": "vwallsworth0@auda.org.au"
     }
   ,
+  "isDrivingHistoryClean": false,
+  "drivingLicenseNumber": "WA1LMAFE6BD311609",
+  "salary": 950,
   "password": "FTpo3Nvn"
 }, {
   "id": 4,
@@ -85,6 +94,9 @@
       "emailId": "nmackiewicz0@senate.gov"
     }
   ,
+  "isDrivingHistoryClean": false,
+  "drivingLicenseNumber": "WBXPA93435W975145",
+  "salary": 896,
   "password": "HKtACf"
 }, {
   "id": 5,
@@ -107,5 +119,8 @@
       "emailId": "lfifield0@amazon.de"
     }
   ,
+  "isDrivingHistoryClean": false,
+  "drivingLicenseNumber": "1HGCR2E30FA891333",
+  "salary": 1797,
   "password": "rnRzKagxDqLV"
 }]

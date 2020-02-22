@@ -7,6 +7,8 @@
   "insuranceProviderName": "Schumm, Beatty and Emard",
   "numberOfSeat": 4,
   "fuelType": "Electric",
+  "topSpeed": 81,
+  "mileage": 13,
   "baseRate": 50,
   "perKmRate": 1
 }, {
@@ -18,6 +20,8 @@
   "insuranceProviderName": "Ryan Inc",
   "numberOfSeat": 4,
   "fuelType": "Petrol",
+  "topSpeed": 95,
+  "mileage": 16,
   "baseRate": 50,
   "perKmRate": 1
 }, {
@@ -29,6 +33,8 @@
   "insuranceProviderName": "Leannon-Schultz",
   "numberOfSeat": 2,
   "fuelType": "Petrol",
+  "topSpeed": 86,
+  "mileage": 12,
   "baseRate": 50,
   "perKmRate": 1
 }]
