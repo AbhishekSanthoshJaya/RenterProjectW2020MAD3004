@@ -121,10 +121,10 @@ class Driver : Person
              throw JsonValidationError.isNotValidInput(className: className, memberName: memberName)
          }
          
-         guard let drivingLicenceNumber = driverDict["drivingLicenceNumber"] as? String else {
+         guard let drivingLicenceNumber = driverDict["drivingLicenseNumber"] as? String else {
              throw JsonValidationError.isNotValidInput(
                  className: String(describing:type(of: self)),
-                 memberName: "drivingLicenceNumber")
+                 memberName: "drivingLicenseNumber")
          }
         
         guard let isDrivingHistoryCleanString = driverDict["isDrivingHistoryClean"] as? Int else {

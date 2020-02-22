@@ -85,7 +85,7 @@ if let ownerArray = ownerReader.read(){
 }
 
 
-//-------------  ARRAY OF OWNER OBJECTS -------------
+//-------------  ARRAY OF DRIVER OBJECTS -------------
 var driverReader = JsonHandler(fileName:"DriverData")
 var driverArray = driverReader.read()
 
@@ -103,3 +103,21 @@ if let driverArray = driverReader.read(){
     }
 }
 
+
+//-------------  ARRAY OF CUSTOMER OBJECTS -------------
+var customerReader = JsonHandler(fileName:"CustomerData")
+var customerArray = customerReader.read()
+
+var customerObjects = Array<Customer>()
+if let customerArray = customerReader.read(){
+    for customerDict in customerArray {
+        do {
+            let o = try Customer(customerDict: customerDict)
+            customerObjects.append(o)
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+    }
+}
