@@ -8,7 +8,7 @@
 
 import Foundation
 
-//OUTPUT TO TXT
+//OUTPUT TO TXT START
 let fileName = "ouput"
 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 
@@ -22,7 +22,7 @@ do {
 } catch let error as NSError {
     print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
 }
-//OUTPUT TO TXT
+//OUTPUT TO TXT END
 
 //-------------  ARRAY OF MOTORCYCLE OBJECTS -------------
 var motorcyleReader = JsonHandler(fileName:"MotorCycleData")
@@ -80,7 +80,7 @@ if let carArray = carReader.read(){
         }
     }
 }
-//carObjects[0].display()
+carObjects[0].display()
 
 //-------------  ARRAY OF OWNER OBJECTS -------------
 var ownerReader = JsonHandler(fileName:"OwnerData")
