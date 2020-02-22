@@ -8,15 +8,12 @@
 
 import Foundation
 
-var motercyleReader = JsonHandler(fileName:"MotorCycleData")
-var motorCyclesArray = motercyleReader.read()
-
-var busReader = JsonHandler(fileName:"BusData")
-var busArray = busReader.read()
-
 //-------------  ARRAY OF MOTORCYCLE OBJECTS -------------
+var motorcyleReader = JsonHandler(fileName:"MotorCycleData")
+var motorCyclesArray = motorcyleReader.read()
+
 var mcObjects = Array<MotorCycle>()
-if let motorCyclesArray = motercyleReader.read(){
+if let motorCyclesArray = motorcyleReader.read(){
     for motorCycleDict in motorCyclesArray{
 
         do{
@@ -29,9 +26,12 @@ if let motorCyclesArray = motercyleReader.read(){
         }
     }
 }
-mcObjects[0].display()
+//mcObjects[0].display()
 
 //-------------  ARRAY OF BUS OBJECTS -------------
+var busReader = JsonHandler(fileName:"BusData")
+var busArray = busReader.read()
+
 var busObjects = Array<Bus>()
 if let busArray = busReader.read(){
     for busDict in busArray {
@@ -47,18 +47,21 @@ if let busArray = busReader.read(){
 }
 //busObjects[0].display()
 
-//var carReader = JsonHandler(fileName:"CarData")
-//var carArray = carReader.read()
-//
-//if let carArray = carReader.read(){
-//    for carDict in carArray {
-//        do {
-//            let c = try Car(carDict: carDict)
-//            c.display()
-//        }
-//        catch JsonValidationError.isNotValidInput(let msgg){
-//            print("Could not create object. Error while reading from json: ")
-//            print(msgg)
-//        }
-//    }
-//}
+//-------------  ARRAY OF BUS OBJECTS -------------
+var carReader = JsonHandler(fileName:"CarData")
+var carArray = carReader.read()
+
+var carObjects = Array<Car>()
+if let carArray = carReader.read(){
+    for carDict in carArray {
+        do {
+            let c = try Car(carDict: carDict)
+            carObjects.append(c)
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+    }
+}
+//carObjects[0].display()
