@@ -130,8 +130,7 @@ class MotorCycle: Vehicle
                    insuranceProviderName: insuranceProviderName ,
                    numberOfSeat: numberOfSeat ,
                    baseRate: baseRate ,
-                   perKmRate: perKmRate
-                    )
+                   perKmRate: perKmRate)
     }
     
       func display()

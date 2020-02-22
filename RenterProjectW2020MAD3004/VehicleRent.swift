@@ -12,10 +12,10 @@ class VehicleRent: IDisplayDelegate
 {
     var rentStartDate: Date
     var rentEndDate: Date
-    var numberOfDays: Int
-    var kmDriven: Int
-    var totalBill: Float
-    var vehicle: Vehicle
+    var numberOfDays: Int = 0
+    var kmDriven: Int = 0
+    var totalBill: Float = 0
+    var vehicle: Vehicle 
     
     init(rentStartDate: Date, rentEndDate: Date){
         self.rentEndDate = rentEndDate
