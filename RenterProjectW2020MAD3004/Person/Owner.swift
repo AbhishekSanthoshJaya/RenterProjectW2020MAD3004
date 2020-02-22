@@ -43,6 +43,11 @@ class Owner : Person
     var url: String
     var vehicleList = [String: Vehicle]()
     
+    convenience init(ownerDict: [String: Any]){
+        
+    }
+    
+    
     func display()
     {
         print("\nID           : \(id)")
