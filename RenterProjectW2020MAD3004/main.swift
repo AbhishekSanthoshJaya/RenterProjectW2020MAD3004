@@ -65,3 +65,21 @@ if let carArray = carReader.read(){
     }
 }
 //carObjects[0].display()
+
+//-------------  ARRAY OF OWNER OBJECTS -------------
+var ownerReader = JsonHandler(fileName:"OwnerData")
+var ownerArray = ownerReader.read()
+
+var ownerObjects = Array<Owner>()
+if let ownerArray = ownerReader.read(){
+    for ownerDict in ownerArray {
+        do {
+            let o = try Owner(ownerDict: ownerDict)
+            ownerObjects.append(o)
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+    }
+}
