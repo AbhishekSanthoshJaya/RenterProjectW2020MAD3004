@@ -22,5 +22,36 @@ public class Address
         self.pincode = pincode
         self.streetName = streetName
     }
+    
+    convenience init(addressDict: [String: String]) throws {
+        guard let country = addressDict["country"] else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "country")
+        }
+        
+        guard let city = addressDict["city"] else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "city")
+        }
+        
+        
+        guard let pincode = addressDict["pincode"] else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "pincode")
+        }
+        
+        
+        guard let streetName = addressDict["streetName"] else {
+                   throw JsonValidationError.isNotValidInput(
+                       className: String(describing:type(of: self)),
+                       memberName: "streetName")
+               }
+        
+        self.init(country: country, city: city, pincode: pincode, streetName: streetName)
+        
+    }
 
 }

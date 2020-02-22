@@ -93,17 +93,39 @@ class Customer : Person
                 memberName: "password")
         }
         
-        guard let contact = customerDict["contact"] as? [String: String] else {
+        guard let addressJson = customerDict["address"] as? [String: String] else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "address")
+        }
+        
+        
+        
+        
+        
+        
+        guard let contactJson = customerDict["contact"] as? [String: String] else {
             throw JsonValidationError.isNotValidInput(
                 className: String(describing:type(of: self)),
                 memberName: "contact")
         }
         
-        guard let address = customerDict["address"] as? [String: String] else {
-            throw JsonValidationError.isNotValidInput(
-                className: String(describing:type(of: self)),
-                memberName: "address")
+        var contact:Contact?
+        do{
+            var address:Address?
+            do{
+                address = try Address(addressDict: addressJson)
+            }
+            catch JsonValidationError.isNotValidInput(let className, let memberName) {
+                throw JsonValidationError.isNotValidInput(className: className, memberName: memberName)
+            }
+            contact = try Contact(contactDict: contactJson, address:address!)
         }
+        catch JsonValidationError.isNotValidInput(let className, let memberName) {
+            throw JsonValidationError.isNotValidInput(className: className, memberName: memberName)
+        }
+        
+        
         
         self.init(id: id,
                   firstName: firstName,
@@ -112,8 +134,7 @@ class Customer : Person
                   birthDate: birthDate,
                   userName: userName,
                   password: password,
-                  contact: Contact(mobileNumber: "asdas", emailId: "asdas", address:
-                    Address(country: "asdas", city: "asdas", pincode: "asdas", streetName: "asdas"))
+                  contact: contact!
                   )
         
     }
@@ -128,6 +149,7 @@ class Customer : Person
         print("Date of Birth  : \(birthDate ?? Date())")
         print("Age            : \(age)")
         print("Username       : \(userName)")
+
 
     }
     //ToDo add a dictionary for the vehicle rent
