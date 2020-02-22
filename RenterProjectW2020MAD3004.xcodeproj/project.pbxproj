@@ -77,6 +77,7 @@
 		9BC009DE23FF67B3009EE5A5 /* BusData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BusData.json; sourceTree = "<group>"; };
 		9BC009E123FF6856009EE5A5 /* MotorCycleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MotorCycleData.json; sourceTree = "<group>"; };
 		9BF2931D2400BCFC0032C85B /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
+		9BF2931F2400C4730032C85B /* output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
 		ABFCF0AB24003D6000B29A2D /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		ABFCF0AE2400801F00B29A2D /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		BD09D8BC23F4DB080039A0A2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		9B98780C23F4BD1D00ECCBD5 = {
 			isa = PBXGroup;
 			children = (
+				9BF2931F2400C4730032C85B /* output.txt */,
 				9BC009D523FF6110009EE5A5 /* JSONfiles */,
 				9B98781723F4BD1D00ECCBD5 /* RenterProjectW2020MAD3004 */,
 				9B98781623F4BD1D00ECCBD5 /* Products */,
