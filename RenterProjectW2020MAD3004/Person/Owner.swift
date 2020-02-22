@@ -23,8 +23,6 @@ class Owner : Person
     var companyTitle: String
     var url: String
     var vehicleList = [String: Vehicle]()
-       
-    
     
     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?,  userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
     {
@@ -40,7 +38,6 @@ class Owner : Person
         self.url = url
     }
     
-   
     convenience init(ownerDict: [String: Any]) throws{
         
        guard let id =  ownerDict["id"] as? String else {
