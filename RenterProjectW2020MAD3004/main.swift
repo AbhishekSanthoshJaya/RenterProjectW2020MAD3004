@@ -14,21 +14,24 @@ var motorCyclesArray = motercyleReader.read()
 var busReader = JsonHandler(fileName:"BusData")
 var busArray = busReader.read()
 
-var CarObjects = Array<Car>()
-//if let motorCyclesArray = motercyleReader.read(){
-//    for motorCycleDict in motorCyclesArray{
-//
-//        do{
-//            let mm = try MotorCycle(motorCycleDict: motorCycleDict)
-//            mm.display()
-//            print("*****")
-//        }
-//        catch JsonValidationError.isNotValidInput(let msgg){
-//            print("Could not create object. Error while reading from json: ")
-//            print(msgg)
-//        }
-//    }
-//}
+//-------------  ARRAY OF MOTORCYCLE OBJECTS -------------
+var mcObjects = Array<MotorCycle>()
+if let motorCyclesArray = motercyleReader.read(){
+    for motorCycleDict in motorCyclesArray{
+
+        do{
+            let mc = try MotorCycle(motorCycleDict: motorCycleDict)
+            mcObjects.append(mc)
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+    }
+}
+mcObjects[0].display()
+
+//-------------  ARRAY OF BUS OBJECTS -------------
 var busObjects = Array<Bus>()
 if let busArray = busReader.read(){
     for busDict in busArray {
@@ -42,7 +45,7 @@ if let busArray = busReader.read(){
         }
     }
 }
-busObjects[0].display()
+//busObjects[0].display()
 
 //var carReader = JsonHandler(fileName:"CarData")
 //var carArray = carReader.read()
