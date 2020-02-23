@@ -162,7 +162,7 @@ class Customer : Person
       }
       else 
       {
-        vehicleRents.updateValue(vehicle,forkey: vehicleId)
+        vehicleRents.updateValue(vehicle,forKey: vehicleId)
       }
     }
 

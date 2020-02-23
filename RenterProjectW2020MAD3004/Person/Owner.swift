@@ -172,7 +172,7 @@ class Owner : Person
       }
       else 
       {
-        vehicleList.updateValue(vehicle,forkey: vehicleId)
+        vehicleList.updateValue(vehicle,forKey: vehicleId)
       }
     }
 }
