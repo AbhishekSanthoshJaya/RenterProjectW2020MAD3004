@@ -45,7 +45,15 @@ public class Contact
     
     internal init(mobileNumber: String, emailId: String, address: Address)
        {
-        self.mobileNumber = mobileNumber
+        if(mobileNumber.count == 10)
+             {
+           self.mobileNumber = mobileNumber
+             }
+           else
+             {
+             print("\nTHIS MOBILE NUMBER IS NOT VALID: \(mobileNumber)")
+             exit(0)
+        }
         self.address = address
         self.emailId = emailId
         if isValid(emailAddressString: self.emailId)
