@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-
 func ageCalculation(birthDate: String) -> Int
 {
     let formattedDate = DateFormatter()
