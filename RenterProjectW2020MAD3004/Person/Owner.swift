@@ -156,20 +156,22 @@ class Owner : Person
         print("Age            : \(age)")
         print("Username       : \(userName)")
         print("Vehicles Owned :\n")
-        for i in vehicleRents{
+        for i in vehicleRent
+        {
           print("\t\t")
           print(i.value.display())
         }
     }
 
-    func addVehicle(vehicleId: String, vehicle: Vehicle){
+    func addVehicle(vehicleId: String, vehicle: Vehicle)
+    {
       if vehicleRent.keys.contains(vehicleId)
       {
         print("\nERROR! VEHICLE ALREADY IN LIST")
       }
       else 
       {
-        vehicleRents.updateValue(vehicle,forkey: vehicleId)
+        vehicleRent.updateValue(vehicle,forkey: vehicleId)
       }
     }
 }
