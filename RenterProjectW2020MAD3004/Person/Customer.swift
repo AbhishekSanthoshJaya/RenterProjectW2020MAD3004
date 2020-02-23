@@ -9,8 +9,7 @@
 import Foundation
 
 class Customer : Person
-{ 
-    
+{
     var gender: Gender
     var id: String
     var firstName: String

@@ -11,12 +11,12 @@ import Foundation
 class Owner : Person
 {
     
-    var age: Int = 0
+    var age: Int
     var id: String
     var firstName: String
     var lastName: String
     var gender: Gender
-    var birthDate: Date?
+    var birthDate: String
     var userName: String
     var password: String
     var contact: Contact
@@ -24,13 +24,15 @@ class Owner : Person
     var url: String
     var vehicleList = [String: Vehicle]()
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?,  userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: String,
+         age: Int,userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
+        self.age = ageCalculation(birthDate: birthDate)
         self.userName = userName
         self.password = password
         self.contact = contact
