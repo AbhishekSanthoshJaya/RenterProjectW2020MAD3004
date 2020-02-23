@@ -7,7 +7,7 @@
 //
 
 import Foundation
- static func ageCalculation(birthDate: String) -> Int
+public func ageCalculation(birthDate: String) -> Int
 {
     let formattedDate = DateFormatter()
     formattedDate.dateFormat = "dd/MMM/yyyy"
