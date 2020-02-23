@@ -32,7 +32,7 @@
 		BD54FBF423FF23DA00282AD5 /* Gender .swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FBF323FF23DA00282AD5 /* Gender .swift */; };
 		BD54FBF823FF683700282AD5 /* PasswordUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FBF723FF683700282AD5 /* PasswordUtil.swift */; };
 		BD737C052400709D00FADF8E /* (Imported Proj)RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */; };
-		BDD84DFA240219FE0043DD03 /* AgeCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD84DF9240219FE0043DD03 /* AgeCalculation.swift */; };
+		BDD84DFA240219FE0043DD03 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD84DF9240219FE0043DD03 /* Calculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,7 +90,7 @@
 		BD54FBF323FF23DA00282AD5 /* Gender .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gender .swift"; sourceTree = "<group>"; };
 		BD54FBF723FF683700282AD5 /* PasswordUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUtil.swift; sourceTree = "<group>"; };
 		BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "(Imported Proj)RNCryptor.swift"; sourceTree = "<group>"; };
-		BDD84DF9240219FE0043DD03 /* AgeCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeCalculation.swift; sourceTree = "<group>"; };
+		BDD84DF9240219FE0043DD03 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +188,7 @@
 				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
 				BD54FBF723FF683700282AD5 /* PasswordUtil.swift */,
 				BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */,
-				BDD84DF9240219FE0043DD03 /* AgeCalculation.swift */,
+				BDD84DF9240219FE0043DD03 /* Calculation.swift */,
 				ABFCF0AB24003D6000B29A2D /* FileHandler.swift */,
 			);
 			path = Util;
@@ -272,7 +272,7 @@
 				BD54FBF423FF23DA00282AD5 /* Gender .swift in Sources */,
 				9B98781923F4BD1D00ECCBD5 /* main.swift in Sources */,
 				9B023FA123F608250086B6F1 /* MotorCycle.swift in Sources */,
-				BDD84DFA240219FE0043DD03 /* AgeCalculation.swift in Sources */,
+				BDD84DFA240219FE0043DD03 /* Calculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
