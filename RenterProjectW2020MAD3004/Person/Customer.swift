@@ -15,20 +15,21 @@ class Customer : Person
     var id: String
     var firstName: String
     var lastName: String
-    var birthDate: Date?
-    var age: Int = 0
+    var birthDate: String
+    var age: Int
     var userName: String
     var password: String
     var contact: Contact
     private lazy var vehicleRents = [String: Vehicle]()
 
-     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, userName: String, password: String, contact: Contact)
+     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: String, age: Int, userName: String, password: String, contact: Contact)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
+        self.age = ageCalculation(birthDate: birthDate)
         self.userName = userName
         self.password = password
         self.contact = contact
