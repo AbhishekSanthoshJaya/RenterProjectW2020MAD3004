@@ -16,7 +16,7 @@ class Owner : Person
     var firstName: String
     var lastName: String
     var gender: Gender
-    var birthDate: String
+    var birthDate: String?
     var userName: String
     var password: String
     var contact: Contact
@@ -24,7 +24,7 @@ class Owner : Person
     var url: String
     var vehicleList = [String: Vehicle]()
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: String,
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: String?,
          age: Int,userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
     {
         self.id = id
