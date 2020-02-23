@@ -28,7 +28,7 @@ class Customer : Person
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
-        self.age = ageCalculation(birthDate: birthDate)
+        self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided")
         self.userName = userName
         self.password = password
         self.contact = contact
