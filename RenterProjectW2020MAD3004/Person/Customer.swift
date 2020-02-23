@@ -146,8 +146,24 @@ class Customer : Person
         print("Date of Birth  : \(birthDate ?? "No Birth Date Provided")")
         print("Age            : \(self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided"))")
         print("Username       : \(userName)")
-
+        for i in vehicleRents
+        {
+          print("\t\t")
+          print(i.value.display())
+        }
 
     }
-    //ToDo add a dictionary for the vehicle rent
+  
+  func addVehicleRents(vehicleId: String, vehicle: Vehicle)
+    {
+      if vehicleRents.keys.contains(vehicleId)
+      {
+        print("\nERROR! VEHICLE ALREADY RENTED")
+      }
+      else 
+      {
+        vehicleRents.updateValue(vehicle,forkey: vehicleId)
+      }
+    }
+
 }
