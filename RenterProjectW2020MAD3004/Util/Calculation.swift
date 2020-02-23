@@ -7,14 +7,14 @@
 //
 
 import Foundation
-public func ageCalculation(birthDate: String) -> Int
+public func ageCalculation(birthDate: Date) -> Int
 {
     let formattedDate = DateFormatter()
     formattedDate.dateFormat = "dd/MMM/yyyy"
-    let dateOfBirth = formattedDate.date(from: birthDate)
+//    let dateOfBirth = formattedDate.date(from: birthDate)
     let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
     let now = Date()
-    let calcAge = calendar.components(.year, from: dateOfBirth!, to: now, options: [])
+    let calcAge = calendar.components(.year, from: birthDate, to: now, options: [])
     let age = calcAge.year
     return age!
 }

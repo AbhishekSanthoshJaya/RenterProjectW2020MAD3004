@@ -14,14 +14,14 @@ class Customer : Person
     var id: String
     var firstName: String
     var lastName: String
-    var birthDate: String?
-    var age: Int
+    var birthDate: Date?
+    var age: Int =  0
     var userName: String
     var password: String
     var contact: Contact
     private lazy var vehicleRents = [String: Vehicle]()
 
-     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: String?, userName: String, password: String, contact: Contact)
+     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, userName: String, password: String, contact: Contact)
     {
         self.id = id
         self.firstName = firstName
@@ -143,8 +143,8 @@ class Customer : Person
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
-        print("Date of Birth  : \(birthDate ?? "No Birth Date Provided")")
-        print("Age            : \(self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided"))")
+        print("Date of Birth  : \(birthDate ?? Date())")
+        print("Age            : \( self.age = ageCalculation(birthDate: birthDate ?? Date()))")
         print("Username       : \(userName)")
 
 

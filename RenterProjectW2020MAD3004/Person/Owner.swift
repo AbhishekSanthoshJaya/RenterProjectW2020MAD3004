@@ -11,12 +11,12 @@ import Foundation
 class Owner : Person
 {
     
-    var age: Int
+    var age: Int = 0 
     var id: String
     var firstName: String
     var lastName: String
     var gender: Gender
-    var birthDate: String?
+    var birthDate: Date?
     var userName: String
     var password: String
     var contact: Contact
@@ -24,7 +24,7 @@ class Owner : Person
     var url: String
     var vehicleList = [String: Vehicle]()
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: String?,
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?,
         userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
     {
         self.id = id
@@ -153,8 +153,8 @@ class Owner : Person
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
-        print("Date of Birth  : \(birthDate ?? "No Birth Date Provided")")
-        print("Age            : \( self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided"))")
+        print("Date of Birth  : \(birthDate ?? Date())")
+        print("Age            : \( self.age = ageCalculation(birthDate: birthDate ?? Date()))")
         print("Username       : \(userName)")
         print("Vehicles Owned :\n")
         for i in vehicleRent

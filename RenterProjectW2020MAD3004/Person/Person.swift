@@ -15,7 +15,7 @@ protocol Person : IDisplayDelegate
      var firstName: String {get set}
      var lastName: String {get set}
      var gender: Gender {get set}
-     var birthDate: String? {get set}
+     var birthDate: Date? {get set}
      var age: Int {get set}
      var userName: String {get set}
      var password: String {get set}
