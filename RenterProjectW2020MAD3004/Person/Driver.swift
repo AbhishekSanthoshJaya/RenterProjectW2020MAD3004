@@ -23,14 +23,13 @@ class Driver : Person
      var isDrivingHistoryClean: Bool
      var salary: Float
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: String?,  age:Int,userName: String, password: String, contact: Contact, drivingLicenceNumber: String, isDrivingHistoryClean: Bool, salary: Float)
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: String? , userName: String, password: String, contact: Contact, drivingLicenceNumber: String, isDrivingHistoryClean: Bool, salary: Float)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
-        self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided")
         self.userName = userName
         self.password = password
         self.contact = contact
@@ -163,7 +162,7 @@ class Driver : Person
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
         print("Date of Birth  : \(birthDate ?? "No Birth Date Provided")")
-        print("Age            : \(age)")
+        print("Age            : \( self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided"))")
         print("Username       : \(userName)")
         print("License Number : \(drivingLicenceNumber)")
         print("Clean History  : \(isDrivingHistoryClean)")

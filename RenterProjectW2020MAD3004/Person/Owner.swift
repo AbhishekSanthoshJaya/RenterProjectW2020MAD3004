@@ -25,14 +25,13 @@ class Owner : Person
     var vehicleList = [String: Vehicle]()
     
     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: String?,
-         age: Int,userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
+        userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
-        self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided")
         self.userName = userName
         self.password = password
         self.contact = contact
@@ -155,7 +154,7 @@ class Owner : Person
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
         print("Date of Birth  : \(birthDate ?? "No Birth Date Provided")")
-        print("Age            : \(age)")
+        print("Age            : \( self.age = ageCalculation(birthDate: birthDate ?? "No Birth Date Provided"))")
         print("Username       : \(userName)")
         print("Vehicles Owned :\n")
         for i in vehicleRent
