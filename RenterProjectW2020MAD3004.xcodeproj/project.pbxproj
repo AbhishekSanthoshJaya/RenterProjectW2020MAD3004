@@ -32,7 +32,8 @@
 		BD54FBF423FF23DA00282AD5 /* Gender .swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FBF323FF23DA00282AD5 /* Gender .swift */; };
 		BD54FBF823FF683700282AD5 /* PasswordUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FBF723FF683700282AD5 /* PasswordUtil.swift */; };
 		BD737C052400709D00FADF8E /* (Imported Proj)RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */; };
-		BDD84DFA240219FE0043DD03 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD84DF9240219FE0043DD03 /* Calculation.swift */; };
+		BDD84DFA240219FE0043DD03 /* ageCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD84DF9240219FE0043DD03 /* ageCalculation.swift */; };
+		BDD84DFC240236930043DD03 /* Email & Phone validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD84DFB240236930043DD03 /* Email & Phone validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,7 +91,8 @@
 		BD54FBF323FF23DA00282AD5 /* Gender .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gender .swift"; sourceTree = "<group>"; };
 		BD54FBF723FF683700282AD5 /* PasswordUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUtil.swift; sourceTree = "<group>"; };
 		BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "(Imported Proj)RNCryptor.swift"; sourceTree = "<group>"; };
-		BDD84DF9240219FE0043DD03 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
+		BDD84DF9240219FE0043DD03 /* ageCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ageCalculation.swift; sourceTree = "<group>"; };
+		BDD84DFB240236930043DD03 /* Email & Phone validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Email & Phone validation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +190,9 @@
 				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
 				BD54FBF723FF683700282AD5 /* PasswordUtil.swift */,
 				BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */,
-				BDD84DF9240219FE0043DD03 /* Calculation.swift */,
+				BDD84DF9240219FE0043DD03 /* ageCalculation.swift */,
 				ABFCF0AB24003D6000B29A2D /* FileHandler.swift */,
+				BDD84DFB240236930043DD03 /* Email & Phone validation.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				BD737C052400709D00FADF8E /* (Imported Proj)RNCryptor.swift in Sources */,
 				9BF2931E2400BCFC0032C85B /* VehicleRent.swift in Sources */,
 				9B023FA323F608480086B6F1 /* Bus.swift in Sources */,
+				BDD84DFC240236930043DD03 /* Email & Phone validation.swift in Sources */,
 				BD09D8C323F4F8200039A0A2 /* Address.swift in Sources */,
 				BD54FBF823FF683700282AD5 /* PasswordUtil.swift in Sources */,
 				BD09D8C923F4FE7E0039A0A2 /* Driver.swift in Sources */,
@@ -272,7 +276,7 @@
 				BD54FBF423FF23DA00282AD5 /* Gender .swift in Sources */,
 				9B98781923F4BD1D00ECCBD5 /* main.swift in Sources */,
 				9B023FA123F608250086B6F1 /* MotorCycle.swift in Sources */,
-				BDD84DFA240219FE0043DD03 /* Calculation.swift in Sources */,
+				BDD84DFA240219FE0043DD03 /* ageCalculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
