@@ -44,5 +44,6 @@
   "wifiAvailability": false,
   "standingCapacity": 40,
   "baseRate": 250,
-  "perKmRate": 7
+  "perKmRate": 7,
+  "driverId": "",
 }]

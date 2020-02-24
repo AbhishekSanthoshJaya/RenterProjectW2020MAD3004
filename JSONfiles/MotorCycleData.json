@@ -38,5 +38,6 @@
   "topSpeed": 86,
   "mileage": 12,
   "baseRate": 50,
-  "perKmRate": 1
+  "perKmRate": 1,
+  "driverId": ""
 }]

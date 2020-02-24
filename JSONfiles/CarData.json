@@ -10,7 +10,7 @@
   "carType": "Satterfield-Toy",
   "carColor": "Crimson",
   "baseRate": 100,
-  "perKmRate": 5
+  "perKmRate": 5,
   "driverId": "1"
 }, {
   "vehicleId": "YV440MBK0F1011572",
@@ -24,7 +24,7 @@
   "carType": "McKenzie-Schulist",
   "carColor": "Maroon",
   "baseRate": 100,
-  "perKmRate": 5
+  "perKmRate": 5,
   "driverId": "2"
 }, {
   "vehicleId": "1D7RB1CT2BS745200",
@@ -38,5 +38,7 @@
   "carType": "Mraz, Stark and Heathcote",
   "carColor": "Mauv",
   "baseRate": 100,
-  "perKmRate": 5
+  "perKmRate": 5,
+  "driverId" : ""
+  
 }]

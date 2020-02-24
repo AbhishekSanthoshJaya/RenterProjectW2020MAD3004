@@ -22,6 +22,7 @@ class Car: Vehicle
     var perKmRate: Float
     var carType: String
     var carColor: String
+    
    
     init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType, carColor: String, carType: String, isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float)
   {
@@ -116,6 +117,14 @@ class Car: Vehicle
                 memberName: "perKmRate")
         }
         
+        guard let driver = carDict["driverId"] as? String else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "driverId")
+        }
+        var driverManager = ObjectManager.getInstance()
+        var driverObj = driverManager.getPersonById(id: driver, typeName: Driver.typeSName)
+        
       
         self.init(vehicleId: vehicleId ,
                   description: description,
@@ -129,7 +138,7 @@ class Car: Vehicle
                    numberOfSeat: numberOfSeat ,
                    baseRate: baseRate ,
                    perKmRate: perKmRate
-                    )
+                   )
     }
     
     func display()
