@@ -8,17 +8,31 @@
 
 import Foundation
 
-protocol Person : IDisplayDelegate, TypeName
+class Person : IDisplayDelegate, TypeName
 {
-     func display()
-     var id: String {get set}
-     var firstName: String {get set}
-     var lastName: String {get set}
-     var gender: Gender {get set}
-     var birthDate: Date? {get set}
-     var age: Int {get set}
-     var userName: String {get set}
-     var password: String {get set}
-     var contact: Contact {get set}
+    func display(){
+        print("Person")
+    }
+     var id: String
+     var firstName: String
+     var lastName: String
+     var gender: Gender
+     var birthDate: Date?
+     var age: Int
+     var userName: String
+     var password: String
+     var contact: Contact
+    
+    init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?,age:Int, userName: String, password: String, contact: Contact) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.gender = gender
+        self.birthDate = birthDate
+        self.age = age
+        self.userName = userName
+        self.password = password
+        self.contact = contact
+    }
 }
 
