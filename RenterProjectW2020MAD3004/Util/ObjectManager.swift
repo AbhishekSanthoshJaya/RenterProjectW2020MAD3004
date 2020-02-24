@@ -24,8 +24,8 @@ struct ObjectManager{
         return obj
     }
     
-    static func getVehicleById( id: String) -> Vehicle? {
-        for (_,vehicle) in vehicleObjects{
+    func getVehicleById( id: String) -> Vehicle? {
+        for (_,vehicle) in ObjectManager.vehicleObjects{
             if vehicle.vehicleId == id{
                 return vehicle
             }
@@ -33,8 +33,8 @@ struct ObjectManager{
         return nil
     }
     
-    static func getPersonById( id: String) -> Person? {
-        for (_,person) in personObjects{
+    func getPersonById( id: String) -> Person? {
+        for (_,person) in ObjectManager.personObjects{
             if person.id == id{
                 return person
             }
@@ -42,8 +42,8 @@ struct ObjectManager{
         return nil
     }
     
-    static func getRentById( id: String) -> VehicleRent? {
-        for (_,rent) in rentObjects{
+    func getRentById( id: String) -> VehicleRent? {
+        for (_,rent) in ObjectManager.rentObjects{
             if rent.id == id{
                 return rent
             }

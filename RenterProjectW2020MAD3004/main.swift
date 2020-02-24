@@ -152,96 +152,96 @@ if let customerArray = customerReader.read(){
 
 
 
-
+var vehicleRentManger = ObjectManager.getInstance()
 //-------------  ARRAY OF VEHICLE RENT OBJECTS -------------
 var vehicleRentObjects = Array<VehicleRent>()
 
 // rent for car(SCBLF44J47C415338)
-guard var vr1Vehicle = getVehicleById(id: "SCBLF44J47C415338") else {
+guard var vr1Vehicle = vehicleManger.getVehicleById(id: "SCBLF44J47C415338") else {
     print("no vehicle found")
     exit(1)
 }
 var vr1 = VehicleRent(rentStartDate: "2019-04-22".toDate(),
                       rentEndDate:"2019-04-24".toDate(),
                       vehicle: vr1Vehicle)
-vehicleRentObjects.append(vr1)
+vehicleRentManger.addObject(vehicleRent: vr1)
 
 
 // rent for bus(3VW517AT7FM076063)
-guard var vr2Vehicle = getVehicleById(id: "3VW517AT7FM076063") else {
+guard var vr2Vehicle = vehicleManger.getVehicleById(id: "3VW517AT7FM076063") else {
     print("no vehicle found")
     exit(1)
 }
 var vr2 = VehicleRent(rentStartDate: "2019-09-22".toDate(),
                       rentEndDate:"2019-10-2".toDate(),
                       vehicle: vr2Vehicle)
-vehicleRentObjects.append(vr2)
+vehicleRentManger.addObject(vehicleRent: vr2)
 
 
 
 // rent for MotorCycle(1GKS1CE02ER511717)
-guard var vr3Vehicle = getVehicleById(id: "1GKS1CE02ER511717") else {
+guard var vr3Vehicle = vehicleManger.getVehicleById(id: "1GKS1CE02ER511717") else {
     print("no vehicle found")
     exit(1)
 }
 var vr3 = VehicleRent(rentStartDate: "2020-01-22".toDate(),
                       rentEndDate:"2020-1-22".toDate(),
                       vehicle: vr3Vehicle)
-vehicleRentObjects.append(vr3)
+vehicleRentManger.addObject(vehicleRent: vr3)
 
 
 // rent for MotorCycle(WAUVFAFH4DN164011)
-guard var vr4Vehicle = getVehicleById(id: "WAUVFAFH4DN164011") else {
+guard var vr4Vehicle = vehicleManger.getVehicleById(id: "WAUVFAFH4DN164011") else {
     print("no vehicle found")
     exit(1)
 }
 var vr4 = VehicleRent(rentStartDate: "2020-02-22".toDate(),
                       rentEndDate:"2020-2-29".toDate(),
                       vehicle: vr4Vehicle)
-vehicleRentObjects.append(vr4)
+vehicleRentManger.addObject(vehicleRent: vr4)
 
 
 // rent for Bus(WAUKF98E67A648746)
-guard var vr5Vehicle = getVehicleById(id: "WAUKF98E67A648746") else {
+guard var vr5Vehicle = vehicleManger.getVehicleById(id: "WAUKF98E67A648746") else {
     print("no vehicle found")
     exit(1)
 }
 var vr5 = VehicleRent(rentStartDate: "2020-02-19".toDate(),
                       rentEndDate:"2020-3-29".toDate(),
                       vehicle: vr5Vehicle)
-vehicleRentObjects.append(vr5)
+vehicleRentManger.addObject(vehicleRent: vr5)
 
 
 // rent for Bus(4T1BD1EB5DU398278)
-guard var vr6Vehicle = getVehicleById(id: "4T1BD1EB5DU398278") else {
+guard var vr6Vehicle = vehicleManger.getVehicleById(id: "4T1BD1EB5DU398278") else {
     print("no vehicle found")
     exit(1)
 }
 var vr6 = VehicleRent(rentStartDate: "2020-01-19".toDate(),
                       rentEndDate:"2020-1-29".toDate(),
                       vehicle: vr6Vehicle)
-vehicleRentObjects.append(vr6)
+vehicleRentManger.addObject(vehicleRent: vr6)
 
 // rent for car(YV440MBK0F1011572)
-guard var vr7Vehicle = getVehicleById(id: "YV440MBK0F1011572") else {
+guard var vr7Vehicle = vehicleManger.getVehicleById(id: "YV440MBK0F1011572") else {
     print("no vehicle found")
     exit(1)
 }
 var vr7 = VehicleRent(rentStartDate: "2019-01-19".toDate(),
                       rentEndDate:"2019-1-23".toDate(),
                       vehicle: vr7Vehicle)
-vehicleRentObjects.append(vr7)
+vehicleRentManger.addObject(vehicleRent: vr7)
 
 
 // rent for car(1D7RB1CT2BS745200)
-guard var vr8Vehicle = getVehicleById(id: "1D7RB1CT2BS745200") else {
+guard var vr8Vehicle = vehicleManger.getVehicleById(id: "1D7RB1CT2BS745200") else {
     print("no vehicle found")
     exit(1)
 }
 var vr8 = VehicleRent(rentStartDate: "2020-01-19".toDate(),
                       rentEndDate:"2020-1-23".toDate(),
                       vehicle: vr8Vehicle)
-vehicleRentObjects.append(vr7)
+vehicleRentManger.addObject(vehicleRent: vr8)
 
 
 vehicleManger.display()
