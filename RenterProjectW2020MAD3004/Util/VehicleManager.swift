@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Singel
+// Singleton struct to manage vehicles
 struct VehicleManager{
     private init(){}
     
@@ -17,5 +17,14 @@ struct VehicleManager{
     private static var obj = VehicleManager()
     static func getInstance() -> VehicleManager{
         return obj
+    }
+    
+    static func getVehicleById( id: String) -> Vehicle? {
+        for vehicle in vehicleObjects{
+            if vehicle.vehicleId == id{
+                return vehicle
+            }
+        }
+        return nil
     }
 }
