@@ -10,7 +10,7 @@ import Foundation
 
 class Driver : Person
 {
-     var age: Int = 0 
+     var age: Int
      var id: String
      var firstName: String
      var lastName: String
@@ -23,13 +23,14 @@ class Driver : Person
      var isDrivingHistoryClean: Bool
      var salary: Float
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date? , userName: String, password: String, contact: Contact, drivingLicenceNumber: String, isDrivingHistoryClean: Bool, salary: Float)
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date? , userName: String,age: Int, password: String, contact: Contact, drivingLicenceNumber: String, isDrivingHistoryClean: Bool, salary: Float)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
+        self.age = age
         self.userName = userName
         self.password = password
         self.contact = contact
@@ -148,6 +149,7 @@ class Driver : Person
                    gender: gender,
                    birthDate: birthDate,
                    userName: userName,
+                   age: ageCalculation(birthDate: birthDate),
                    password: password,
                    contact: contact!,
                    drivingLicenceNumber: drivingLicenceNumber,
@@ -162,7 +164,7 @@ class Driver : Person
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
         print("Date of Birth  : \(birthDate ?? Date())")
-        print("Age            : \( self.age = ageCalculation(birthDate: birthDate ?? Date()))")
+        print("Age            : \(age)")
         print("Username       : \(userName)")
         print("License Number : \(drivingLicenceNumber)")
         print("Clean History  : \(isDrivingHistoryClean)")
