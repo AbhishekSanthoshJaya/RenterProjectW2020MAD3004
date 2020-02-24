@@ -21,7 +21,8 @@
   ,
   "companyTitle": "Jerde LLC",
   "url": "google.co.jp",
-  "password": "BsfzUuGo"
+  "password": "BsfzUuGo",
+  "vehicles" : ["SCBLF44J47C415338","YV440MBK0F1011572"]
 }, {
   "id": "2",
   "firstName": "Karissa",
