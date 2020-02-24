@@ -63,7 +63,7 @@ if let busArray = busReader.read(){
 }
 //busObjects[0].display()
 
-//-------------  ARRAY OF BUS OBJECTS -------------
+//-------------  ARRAY OF CAR OBJECTS -------------
 var carReader = JsonHandler(fileName:"CarData")
 var carArray = carReader.read()
 
@@ -141,5 +141,34 @@ driverObjects[1].display()
 }
 
 
+
+func getVehicleById(id: String) -> Vehicle? {
+    func searchObject(objArr: [Vehicle], id: String) -> Vehicle? {
+        for vehicle in objArr{
+            if vehicle.vehicleId == id{
+                return vehicle
+            }
+        }
+        return nil
+    }
+    
+    if let carFound = searchObject(objArr: carObjects, id: id){
+        return carFound
+    }
+    if let busFound = searchObject(objArr: busObjects, id: id){
+        return busFound
+    }
+    if let mcFound = searchObject(objArr: mcObjects, id: id){
+        return mcFound
+    }
+    return nil
+}
+
+
 //-------------  ARRAY OF VEHICLE OBJECTS -------------
+
+// rent for
 var vehicleRentObjects = Array<VehicleRent>()
+//var vr1 = VehicleRent(rentStartDate: "2019-04-22".toDate(),
+//                      rentEndDate:"2019-04-24".toDate(),
+//                      vehicle: )
