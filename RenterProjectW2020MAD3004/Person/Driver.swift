@@ -30,7 +30,7 @@ class Driver : Person
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
-        self.age = age
+        self.age = ageCalculation(birthDate: birthDate ?? Date())
         self.userName = userName
         self.password = password
         self.contact = contact
