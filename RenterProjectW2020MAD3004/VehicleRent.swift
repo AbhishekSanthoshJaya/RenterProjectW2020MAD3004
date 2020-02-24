@@ -14,16 +14,17 @@ class VehicleRent: IDisplayDelegate, TypeName
     var rentStartDate: Date
     var rentEndDate: Date
     var numberOfDays: Int {get {self.calculateNumberOfDays()}}
-    var kmDriven: Int = 0
+    var kmDriven: Float = 0
     var totalBill: Float = 0
     var vehicle: Vehicle
     
-    init(id: String,rentStartDate: Date, rentEndDate: Date, vehicle: Vehicle){
+    init(id: String,rentStartDate: Date, rentEndDate: Date, vehicle: Vehicle, kmDriven: Float){
         self.id = id
         self.rentEndDate = rentEndDate
         self.rentStartDate = rentStartDate
         self.vehicle = vehicle
         self.totalBill = calculateTotalBill()
+        self.kmDriven = kmDriven
     }
     
    func calculateNumberOfDays() -> Int

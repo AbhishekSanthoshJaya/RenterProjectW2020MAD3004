@@ -152,7 +152,7 @@ guard var vr1Vehicle = vehicleManger.getVehicleById(id: "SCBLF44J47C415338") els
 var vr1 = VehicleRent(id:"1",
                       rentStartDate: "2019-04-22".toDate(),
                       rentEndDate:"2019-04-24".toDate(),
-                      vehicle: vr1Vehicle)
+                      vehicle: vr1Vehicle, kmDriven: 22)
 vehicleRentManger.addObject(vehicleRent: vr1)
 vehicleRentObjects.append(vr1)
 
@@ -165,7 +165,7 @@ guard var vr2Vehicle = vehicleManger.getVehicleById(id: "3VW517AT7FM076063") els
 var vr2 = VehicleRent(id:"2",
                       rentStartDate: "2019-09-22".toDate(),
                       rentEndDate:"2019-10-2".toDate(),
-                      vehicle: vr2Vehicle)
+                      vehicle: vr2Vehicle, kmDriven: 34)
 vehicleRentManger.addObject(vehicleRent: vr2)
 vehicleRentObjects.append(vr2)
 
@@ -179,7 +179,7 @@ guard var vr3Vehicle = vehicleManger.getVehicleById(id: "1GKS1CE02ER511717") els
 var vr3 = VehicleRent(id:"3",
                       rentStartDate: "2020-01-22".toDate(),
                       rentEndDate:"2020-1-22".toDate(),
-                      vehicle: vr3Vehicle)
+                      vehicle: vr3Vehicle, kmDriven: 11)
 vehicleRentManger.addObject(vehicleRent: vr3)
 vehicleRentObjects.append(vr3)
 
@@ -191,7 +191,7 @@ guard var vr4Vehicle = vehicleManger.getVehicleById(id: "WAUVFAFH4DN164011") els
 var vr4 = VehicleRent(id:"4",
                       rentStartDate: "2020-02-22".toDate(),
                       rentEndDate:"2020-2-29".toDate(),
-                      vehicle: vr4Vehicle)
+                      vehicle: vr4Vehicle, kmDriven: 55)
 vehicleRentManger.addObject(vehicleRent: vr4)
 vehicleRentObjects.append(vr4)
 
@@ -204,7 +204,7 @@ guard var vr5Vehicle = vehicleManger.getVehicleById(id: "WAUKF98E67A648746") els
 var vr5 = VehicleRent(id:"5",
                       rentStartDate: "2020-02-19".toDate(),
                       rentEndDate:"2020-3-29".toDate(),
-                      vehicle: vr5Vehicle)
+                      vehicle: vr5Vehicle, kmDriven: 45)
 vehicleRentManger.addObject(vehicleRent: vr5)
 vehicleRentObjects.append(vr5)
 
@@ -217,7 +217,7 @@ guard var vr6Vehicle = vehicleManger.getVehicleById(id: "4T1BD1EB5DU398278") els
 var vr6 = VehicleRent(id:"6",
                       rentStartDate: "2020-01-19".toDate(),
                       rentEndDate:"2020-1-29".toDate(),
-                      vehicle: vr6Vehicle)
+                      vehicle: vr6Vehicle,kmDriven: 90)
 vehicleRentManger.addObject(vehicleRent: vr6)
 vehicleRentObjects.append(vr6)
 
@@ -229,7 +229,7 @@ guard var vr7Vehicle = vehicleManger.getVehicleById(id: "YV440MBK0F1011572") els
 var vr7 = VehicleRent(id:"7",
                       rentStartDate: "2019-01-19".toDate(),
                       rentEndDate:"2019-1-23".toDate(),
-                      vehicle: vr7Vehicle)
+                      vehicle: vr7Vehicle, kmDriven: 3)
 vehicleRentManger.addObject(vehicleRent: vr7)
 vehicleRentObjects.append(vr7)
 
@@ -242,7 +242,8 @@ guard var vr8Vehicle = vehicleManger.getVehicleById(id: "1D7RB1CT2BS745200") els
 var vr8 = VehicleRent(id:"8",
                       rentStartDate: "2020-01-19".toDate(),
                       rentEndDate:"2020-1-23".toDate(),
-                      vehicle: vr8Vehicle)
+                      vehicle: vr8Vehicle,
+                    kmDriven: 34)
 vehicleRentManger.addObject(vehicleRent: vr8)
 vehicleRentObjects.append(vr8)
 
