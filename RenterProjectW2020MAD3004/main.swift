@@ -165,15 +165,23 @@ func getVehicleById(id: String) -> Vehicle? {
     if let mcFound = searchObject(objArr: mcObjects, id: id){
         return mcFound
     }
+    print("Couldnt find vehicle with id : \(id)")
     return nil
 }
 
-print(getVehicleById(id: "SCBLF44J47C415338"))
 
 //-------------  ARRAY OF VEHICLE OBJECTS -------------
-
-// rent for
 var vehicleRentObjects = Array<VehicleRent>()
-//var vr1 = VehicleRent(rentStartDate: "2019-04-22".toDate(),
-//                      rentEndDate:"2019-04-24".toDate(),
-//                      vehicle: )
+
+// rent for car(SCBLF44J47C415338)
+guard var vr1Vehicle = getVehicleById(id: "SCBLF44J47C415338") else {
+    print("no vehicle found")
+    exit(1)
+}
+var vr1 = VehicleRent(rentStartDate: "2019-04-22".toDate(),
+                      rentEndDate:"2019-04-24".toDate(),
+                      vehicle: vr1Vehicle)
+vehicleRentObjects.append(vr1)
+
+
+
