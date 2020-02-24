@@ -26,6 +26,9 @@
 		ABFCF0B1240419FC00B29A2D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0B0240419FC00B29A2D /* String+Extensions.swift */; };
 		ABFCF0B32404291600B29A2D /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0B22404291600B29A2D /* ObjectManager.swift */; };
 		ABFCF0B524043F7500B29A2D /* TypeNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0B424043F7500B29A2D /* TypeNameProtocol.swift */; };
+		ABFCF0B82404750E00B29A2D /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0B72404750E00B29A2D /* Float+Extensions.swift */; };
+		ABFCF0BA2404754800B29A2D /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0B92404754800B29A2D /* Double+Extensions.swift */; };
+		ABFCF0BC2404757400B29A2D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCF0BB2404757400B29A2D /* Date+Extensions.swift */; };
 		BD09D8BD23F4DB080039A0A2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8BC23F4DB080039A0A2 /* Person.swift */; };
 		BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C023F4F7240039A0A2 /* Contact.swift */; };
 		BD09D8C323F4F8200039A0A2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C223F4F8200039A0A2 /* Address.swift */; };
@@ -87,6 +90,9 @@
 		ABFCF0B0240419FC00B29A2D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		ABFCF0B22404291600B29A2D /* ObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
 		ABFCF0B424043F7500B29A2D /* TypeNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeNameProtocol.swift; sourceTree = "<group>"; };
+		ABFCF0B72404750E00B29A2D /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
+		ABFCF0B92404754800B29A2D /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		ABFCF0BB2404757400B29A2D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		BD09D8BC23F4DB080039A0A2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BD09D8C023F4F7240039A0A2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		BD09D8C223F4F8200039A0A2 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 		9B98781723F4BD1D00ECCBD5 /* RenterProjectW2020MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
+				ABFCF0B6240474F700B29A2D /* Extensions */,
 				9B98781823F4BD1D00ECCBD5 /* main.swift */,
 				ABFCF0AD24007FB500B29A2D /* Exceptions */,
 				BD54FBF623FF680E00282AD5 /* Util */,
@@ -173,6 +180,16 @@
 				ABFCF0AE2400801F00B29A2D /* Validations.swift */,
 			);
 			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		ABFCF0B6240474F700B29A2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABFCF0B72404750E00B29A2D /* Float+Extensions.swift */,
+				ABFCF0B92404754800B29A2D /* Double+Extensions.swift */,
+				ABFCF0BB2404757400B29A2D /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BD09D8CA23F4FFC10039A0A2 /* Person */ = {
@@ -265,13 +282,16 @@
 				9B98782223F4C49200ECCBD5 /* Vehicle.swift in Sources */,
 				ABFCF0B1240419FC00B29A2D /* String+Extensions.swift in Sources */,
 				ABFCF0B32404291600B29A2D /* ObjectManager.swift in Sources */,
+				ABFCF0BC2404757400B29A2D /* Date+Extensions.swift in Sources */,
 				9B98782023F4C09C00ECCBD5 /* IDisplay.swift in Sources */,
 				9B88229123F5F7D000A80D1C /* Car.swift in Sources */,
 				BD09D8C523F4FA1B0039A0A2 /* Owner.swift in Sources */,
 				ABFCF0AF2400801F00B29A2D /* Validations.swift in Sources */,
 				BD09D8C123F4F7240039A0A2 /* Contact.swift in Sources */,
+				ABFCF0BA2404754800B29A2D /* Double+Extensions.swift in Sources */,
 				9B7B1B2A23FCB6CD0054DA26 /* FuelType.swift in Sources */,
 				ABFCF0AC24003D6000B29A2D /* FileHandler.swift in Sources */,
+				ABFCF0B82404750E00B29A2D /* Float+Extensions.swift in Sources */,
 				BD09D8C723F4FD230039A0A2 /* Customer.swift in Sources */,
 				BD737C052400709D00FADF8E /* (Imported Proj)RNCryptor.swift in Sources */,
 				9BF2931E2400BCFC0032C85B /* VehicleRent.swift in Sources */,
