@@ -9,14 +9,14 @@
 import Foundation
 
 enum EmailValidationError: Error{
-    case isNotValidEmail
-    case isEmpty
-    case isNotValidLength
+    case isNotValidEmail(email: String)
+    case isEmpty(email: String)
+    case isNotValidLength(email: String)
 }
 
 enum PhoneNumberValidationError: Error{
-    case voiletsMinLength
-    case voiletsMaxLength
+    case voiletsMinLength(number: String)
+    case voiletsMaxLength(number: String)
 }
 
 public enum JsonValidationError: Error
@@ -29,22 +29,6 @@ public enum JsonValidationError: Error
 struct Validations {
     private static let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     
-    static func email(email: String) throws {
-        
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-        if !emailPred.evaluate(with: email){
-            throw EmailValidationError.isNotValidEmail
-        }
-        
-        if email.isEmpty{
-            throw EmailValidationError.isEmpty
-        }
-        
-        if email.count > 254
-        {
-            throw EmailValidationError.isNotValidLength
-        }
-    }
     
     
     static func mobileNumber(number: String) throws {

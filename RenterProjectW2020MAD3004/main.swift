@@ -135,6 +135,9 @@ if let customerArray = customerReader.read(){
             print("Could not create object. Error while reading from json: ")
             print(msgg)
         }
+        catch{
+            print("Error")
+        }
     }
     
 driverObjects[1].display()

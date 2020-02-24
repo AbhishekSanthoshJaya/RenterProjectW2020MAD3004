@@ -44,29 +44,13 @@ public class Contact
 
     
     internal init(mobileNumber: String, emailId: String, address: Address) throws
-       {
-        if(mobileNumber.count == 10)
-             {
-           self.mobileNumber = mobileNumber
-             }
-           else
-             {
-             print("\nTHIS MOBILE NUMBER IS NOT VALID: \(mobileNumber)")
-             throw CustomErrors.invalidPhone
-        }
+    {
+        try Validations.email(email: emailId)
+        try Validations.mobileNumber(number: mobileNumber)
         self.address = address
         self.emailId = emailId
-        if isValid(emailAddressString: self.emailId)
-        {
-        self.emailId = emailId
-        }
-        else
-        {
-        print("\nTHIS EMAIL ADDRESS IS INVALID: \(emailId)")
-        throw CustomErrors.invalidEmail
-        }
-       }
-    
+        self.mobileNumber = mobileNumber
+    }
     
     convenience init(contactDict: [String: String], address: Address) throws {
         
@@ -82,7 +66,7 @@ public class Contact
                 memberName: "emailId")
         }
         
-        self.init(mobileNumber: mobileNumber, emailId: emailId, address: address)
+        try self.init(mobileNumber: mobileNumber, emailId: emailId, address: address)
     }
 
         

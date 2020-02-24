@@ -111,19 +111,9 @@ class Customer : Person
         var contact:Contact?
         do{
             var address:Address?
-            do{
-                address = try Address(addressDict: addressJson)
-            }
-            catch JsonValidationError.isNotValidInput(let className, let memberName) {
-                throw JsonValidationError.isNotValidInput(className: className, memberName: memberName)
-            }
+            address = try Address(addressDict: addressJson)
             contact = try Contact(contactDict: contactJson, address:address!)
         }
-        catch JsonValidationError.isNotValidInput(let className, let memberName) {
-            throw JsonValidationError.isNotValidInput(className: className, memberName: memberName)
-        }
-        
-        
         
         self.init(id: id,
                   firstName: firstName,
