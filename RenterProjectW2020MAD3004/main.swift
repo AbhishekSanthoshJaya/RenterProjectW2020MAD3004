@@ -23,6 +23,27 @@ do {
 }
 //OUTPUT TO TXT END
 
+var personManager = ObjectManager.getInstance()
+
+//-------------  ARRAY OF DRIVER OBJECTS -------------
+var driverReader = JsonHandler(fileName:"DriverData")
+var driverArray = driverReader.read()
+
+var driverObjects = Array<Driver>()
+if let driverArray = driverReader.read(){
+    for driverDict in driverArray {
+        do {
+            let o = try Driver(driverDict: driverDict)
+            personManager.addObject(person: o)
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+    }
+}
+
+personManager.display()
 
 var vehicleManger = ObjectManager.getInstance()
 //-------------  ARRAY OF MOTORCYCLE OBJECTS -------------
@@ -84,7 +105,7 @@ if let carArray = carReader.read(){
 // carObjects[0].display()
 
 
-var personManager = ObjectManager.getInstance()
+
 
 
 //-------------  ARRAY OF OWNER OBJECTS -------------
@@ -106,23 +127,7 @@ if let ownerArray = ownerReader.read(){
 }
 
 
-//-------------  ARRAY OF DRIVER OBJECTS -------------
-var driverReader = JsonHandler(fileName:"DriverData")
-var driverArray = driverReader.read()
 
-var driverObjects = Array<Driver>()
-if let driverArray = driverReader.read(){
-    for driverDict in driverArray {
-        do {
-            let o = try Driver(driverDict: driverDict)
-            personManager.addObject(person: o)
-        }
-        catch JsonValidationError.isNotValidInput(let msgg){
-            print("Could not create object. Error while reading from json: ")
-            print(msgg)
-        }
-    }
-}
 
 
 //-------------  ARRAY OF CUSTOMER OBJECTS -------------

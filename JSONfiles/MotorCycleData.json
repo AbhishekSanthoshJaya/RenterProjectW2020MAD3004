@@ -25,7 +25,7 @@
   "mileage": 16,
   "baseRate": 50,
   "perKmRate": 1,
-  "driverId": "6"
+  "driverId": ""
 }, {
   "vehicleId": "WBAGL83595D449282",
   "description": "Range Rover",
