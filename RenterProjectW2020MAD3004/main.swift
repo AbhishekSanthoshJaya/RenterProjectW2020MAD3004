@@ -251,7 +251,7 @@ vehicleRentObjects.append(vr7)
 
 
 // rent for car(1D7RB1CT2BS745200)
-guard var vr7Vehicle = getVehicleById(id: "1D7RB1CT2BS745200") else {
+guard var vr8Vehicle = getVehicleById(id: "1D7RB1CT2BS745200") else {
     print("no vehicle found")
     exit(1)
 }
