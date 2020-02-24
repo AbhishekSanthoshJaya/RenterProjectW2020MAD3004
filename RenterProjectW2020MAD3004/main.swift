@@ -136,7 +136,8 @@ if let customerArray = customerReader.read(){
             print(msgg)
         }
         catch{
-            print("Error")
+            let nsError = error as NSError
+            print(nsError.localizedDescription)
         }
     }
     
