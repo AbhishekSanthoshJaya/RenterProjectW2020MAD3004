@@ -150,28 +150,7 @@ if let customerArray = customerReader.read(){
 
 
 
-func getVehicleById(id: String) -> Vehicle? {
-    func searchObject(objArr: [Vehicle], id: String) -> Vehicle? {
-        for vehicle in objArr{
-            if vehicle.vehicleId == id{
-                return vehicle
-            }
-        }
-        return nil
-    }
-    
-    if let carFound = searchObject(objArr: carObjects, id: id){
-        return carFound
-    }
-    if let busFound = searchObject(objArr: busObjects, id: id){
-        return busFound
-    }
-    if let mcFound = searchObject(objArr: mcObjects, id: id){
-        return mcFound
-    }
-    print("Couldnt find vehicle with id : \(id)")
-    return nil
-}
+
 
 
 //-------------  ARRAY OF VEHICLE OBJECTS -------------
