@@ -252,4 +252,5 @@ var vr8 = VehicleRent(id:"8",
 vehicleRentManger.addObject(vehicleRent: vr8)
 
 
-vehicleManger.display()
+var ss = vehicleManger.getPersonById(id: "1", typeName: Owner.typeSName)
+ss?.display()

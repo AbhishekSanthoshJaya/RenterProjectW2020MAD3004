@@ -24,9 +24,9 @@ struct ObjectManager{
         return obj
     }
     
-    func getVehicleById( id: String, typeName: String = Car.typeSName) -> Vehicle? {
+    func getVehicleById( id: String, typeName: String = "all") -> Vehicle? {
         for vehicle in ObjectManager.vehicleObjects{
-            if vehicle.vehicleId == id && vehicle.typeName == typeName {
+            if vehicle.vehicleId == id && (vehicle.typeName == typeName || typeName == "all"){
                 return vehicle
             }
         }
@@ -35,7 +35,7 @@ struct ObjectManager{
     
     func getPersonById( id: String, typeName: String = Customer.typeSName) -> Person? {
         for person in ObjectManager.personObjects{
-            if person.id == id && person.typeName == typeName{
+            if person.id == id && (person.typeName == typeName || typeName == "all"){
                 return person
             }
         }
@@ -68,8 +68,10 @@ struct ObjectManager{
     func display(type: String = "all"){
         
         func displaySet(displayProtocalInstances: [ IDisplayDelegate]){
-            for displayInstance in displayProtocalInstances{
-                displayInstance.display()
+            if !displayProtocalInstances.isEmpty {
+                for displayInstance in displayProtocalInstances{
+                    displayInstance.display()
+                }
             }
         }
         switch type.lowercased() {

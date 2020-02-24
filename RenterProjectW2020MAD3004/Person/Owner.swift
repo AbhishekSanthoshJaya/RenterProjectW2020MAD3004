@@ -26,7 +26,7 @@ class Owner : Person
     
     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age:Int,
         userName: String, password: String, contact: Contact, companyTitle: String,  url: String,
-        vehicleList: [Vehicle])
+        vehicleList: [String: Vehicle])
     {
         self.id = id
         self.firstName = firstName
@@ -39,6 +39,7 @@ class Owner : Person
         self.contact = contact
         self.companyTitle = companyTitle
         self.url = url
+        self.vehicleList = vehicleList
     }
     
     convenience init(ownerDict: [String: Any]) throws{
@@ -145,10 +146,10 @@ class Owner : Person
                 memberName: "vehicles")
         }
         vehicleManger = ObjectManager.getInstance()
-        var vehicleObjectList = [Vehicle]()
+        var vehicleObjectList = [String: Vehicle]()
         for vehicleId in vehicles{
             if let vehicle = vehicleManger.getVehicleById(id: vehicleId){
-                vehicleObjectList.append(vehicle)
+                vehicleObjectList.updateValue(vehicle, forKey: vehicleId)
             }
         }
         
