@@ -137,6 +137,6 @@ if let customerArray = customerReader.read(){
         }
     }
     
-ownerObjects[1].display()
+driverObjects[1].display()
 }
 

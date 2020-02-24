@@ -11,7 +11,6 @@ public func ageCalculation(birthDate: Date) -> Int
 {
     let formattedDate = DateFormatter()
     formattedDate.dateFormat = "dd/MMM/yyyy"
-//    let dateOfBirth = formattedDate.date(from: birthDate)
     let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
     let now = Date()
     let calcAge = calendar.components(.year, from: birthDate, to: now, options: [])
