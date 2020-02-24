@@ -126,5 +126,7 @@ class Person : IDisplayDelegate, TypeName
         self.password = PasswordUtil.getHashedPassword(salt: self.salt, plainPassword: password)
         
     }
+    
+    
 }
 

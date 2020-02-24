@@ -287,3 +287,17 @@ for customer in customerObjects{
 print("*****************************************************\n\n", to: &logger)
 
 
+
+/*
+ Show all owners with their vehicles
+ */
+print("Displaying All Owners with their vehicles", to: &logger)
+print("*****************************************************", to: &logger)
+for owner in ownerObjects{
+    owner.display(withVehicles: true)
+}
+print("*****************************************************\n\n", to: &logger)
+
+
+
+

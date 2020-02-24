@@ -74,11 +74,18 @@ class Owner : Person
         print("Date of Birth  : \((birthDate ?? Date()).printFormat())", to: &logger)
         print("Age            : \(age)", to: &logger)
         print("Username       : \(userName)", to: &logger)
-        print("Vehicles Owned :\n")
-        for i in vehicleList
-        {
-          print("\t\t")
-          print(i.value.display())
+        
+    }
+    
+    func display(withVehicles: Bool){
+        self.display()
+        if withVehicles{
+            print("Vehicles Owned :\n", to: &logger)
+            for i in vehicleList
+            {
+              print("\t\t", to: &logger)
+              print(i.value.display(), to: &logger)
+            }
         }
     }
 
@@ -86,7 +93,7 @@ class Owner : Person
     {
       if vehicleList.keys.contains(vehicleId)
       {
-        print("\nERROR! VEHICLE ALREADY IN LIST")
+        print("\nERROR! VEHICLE ALREADY IN LIST", to: &logger)
       }
       else 
       {
