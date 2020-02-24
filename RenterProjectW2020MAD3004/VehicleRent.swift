@@ -32,10 +32,10 @@ class VehicleRent: IDisplayDelegate, TypeName
     }
 
     func display(){
-        print("\nStart Date             : \(rentStartDate)")
-        print("End Date                : \(rentEndDate)")
+        print("\nStart Date             : \(rentStartDate.printFormat())")
+        print("End Date                : \(rentEndDate.printFormat())")
         print("Number Of Days          : \(numberOfDays)")
-        print("KM Driven               : \(kmDriven)")
+        print("KM Driven               : \(kmDriven.distanceFormat())")
         print("Total Bill              : \(totalBill.priceFormat())")
     }
     
