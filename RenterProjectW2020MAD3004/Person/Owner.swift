@@ -11,7 +11,7 @@ import Foundation
 class Owner : Person
 {
     
-    var age: Int = 0 
+    var age: Int
     var id: String
     var firstName: String
     var lastName: String
@@ -24,7 +24,7 @@ class Owner : Person
     var url: String
     var vehicleList = [String: Vehicle]()
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?,
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age:Int,
         userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
     {
         self.id = id
@@ -32,6 +32,7 @@ class Owner : Person
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
+        self.age = ageCalculation(birthDate: birthDate ?? Date())
         self.userName = userName
         self.password = password
         self.contact = contact
@@ -138,6 +139,7 @@ class Owner : Person
                   lastName: lastName,
                   gender: gender,
                   birthDate: birthDate,
+                  age: ageCalculation(birthDate: birthDate),
                   userName: userName,
                   password: password,
                   contact: contact!,
@@ -147,14 +149,15 @@ class Owner : Person
     }
     
     
+    
     func display()
     {
-        print("\nID           : \(id)")
+        print("\nID            : \(id)")
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
         print("Date of Birth  : \(birthDate ?? Date())")
-        print("Age            : \( self.age = ageCalculation(birthDate: birthDate ?? Date()))")
+        print("Age            : \(age)")
         print("Username       : \(userName)")
         print("Vehicles Owned :\n")
         for i in vehicleList
