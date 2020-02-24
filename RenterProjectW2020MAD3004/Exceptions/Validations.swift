@@ -8,6 +8,13 @@
 
 import Foundation
 
-public enum JsonValidationError: Error{
+public enum JsonValidationError: Error
+{
     case isNotValidInput(className: String, memberName: String)
+}
+
+
+public enum CustomErrors: Error
+{
+  case invalidEmail, invalidPhone
 }

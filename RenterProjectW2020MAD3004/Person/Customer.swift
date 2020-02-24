@@ -9,24 +9,24 @@
 import Foundation
 
 class Customer : Person
-{ 
-    
+{
     var gender: Gender
     var id: String
     var firstName: String
     var lastName: String
     var birthDate: Date?
-    var age: Int = 0
+    var age: Int
     var userName: String
     var password: String
     var contact: Contact
     private lazy var vehicleRents = [String: Vehicle]()
 
-     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, userName: String, password: String, contact: Contact)
+    init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?,age:Int, userName: String, password: String, contact: Contact)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
+        self.age = ageCalculation(birthDate: birthDate ?? Date())
         self.gender = gender
         self.birthDate = birthDate
         self.userName = userName
@@ -130,6 +130,7 @@ class Customer : Person
                   lastName: lastName,
                   gender: gender,
                   birthDate: birthDate,
+                  age: ageCalculation(birthDate: birthDate),
                   userName: userName,
                   password: password,
                   contact: contact!
@@ -140,15 +141,31 @@ class Customer : Person
     
     func display()
     {
-        print("\nID           : \(id)")
+        print("\nID            : \(id)")
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
         print("Date of Birth  : \(birthDate ?? Date())")
         print("Age            : \(age)")
         print("Username       : \(userName)")
-
+        for i in vehicleRents
+        {
+          print("\t\t")
+          print(i.value.display())
+        }
 
     }
-    //ToDo add a dictionary for the vehicle rent
+  
+  func addVehicleRents(vehicleId: String, vehicle: Vehicle)
+    {
+      if vehicleRents.keys.contains(vehicleId)
+      {
+        print("\nERROR! VEHICLE ALREADY RENTED")
+      }
+      else 
+      {
+        vehicleRents.updateValue(vehicle,forKey: vehicleId)
+      }
+    }
+
 }

@@ -11,7 +11,7 @@ import Foundation
 class Owner : Person
 {
     
-    var age: Int = 0
+    var age: Int
     var id: String
     var firstName: String
     var lastName: String
@@ -24,13 +24,15 @@ class Owner : Person
     var url: String
     var vehicleList = [String: Vehicle]()
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?,  userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
+    init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age:Int,
+        userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
     {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
+        self.age = ageCalculation(birthDate: birthDate ?? Date())
         self.userName = userName
         self.password = password
         self.contact = contact
@@ -137,6 +139,7 @@ class Owner : Person
                   lastName: lastName,
                   gender: gender,
                   birthDate: birthDate,
+                  age: ageCalculation(birthDate: birthDate),
                   userName: userName,
                   password: password,
                   contact: contact!,
@@ -146,9 +149,10 @@ class Owner : Person
     }
     
     
+    
     func display()
     {
-        print("\nID           : \(id)")
+        print("\nID            : \(id)")
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
@@ -156,20 +160,22 @@ class Owner : Person
         print("Age            : \(age)")
         print("Username       : \(userName)")
         print("Vehicles Owned :\n")
-        for i in vehicleRents{
+        for i in vehicleList
+        {
           print("\t\t")
           print(i.value.display())
         }
     }
 
-    func addVehicle(vehicleId: String, vehicle: Vehicle){
-      if vehicleRent.keys.contains(vehicleId)
+    func addVehicle(vehicleId: String, vehicle: Vehicle)
+    {
+      if vehicleList.keys.contains(vehicleId)
       {
         print("\nERROR! VEHICLE ALREADY IN LIST")
       }
       else 
       {
-        vehicleRents.updateValue(vehicle,forkey: vehicleId)
+        vehicleList.updateValue(vehicle,forKey: vehicleId)
       }
     }
 }

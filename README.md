@@ -47,5 +47,7 @@ We have used the following packages and classes to implement the above given str
 * [Jsonplaceholder](https://jsonplaceholder.typicode.com/) - JSON reference
 * [HackingWithSwift](https://www.hackingwithswift.com/example-code/system/how-to-parse-json-using-jsonserialization) - Used to implement json file reading
 * [Mockaroo](https://mockaroo.com/) - Used to generate json data
-* [Changwei's Blog](http://tuchangwei.github.io/2013/09/16/how-to-import-one-project-to-another-one-in-xcode/)-used for reference on how to import an existing project to our own.
+* [Changwei's Blog](http://tuchangwei.github.io/2013/09/16/how-to-import-one-project-to-another-one-in-xcode/)-used for reference on how to import an existing project to our own
 * [GitHub](https://github.com/RNCryptor/RNCryptor)- Imported Rncrpto for password encryption
+* [Knowlegde Stack](http://www.knowstack.com/swift-nsdateformatter/) - Reference for age calculation from birthdate
+* [Swift Developer Blog](http://swiftdeveloperblog.com/code-examples/validate-email-address-code-example-in-swift/) - For validating the email of customers.

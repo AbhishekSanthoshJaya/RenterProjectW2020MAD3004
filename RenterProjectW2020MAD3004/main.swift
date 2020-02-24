@@ -80,7 +80,7 @@ if let carArray = carReader.read(){
         }
     }
 }
-carObjects[0].display()
+// carObjects[0].display()
 
 //-------------  ARRAY OF OWNER OBJECTS -------------
 var ownerReader = JsonHandler(fileName:"OwnerData")
@@ -136,4 +136,7 @@ if let customerArray = customerReader.read(){
             print(msgg)
         }
     }
+    
+driverObjects[1].display()
 }
+
