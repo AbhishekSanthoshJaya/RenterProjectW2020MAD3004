@@ -28,7 +28,13 @@ struct VehicleManager{
         return nil
     }
     
-    static func addVehicle(vehicle: Vehicle){
-        vehicleObjects.updateValue(vehicle, forKey: vehicle.vehicleId)
+    func addVehicle(vehicle: Vehicle){
+        VehicleManager.vehicleObjects.updateValue(vehicle, forKey: vehicle.vehicleId)
+    }
+    
+    func displayVehicle(){
+        for (_,vehicle) in VehicleManager.vehicleObjects{
+            vehicle.display()
+        }
     }
 }

@@ -13,7 +13,6 @@ let fileName = "ouput"
 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 
 let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-print("FilePath: \(fileURL.path)")
 
 let writeString = "Write this text to the fileURL as text in iOS using Swift"
 do {
@@ -24,6 +23,8 @@ do {
 }
 //OUTPUT TO TXT END
 
+
+var vehicleManger = VehicleManager.getInstance()
 //-------------  ARRAY OF MOTORCYCLE OBJECTS -------------
 var motorcyleReader = JsonHandler(fileName:"MotorCycleData")
 var motorCyclesArray = motorcyleReader.read()
@@ -34,7 +35,7 @@ if let motorCyclesArray = motorcyleReader.read(){
 
         do{
             let mc = try MotorCycle(motorCycleDict: motorCycleDict)
-            mcObjects.append(mc)
+            vehicleManger.addVehicle(vehicle: mc)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -44,7 +45,7 @@ if let motorCyclesArray = motorcyleReader.read(){
 }
 //mcObjects[0].display()
 
-var vehicleManger = VehicleManager.getInstance()
+
 
 //-------------  ARRAY OF BUS OBJECTS -------------
 var busReader = JsonHandler(fileName:"BusData")
@@ -55,7 +56,7 @@ if let busArray = busReader.read(){
     for busDict in busArray {
         do {
             let b = try Bus(busDict: busDict)
-            busObjects.append(b)
+            vehicleManger.addVehicle(vehicle: b)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -63,7 +64,7 @@ if let busArray = busReader.read(){
         }
     }
 }
-//busObjects[0].display()
+vehicleManger.displayVehicle()
 
 //-------------  ARRAY OF CAR OBJECTS -------------
 var carReader = JsonHandler(fileName:"CarData")
@@ -74,7 +75,7 @@ if let carArray = carReader.read(){
     for carDict in carArray {
         do {
             let c = try Car(carDict: carDict)
-            carObjects.append(c)
+            vehicleManger.addVehicle(vehicle: c)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -262,4 +263,3 @@ var vr8 = VehicleRent(rentStartDate: "2020-01-19".toDate(),
                       vehicle: vr8Vehicle)
 vehicleRentObjects.append(vr7)
 
-print(vehicleRentObjects)
