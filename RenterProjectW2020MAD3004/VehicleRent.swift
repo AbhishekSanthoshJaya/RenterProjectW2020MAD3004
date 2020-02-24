@@ -20,12 +20,17 @@ class VehicleRent: IDisplayDelegate
     init(rentStartDate: Date, rentEndDate: Date, vehicle: Vehicle){
         self.rentEndDate = rentEndDate
         self.rentStartDate = rentStartDate
-        self.numberOfDays = calculateNumberOfDays() //Method to be written
+        self.numberOfDays = calculateNumberOfDays(rentStartDate: rentStartDate, rentEndDate: rentEndDate) 
         self.kmDriven = kmDriven
         self.vehicle = vehicle
         self.totalBill = calculateTotalBill() //Method to be written
     }
     
+   func calculateNumberOfDays(rentStartDate: Date, rentEndDate:Date) -> Int
+    {
+      return Calendar.current.dateComponents([.day], from: startDate, to: endDate).day!
+    }
+
     func display(){
         print("\nStart Date             : \(rentStartDate)")
         print("End Date                : \(rentEndDate)")
