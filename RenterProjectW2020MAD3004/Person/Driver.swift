@@ -8,6 +8,7 @@
 
 import Foundation
 
+/* Customer class which inherts person*/
 class Driver : Person
 {
      

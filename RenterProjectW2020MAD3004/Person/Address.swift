@@ -8,6 +8,8 @@
 
 import Foundation
 
+/*Address class to manage the city,country,pin and
+ street name for customer,owner and driver */
 public class Address
 {
     private var country: String

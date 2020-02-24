@@ -8,6 +8,8 @@
 
 import Foundation
 
+/* Person class containing necessary variables and functions to use*/
+
 class Person : IDisplayDelegate, TypeName
 {
     func display(){

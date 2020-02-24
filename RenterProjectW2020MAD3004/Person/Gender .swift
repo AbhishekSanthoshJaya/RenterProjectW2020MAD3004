@@ -7,6 +7,8 @@
 //
 
 import Foundation
+//Gender enum to specify genders for persons
+
 public enum Gender
 {
     case MALE,FEMALE,OTHER
