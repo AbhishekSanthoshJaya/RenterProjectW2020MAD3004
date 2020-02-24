@@ -18,7 +18,8 @@ class VehicleRent: IDisplayDelegate
     var totalBill: Float = 0
     var vehicle: Vehicle?
     
-    init(rentStartDate: Date, rentEndDate: Date, vehicle: Vehicle){
+    init(id: String,rentStartDate: Date, rentEndDate: Date, vehicle: Vehicle){
+        self.id = id
         self.rentEndDate = rentEndDate
         self.rentStartDate = rentStartDate
         self.numberOfDays = calculateNumberOfDays(rentStartDate: rentStartDate, rentEndDate: rentEndDate) 

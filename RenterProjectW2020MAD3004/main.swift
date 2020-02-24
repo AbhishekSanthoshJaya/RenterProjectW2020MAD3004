@@ -161,7 +161,8 @@ guard var vr1Vehicle = vehicleManger.getVehicleById(id: "SCBLF44J47C415338") els
     print("no vehicle found")
     exit(1)
 }
-var vr1 = VehicleRent(rentStartDate: "2019-04-22".toDate(),
+var vr1 = VehicleRent(id:"1",
+                      rentStartDate: "2019-04-22".toDate(),
                       rentEndDate:"2019-04-24".toDate(),
                       vehicle: vr1Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr1)
@@ -172,7 +173,8 @@ guard var vr2Vehicle = vehicleManger.getVehicleById(id: "3VW517AT7FM076063") els
     print("no vehicle found")
     exit(1)
 }
-var vr2 = VehicleRent(rentStartDate: "2019-09-22".toDate(),
+var vr2 = VehicleRent(id:"2",
+                      rentStartDate: "2019-09-22".toDate(),
                       rentEndDate:"2019-10-2".toDate(),
                       vehicle: vr2Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr2)
@@ -184,7 +186,8 @@ guard var vr3Vehicle = vehicleManger.getVehicleById(id: "1GKS1CE02ER511717") els
     print("no vehicle found")
     exit(1)
 }
-var vr3 = VehicleRent(rentStartDate: "2020-01-22".toDate(),
+var vr3 = VehicleRent(id:"3",
+                      rentStartDate: "2020-01-22".toDate(),
                       rentEndDate:"2020-1-22".toDate(),
                       vehicle: vr3Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr3)
@@ -195,7 +198,8 @@ guard var vr4Vehicle = vehicleManger.getVehicleById(id: "WAUVFAFH4DN164011") els
     print("no vehicle found")
     exit(1)
 }
-var vr4 = VehicleRent(rentStartDate: "2020-02-22".toDate(),
+var vr4 = VehicleRent(id:"4",
+                      rentStartDate: "2020-02-22".toDate(),
                       rentEndDate:"2020-2-29".toDate(),
                       vehicle: vr4Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr4)
@@ -206,7 +210,8 @@ guard var vr5Vehicle = vehicleManger.getVehicleById(id: "WAUKF98E67A648746") els
     print("no vehicle found")
     exit(1)
 }
-var vr5 = VehicleRent(rentStartDate: "2020-02-19".toDate(),
+var vr5 = VehicleRent(id:"5",
+                      rentStartDate: "2020-02-19".toDate(),
                       rentEndDate:"2020-3-29".toDate(),
                       vehicle: vr5Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr5)
@@ -217,7 +222,8 @@ guard var vr6Vehicle = vehicleManger.getVehicleById(id: "4T1BD1EB5DU398278") els
     print("no vehicle found")
     exit(1)
 }
-var vr6 = VehicleRent(rentStartDate: "2020-01-19".toDate(),
+var vr6 = VehicleRent(id:"6",
+                      rentStartDate: "2020-01-19".toDate(),
                       rentEndDate:"2020-1-29".toDate(),
                       vehicle: vr6Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr6)
@@ -227,7 +233,8 @@ guard var vr7Vehicle = vehicleManger.getVehicleById(id: "YV440MBK0F1011572") els
     print("no vehicle found")
     exit(1)
 }
-var vr7 = VehicleRent(rentStartDate: "2019-01-19".toDate(),
+var vr7 = VehicleRent(id:"7",
+                      rentStartDate: "2019-01-19".toDate(),
                       rentEndDate:"2019-1-23".toDate(),
                       vehicle: vr7Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr7)
@@ -238,11 +245,12 @@ guard var vr8Vehicle = vehicleManger.getVehicleById(id: "1D7RB1CT2BS745200") els
     print("no vehicle found")
     exit(1)
 }
-var vr8 = VehicleRent(rentStartDate: "2020-01-19".toDate(),
+var vr8 = VehicleRent(id:"8",
+                      rentStartDate: "2020-01-19".toDate(),
                       rentEndDate:"2020-1-23".toDate(),
                       vehicle: vr8Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr8)
 
 
-vehicleManger.display()
+vehicleManger.display(type: "All")
 
