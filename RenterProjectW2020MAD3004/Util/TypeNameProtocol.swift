@@ -9,13 +9,19 @@
 import Foundation
 
 protocol TypeName: AnyObject {
-    static var typeName: String { get }
+    static var typeSName: String { get }
+    var typeName: String {get }
+    
 }
 
 // Swift Objects
 extension TypeName {
-    static var typeName: String {
+    static var typeSName: String {
         let type = String(describing: self)
         return type
+    }
+    
+    var typeName: String {
+        return Self.typeSName
     }
 }

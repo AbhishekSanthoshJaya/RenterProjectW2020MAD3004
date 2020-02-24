@@ -12,9 +12,9 @@ import Foundation
 struct ObjectManager{
     private init(){}
     
-    private static var vehicleObjects = [String :Vehicle]()
-    private static var personObjects = [String :Person]()
-    private static var rentObjects = [String :VehicleRent]()
+    private static var vehicleObjects = [Vehicle]()
+    private static var personObjects = [Person]()
+    private static var rentObjects = [VehicleRent]()
     var objectType: String = "Vehicle"
     
     
@@ -24,18 +24,18 @@ struct ObjectManager{
         return obj
     }
     
-    func getVehicleById( id: String) -> Vehicle? {
-        for (_,vehicle) in ObjectManager.vehicleObjects{
-            if vehicle.vehicleId == id{
+    func getVehicleById( id: String, typeName: String = Car.typeSName) -> Vehicle? {
+        for vehicle in ObjectManager.vehicleObjects{
+            if vehicle.vehicleId == id && vehicle.typeName == typeName {
                 return vehicle
             }
         }
         return nil
     }
     
-    func getPersonById( id: String) -> Person? {
-        for (_,person) in ObjectManager.personObjects{
-            if person.id == id{
+    func getPersonById( id: String, typeName: String = Customer.typeSName) -> Person? {
+        for person in ObjectManager.personObjects{
+            if person.id == id && person.typeName == typeName{
                 return person
             }
         }
@@ -43,8 +43,8 @@ struct ObjectManager{
     }
     
     func getRentById( id: String) -> VehicleRent? {
-        for (_,rent) in ObjectManager.rentObjects{
-            if rent.id == id{
+        for rent in ObjectManager.rentObjects{
+            if rent.id == id {
                 return rent
             }
         }
@@ -54,21 +54,21 @@ struct ObjectManager{
     
     
     func addObject(vehicle: Vehicle){
-        ObjectManager.vehicleObjects.updateValue(vehicle , forKey: vehicle.vehicleId)
+        ObjectManager.vehicleObjects.append(vehicle)
     }
     
     func addObject(person: Person){
-        ObjectManager.personObjects.updateValue(person , forKey: person.id)
+        ObjectManager.personObjects.append(person)
     }
     
     func addObject(vehicleRent: VehicleRent){
-        ObjectManager.rentObjects.updateValue(vehicleRent , forKey: vehicleRent.id)
+        ObjectManager.rentObjects.append(vehicleRent)
     }
     
     func display(type: String = "all"){
         
-        func displaySet(displayProtocalInstances: [String: IDisplayDelegate]){
-            for(_,displayInstance) in displayProtocalInstances{
+        func displaySet(displayProtocalInstances: [ IDisplayDelegate]){
+            for displayInstance in displayProtocalInstances{
                 displayInstance.display()
             }
         }
