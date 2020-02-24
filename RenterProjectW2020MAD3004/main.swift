@@ -43,7 +43,6 @@ if let driverArray = driverReader.read(){
     }
 }
 
-personManager.display()
 
 var vehicleManger = ObjectManager.getInstance()
 //-------------  ARRAY OF MOTORCYCLE OBJECTS -------------
@@ -130,28 +129,7 @@ if let ownerArray = ownerReader.read(){
 
 
 
-//-------------  ARRAY OF CUSTOMER OBJECTS -------------
-var customerReader = JsonHandler(fileName:"CustomerData")
-var customerArray = customerReader.read()
 
-var customerObjects = Array<Customer>()
-if let customerArray = customerReader.read(){
-    for customerDict in customerArray {
-        do {
-            let o = try Customer(customerDict: customerDict)
-            personManager.addObject(person: o)
-        }
-        catch JsonValidationError.isNotValidInput(let msgg){
-            print("Could not create object. Error while reading from json: ")
-            print(msgg)
-        }
-        catch{
-            let nsError = error as NSError
-            print(nsError.localizedDescription)
-        }
-    }
-    
-}
 
 
 
@@ -257,5 +235,29 @@ var vr8 = VehicleRent(id:"8",
 vehicleRentManger.addObject(vehicleRent: vr8)
 
 
-var ss = vehicleManger.getPersonById(id: "1", typeName: Owner.typeSName)
-ss?.display()
+
+//-------------  ARRAY OF CUSTOMER OBJECTS -------------
+var customerReader = JsonHandler(fileName:"CustomerData")
+var customerArray = customerReader.read()
+
+var customerObjects = Array<Customer>()
+if let customerArray = customerReader.read(){
+    for customerDict in customerArray {
+        do {
+            let o = try Customer(customerDict: customerDict)
+            personManager.addObject(person: o)
+        }
+        catch JsonValidationError.isNotValidInput(let msgg){
+            print("Could not create object. Error while reading from json: ")
+            print(msgg)
+        }
+        catch{
+            let nsError = error as NSError
+            print(nsError.localizedDescription)
+        }
+    }
+    
+}
+
+
+personManager.display()

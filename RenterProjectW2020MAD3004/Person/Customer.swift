@@ -11,7 +11,7 @@ import Foundation
 class Customer : Person
 {
     
-    private lazy var vehicleRents = [String: Vehicle]()
+    private lazy var vehicleRents = [String: VehicleRent]()
 
     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?,age:Int, userName: String, password: String, contact: Contact)
     {
@@ -19,7 +19,23 @@ class Customer : Person
     }
     
     init(customerDict: [String: Any]) throws {
+        
+        // get rents
+        guard let rents = customerDict["rentsId"] as? [String] else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "rentsId")
+        }
+        let rentsManger = ObjectManager.getInstance()
+        var rentsObjectList = [String: VehicleRent]()
+        for rentId in rents{
+            if let rent = rentsManger.getRentById(id: rentId){
+                rentsObjectList.updateValue(rent, forKey: rentId)
+            }
+        }
+        
         try super.init(personDict: customerDict)
+        self.vehicleRents = rentsObjectList
     }
     
     
@@ -40,15 +56,15 @@ class Customer : Person
 
     }
   
-  func addVehicleRents(vehicleId: String, vehicle: Vehicle)
+  func addVehicleRents(vehicleRent: VehicleRent)
     {
-      if vehicleRents.keys.contains(vehicleId)
+        if vehicleRents.keys.contains(vehicleRent.id)
       {
-        print("\nERROR! VEHICLE ALREADY RENTED")
+        print("\nERROR! VEHICLE Rent ALREADY RENTED")
       }
       else 
       {
-        vehicleRents.updateValue(vehicle,forKey: vehicleId)
+        vehicleRents.updateValue(vehicleRent,forKey: vehicleRent.id)
       }
     }
 
