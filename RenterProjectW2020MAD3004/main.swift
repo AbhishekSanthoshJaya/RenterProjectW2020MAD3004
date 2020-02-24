@@ -153,7 +153,7 @@ if let customerArray = customerReader.read(){
 
 
 
-//-------------  ARRAY OF VEHICLE OBJECTS -------------
+//-------------  ARRAY OF VEHICLE RENT OBJECTS -------------
 var vehicleRentObjects = Array<VehicleRent>()
 
 // rent for car(SCBLF44J47C415338)
