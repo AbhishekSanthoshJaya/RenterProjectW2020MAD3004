@@ -8,6 +8,17 @@
 
 import Foundation
 
+enum EmailValidationError: Error{
+    case isNotValidEmail
+    case isEmpty
+    case isNotValidLength
+}
+
+enum PhoneNumberValidationError: Error{
+    case voiletsMinLength
+    case voiletsMaxLength
+}
+
 public enum JsonValidationError: Error
 {
     case isNotValidInput(className: String, memberName: String)

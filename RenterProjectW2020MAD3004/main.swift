@@ -164,6 +164,7 @@ func getVehicleById(id: String) -> Vehicle? {
     return nil
 }
 
+print(getVehicleById(id: "SCBLF44J47C415338"))
 
 //-------------  ARRAY OF VEHICLE OBJECTS -------------
 
