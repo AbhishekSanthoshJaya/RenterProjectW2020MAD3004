@@ -17,9 +17,13 @@ class VehicleRent: IDisplayDelegate
     var totalBill: Float = 0
     var vehicle: Vehicle?
     
-    init(rentStartDate: Date, rentEndDate: Date){
+    init(rentStartDate: Date, rentEndDate: Date, vehicle: Vehicle){
         self.rentEndDate = rentEndDate
         self.rentStartDate = rentStartDate
+        self.numberOfDays = calculateNumberOfDays() //Method to be written
+        self.kmDriven = kmDriven
+        self.vehicle = vehicle
+        self.totalBill = calculateTotalBill() //Method to be written
     }
     
     func display(){
