@@ -77,7 +77,7 @@ class Customer : Person
             for (_,rent) in vehicleRents{
                 rent.display()
             }
-            print("**********TOTAL: \(totalBill)*********")
+            print("**********TOTAL: \(totalBill.priceFormat())*********")
         }
 
     }

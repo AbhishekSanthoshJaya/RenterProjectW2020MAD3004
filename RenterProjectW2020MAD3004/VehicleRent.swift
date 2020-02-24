@@ -36,7 +36,7 @@ class VehicleRent: IDisplayDelegate, TypeName
         print("End Date                : \(rentEndDate)")
         print("Number Of Days          : \(numberOfDays)")
         print("KM Driven               : \(kmDriven)")
-        print("Total Bill              : \(totalBill)")
+        print("Total Bill              : \(totalBill.priceFormat())")
     }
     
     func calculateTotalBill() ->  Float{
