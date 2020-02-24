@@ -239,5 +239,14 @@ var vr6 = VehicleRent(rentStartDate: "2020-01-19".toDate(),
                       vehicle: vr6Vehicle)
 vehicleRentObjects.append(vr6)
 
+// rent for car(YV440MBK0F1011572)
+guard var vr7Vehicle = getVehicleById(id: "YV440MBK0F1011572") else {
+    print("no vehicle found")
+    exit(1)
+}
+var vr7 = VehicleRent(rentStartDate: "2019-01-19".toDate(),
+                      rentEndDate:"2019-1-23".toDate(),
+                      vehicle: vr7Vehicle)
+vehicleRentObjects.append(vr7)
 
 print(vehicleRentObjects)
