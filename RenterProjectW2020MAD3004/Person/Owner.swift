@@ -69,7 +69,7 @@ class Owner : Person
         print("First Name     : \(firstName)")
         print("Last Name      : \(lastName)")
         print("Gender         : \(gender)")
-        print("Date of Birth  : \(birthDate ?? Date())")
+        print("Date of Birth  : \((birthDate ?? Date()).printFormat())")
         print("Age            : \(age)")
         print("Username       : \(userName)")
         print("Vehicles Owned :\n")
