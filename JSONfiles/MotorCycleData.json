@@ -10,7 +10,8 @@
   "topSpeed": 81,
   "mileage": 13,
   "baseRate": 50,
-  "perKmRate": 1
+  "perKmRate": 1,
+  "driverId": "5",
 }, {
   "vehicleId": "WAUVFAFH4DN164011",
   "description": "Eurovan",
@@ -23,12 +24,13 @@
   "topSpeed": 95,
   "mileage": 16,
   "baseRate": 50,
-  "perKmRate": 1
+  "perKmRate": 1,
+  "driverId": "6"
 }, {
   "vehicleId": "WBAGL83595D449282",
   "description": "Range Rover",
   "manufacturer": "Land Rover",
-  "isSelfDrive": false,
+  "isSelfDrive": true,
   "isInsured": true,
   "insuranceProviderName": "Leannon-Schultz",
   "numberOfSeat": 2,

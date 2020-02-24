@@ -11,6 +11,7 @@
   "carColor": "Crimson",
   "baseRate": 100,
   "perKmRate": 5
+  "driverId": "1"
 }, {
   "vehicleId": "YV440MBK0F1011572",
   "description": "Bronco II",
@@ -24,11 +25,12 @@
   "carColor": "Maroon",
   "baseRate": 100,
   "perKmRate": 5
+  "driverId": "2"
 }, {
   "vehicleId": "1D7RB1CT2BS745200",
   "description": "Alcyone SVX",
   "manufacturer": "Subaru",
-  "isSelfDrive": false,
+  "isSelfDrive": true,
   "isInsured": false,
   "insuranceProviderName": "Feeney-Ernser",
   "numberOfSeat": 4,
