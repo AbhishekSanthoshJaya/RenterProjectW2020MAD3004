@@ -7,32 +7,21 @@
 //
 
 import Foundation
-import CryptoKit
 
-
-
-class passwordUtil
+struct PasswordUtil
 
 {
-/* Function to generate random encoded data*/
+    static private let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    static func getSalt() -> String{
+        return String((0..<10).map{ _ in PasswordUtil.letters.randomElement()! })
+    }
+    
+    static func getHashedPassword(salt: String, plainPassword: String) ->  String{
+        return salt + plainPassword
+    }
 
-func getEncKey(ofLength length:Int) throws -> String
-{
-    let randomData = RNCryptor.randomData(ofLength: 32)
-    return randomData.base64EncodedString()
-}
-
-/* Function to generate a secure password using
- random encoded data and password*/
-
-func generateSecurePassword(password: String) throws -> String
-{
-    let encryptedKey = try getEncKey(ofLength:32)
-    let cipherData = password.data(using: .utf8)!
-    let securePassword = RNCryptor.encrypt(data: cipherData, withPassword: encryptedKey)
-    return securePassword.base64EncodedString()
-}
-
-//to make validation function
+    static func validate(salt: String, hashedPassword: String, userInputPassword: String) -> Bool{
+        return getHashedPassword(salt: salt, plainPassword: userInputPassword) == hashedPassword
+    }
 }
 

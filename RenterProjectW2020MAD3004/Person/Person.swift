@@ -24,6 +24,7 @@ class Person : IDisplayDelegate, TypeName
      var userName: String
      var password: String
      var contact: Contact
+     var salt: String
     
     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?, userName: String, password: String, contact: Contact) {
         self.id = id
@@ -32,9 +33,12 @@ class Person : IDisplayDelegate, TypeName
         self.gender = gender
         self.birthDate = birthDate
         self.userName = userName
-        self.password = password
         self.contact = contact
+        self.salt = PasswordUtil.getSalt()
+        self.password = PasswordUtil.getHashedPassword(salt: self.salt, plainPassword: password)
     }
+    
+    
     
     init(personDict: [String: Any]) throws{
         guard let id = personDict["id"] as? String else {
@@ -117,9 +121,9 @@ class Person : IDisplayDelegate, TypeName
         self.gender = gender
         self.birthDate = birthDate
         self.userName = userName
-        self.password = password
         self.contact = contact!
-        
+        self.salt = PasswordUtil.getSalt()
+        self.password = PasswordUtil.getHashedPassword(salt: self.salt, plainPassword: password)
         
     }
 }
