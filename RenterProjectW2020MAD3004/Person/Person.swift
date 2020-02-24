@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Person : IDisplayDelegate
+protocol Person : IDisplayDelegate, TypeName
 {
      func display()
      var id: String {get set}

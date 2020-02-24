@@ -252,4 +252,4 @@ var vr8 = VehicleRent(id:"8",
 vehicleRentManger.addObject(vehicleRent: vr8)
 
 
-vehicleManger.getPersonById(id: )
+vehicleManger.display()

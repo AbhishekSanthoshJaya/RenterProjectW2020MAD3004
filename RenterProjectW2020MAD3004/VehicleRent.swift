@@ -8,7 +8,7 @@
 
 import Foundation
 
-class VehicleRent: IDisplayDelegate
+class VehicleRent: IDisplayDelegate, TypeName
 {
     var id : String = "0"
     var rentStartDate: Date

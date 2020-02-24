@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Vehicle: IDisplayDelegate
+protocol Vehicle: IDisplayDelegate, TypeName
 {
      func display()
      var vehicleId: String{ get set}
