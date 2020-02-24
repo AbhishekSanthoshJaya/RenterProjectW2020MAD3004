@@ -12,6 +12,17 @@ class Customer : Person
 {
     
     private lazy var vehicleRents = [String: VehicleRent]()
+    var totalBill: Double  {
+        get{
+            var total: Double = 0
+            for (_,rent) in self.vehicleRents{
+                total += Double(rent.totalBill)
+                
+            }
+            return total
+        }
+        
+    }
 
     init(id: String, firstName: String, lastName: String, gender: Gender,birthDate: Date?,age:Int, userName: String, password: String, contact: Contact)
     {
@@ -48,13 +59,29 @@ class Customer : Person
         print("Date of Birth  : \(birthDate ?? Date())")
         print("Age            : \(age)")
         print("Username       : \(userName)")
-        for i in vehicleRents
-        {
-          print("\t\t")
-          print(i.value.display())
+
+    }
+    
+     func display(withBookings: Bool)
+    {
+        print("\nID            : \(id)")
+        print("First Name     : \(firstName)")
+        print("Last Name      : \(lastName)")
+        print("Gender         : \(gender)")
+        print("Date of Birth  : \(birthDate ?? Date())")
+        print("Age            : \(age)")
+        print("Username       : \(userName)")
+        
+        
+        if withBookings{
+            for (_,rent) in vehicleRents{
+                rent.display()
+            }
+            print("**********TOTAL: \(totalBill)*********")
         }
 
     }
+    
   
   func addVehicleRents(vehicleRent: VehicleRent)
     {

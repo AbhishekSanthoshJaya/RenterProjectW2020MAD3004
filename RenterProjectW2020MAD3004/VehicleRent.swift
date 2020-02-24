@@ -13,21 +13,20 @@ class VehicleRent: IDisplayDelegate, TypeName
     var id : String = "0"
     var rentStartDate: Date
     var rentEndDate: Date
-    var numberOfDays: Int = 0
+    var numberOfDays: Int {get {self.calculateNumberOfDays()}}
     var kmDriven: Int = 0
     var totalBill: Float = 0
-    var vehicle: Vehicle?
+    var vehicle: Vehicle
     
     init(id: String,rentStartDate: Date, rentEndDate: Date, vehicle: Vehicle){
         self.id = id
         self.rentEndDate = rentEndDate
         self.rentStartDate = rentStartDate
-        self.numberOfDays = calculateNumberOfDays(rentStartDate: rentStartDate, rentEndDate: rentEndDate) 
         self.vehicle = vehicle
-        self.totalBill = calculateTotalBill() //Method to be written
+        self.totalBill = calculateTotalBill()
     }
     
-   func calculateNumberOfDays(rentStartDate: Date, rentEndDate:Date) -> Int
+   func calculateNumberOfDays() -> Int
     {
         return Calendar.current.dateComponents([.day], from: self.rentStartDate, to: self.rentEndDate).day!
     }
@@ -41,6 +40,8 @@ class VehicleRent: IDisplayDelegate, TypeName
     }
     
     func calculateTotalBill() ->  Float{
-        return 0
+        let baseRate = self.vehicle.baseRate
+        let perKmRate = self.vehicle.perKmRate
+        return baseRate + (perKmRate * Float(numberOfDays))
     }
 }

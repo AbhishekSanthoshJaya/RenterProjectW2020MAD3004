@@ -12,9 +12,9 @@ import Foundation
 struct ObjectManager{
     private init(){}
     
-    private static var vehicleObjects = [Vehicle]()
-    private static var personObjects = [Person]()
-    private static var rentObjects = [VehicleRent]()
+    static var vehicleObjects = [String: [Vehicle]]()
+    static var personObjects = [String: [Person]]()
+    static var rentObjects = [VehicleRent]()
     var objectType: String = "Vehicle"
     
     
@@ -25,16 +25,43 @@ struct ObjectManager{
     }
     
     func getVehicleById( id: String, typeName: String = "all") -> Vehicle? {
-        for vehicle in ObjectManager.vehicleObjects{
-            if vehicle.vehicleId == id && (vehicle.typeName == typeName || typeName == "all"){
-                return vehicle
+        if typeName == "all"{
+            let vechObjs = ObjectManager.vehicleObjects[Car.typeSName] ?? []
+            for vehicle in vechObjs{
+                if vehicle.vehicleId == id && (vehicle.typeName == typeName || typeName == "all"){
+                    return vehicle
+                }
+            }
+            let vechObjs2 = ObjectManager.vehicleObjects[Bus.typeSName] ?? []
+                       for vehicle in vechObjs2{
+                           if vehicle.vehicleId == id && (vehicle.typeName == typeName || typeName == "all"){
+                               return vehicle
+                           }
+            }
+            
+            let vechObjs3 = ObjectManager.vehicleObjects[MotorCycle.typeSName] ?? []
+                       for vehicle in vechObjs3{
+                           if vehicle.vehicleId == id && (vehicle.typeName == typeName || typeName == "all"){
+                               return vehicle
+                           }
+                       }
+        }
+        else{
+            let vechObjs = ObjectManager.vehicleObjects[typeName] ?? []
+            for vehicle in vechObjs{
+                if vehicle.vehicleId == id && (vehicle.typeName == typeName || typeName == "all"){
+                    return vehicle
+                }
             }
         }
+        
+        
         return nil
     }
     
     func getPersonById( id: String, typeName: String = Customer.typeSName) -> Person? {
-        for person in ObjectManager.personObjects{
+        let personObjs = ObjectManager.personObjects[typeName] ?? []
+        for person in personObjs{
             if person.id == id && (person.typeName == typeName || typeName == "all"){
                 return person
             }
@@ -53,12 +80,18 @@ struct ObjectManager{
     
     
     
-    func addObject(vehicle: Vehicle){
-        ObjectManager.vehicleObjects.append(vehicle)
+    func addObject(vehicle: Vehicle, typeName: String = Car.typeSName){
+        if ObjectManager.vehicleObjects[typeName] == nil {
+            ObjectManager.vehicleObjects.updateValue([Vehicle](), forKey: typeName)
+        }
+        ObjectManager.vehicleObjects[typeName]?.append(vehicle)
     }
     
-    func addObject(person: Person){
-        ObjectManager.personObjects.append(person)
+    func addObject(person: Person, typeName: String = Customer.typeSName){
+        if ObjectManager.personObjects[typeName] == nil {
+            ObjectManager.personObjects.updateValue([Person](), forKey: typeName)
+        }
+        ObjectManager.personObjects[typeName]?.append(person)
     }
     
     func addObject(vehicleRent: VehicleRent){
@@ -76,17 +109,31 @@ struct ObjectManager{
         }
         switch type.lowercased() {
             case "vehicle":
-                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects)
+                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects[Car.typeSName] ?? [])
+                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects[Bus.typeSName] ?? [])
+                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects[MotorCycle.typeSName] ?? [])
+            
             case "person":
-               displaySet(displayProtocalInstances: ObjectManager.personObjects)
+                displaySet(displayProtocalInstances: ObjectManager.personObjects[Customer.typeSName] ?? [])
+                displaySet(displayProtocalInstances: ObjectManager.personObjects[Owner.typeSName] ?? [])
+            
+                displaySet(displayProtocalInstances: ObjectManager.personObjects[Driver.typeSName] ?? [])
             case "vehiclerent":
                displaySet(displayProtocalInstances: ObjectManager.rentObjects)
             default:
-                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects)
-                displaySet(displayProtocalInstances: ObjectManager.personObjects)
+                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects[Car.typeSName] ?? [])
+                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects[Bus.typeSName] ?? [])
+                displaySet(displayProtocalInstances: ObjectManager.vehicleObjects[MotorCycle.typeSName] ?? [])
+                displaySet(displayProtocalInstances: ObjectManager.personObjects[Customer.typeSName] ?? [])
+                displaySet(displayProtocalInstances: ObjectManager.personObjects[Owner.typeSName] ?? [])
+            
+                displaySet(displayProtocalInstances: ObjectManager.personObjects[Driver.typeSName] ?? [])
                 displaySet(displayProtocalInstances: ObjectManager.rentObjects)
+
             }
         
     }
+    
+    
     
 }

@@ -34,7 +34,8 @@ if let driverArray = driverReader.read(){
     for driverDict in driverArray {
         do {
             let o = try Driver(driverDict: driverDict)
-            personManager.addObject(person: o)
+            personManager.addObject(person: o, typeName: Driver.typeSName)
+            driverObjects.append(o)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -55,7 +56,8 @@ if let motorCyclesArray = motorcyleReader.read(){
 
         do{
             let mc = try MotorCycle(motorCycleDict: motorCycleDict)
-            vehicleManger.addObject(vehicle: mc)
+            vehicleManger.addObject(vehicle: mc, typeName: MotorCycle.typeSName)
+            mcObjects.append(mc)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -75,7 +77,8 @@ if let busArray = busReader.read(){
     for busDict in busArray {
         do {
             let b = try Bus(busDict: busDict)
-            vehicleManger.addObject(vehicle: b)
+            vehicleManger.addObject(vehicle: b, typeName: Bus.typeSName)
+            busObjects.append(b)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -93,7 +96,8 @@ if let carArray = carReader.read(){
     for carDict in carArray {
         do {
             let c = try Car(carDict: carDict)
-            vehicleManger.addObject(vehicle: c)
+            vehicleManger.addObject(vehicle: c, typeName: Car.typeSName)
+            carObjects.append(c)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -116,7 +120,8 @@ if let ownerArray = ownerReader.read(){
     for ownerDict in ownerArray {
         do {
             let o = try Owner(ownerDict: ownerDict)
-            personManager.addObject(person: o)
+            personManager.addObject(person: o, typeName: Owner.typeSName)
+            ownerObjects.append(o)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -149,6 +154,7 @@ var vr1 = VehicleRent(id:"1",
                       rentEndDate:"2019-04-24".toDate(),
                       vehicle: vr1Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr1)
+vehicleRentObjects.append(vr1)
 
 
 // rent for bus(3VW517AT7FM076063)
@@ -161,6 +167,7 @@ var vr2 = VehicleRent(id:"2",
                       rentEndDate:"2019-10-2".toDate(),
                       vehicle: vr2Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr2)
+vehicleRentObjects.append(vr2)
 
 
 
@@ -174,7 +181,7 @@ var vr3 = VehicleRent(id:"3",
                       rentEndDate:"2020-1-22".toDate(),
                       vehicle: vr3Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr3)
-
+vehicleRentObjects.append(vr3)
 
 // rent for MotorCycle(WAUVFAFH4DN164011)
 guard var vr4Vehicle = vehicleManger.getVehicleById(id: "WAUVFAFH4DN164011") else {
@@ -186,6 +193,7 @@ var vr4 = VehicleRent(id:"4",
                       rentEndDate:"2020-2-29".toDate(),
                       vehicle: vr4Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr4)
+vehicleRentObjects.append(vr4)
 
 
 // rent for Bus(WAUKF98E67A648746)
@@ -198,6 +206,7 @@ var vr5 = VehicleRent(id:"5",
                       rentEndDate:"2020-3-29".toDate(),
                       vehicle: vr5Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr5)
+vehicleRentObjects.append(vr5)
 
 
 // rent for Bus(4T1BD1EB5DU398278)
@@ -210,6 +219,7 @@ var vr6 = VehicleRent(id:"6",
                       rentEndDate:"2020-1-29".toDate(),
                       vehicle: vr6Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr6)
+vehicleRentObjects.append(vr6)
 
 // rent for car(YV440MBK0F1011572)
 guard var vr7Vehicle = vehicleManger.getVehicleById(id: "YV440MBK0F1011572") else {
@@ -221,6 +231,7 @@ var vr7 = VehicleRent(id:"7",
                       rentEndDate:"2019-1-23".toDate(),
                       vehicle: vr7Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr7)
+vehicleRentObjects.append(vr7)
 
 
 // rent for car(1D7RB1CT2BS745200)
@@ -233,6 +244,7 @@ var vr8 = VehicleRent(id:"8",
                       rentEndDate:"2020-1-23".toDate(),
                       vehicle: vr8Vehicle)
 vehicleRentManger.addObject(vehicleRent: vr8)
+vehicleRentObjects.append(vr8)
 
 
 
@@ -246,6 +258,7 @@ if let customerArray = customerReader.read(){
         do {
             let o = try Customer(customerDict: customerDict)
             personManager.addObject(person: o)
+            customerObjects.append(o)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -260,4 +273,28 @@ if let customerArray = customerReader.read(){
 }
 
 
-personManager.display()
+//personManager.display()
+
+
+// Queries
+
+
+/*
+ Show all vehicles
+ */
+print("Displaying All vehicles")
+print("*****************************************************")
+vehicleManger.display(type: Vehicle.typeSName)
+print("*****************************************************\n\n")
+
+
+/*
+ Show all customers with their bookings
+ */
+print("Displaying All Customers with their bookings")
+print("*****************************************************")
+for customer in customerObjects{
+    customer.display(withBookings: true)
+}
+print("*****************************************************\n\n")
+
