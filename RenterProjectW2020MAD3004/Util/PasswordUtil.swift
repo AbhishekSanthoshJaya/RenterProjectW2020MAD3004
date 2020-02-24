@@ -14,35 +14,25 @@ import CryptoKit
 class passwordUtil
 
 {
-/* Function to generate the encryption key using User entered password*/
+/* Function to generate random encoded data*/
 
-func getSalt(withPassword userPassword:String) throws -> String
+func getEncKey(ofLength length:Int) throws -> String
 {
     let randomData = RNCryptor.randomData(ofLength: 32)
-    let cipherData = RNCryptor.encrypt(data: randomData, withPassword: userPassword)
-    return cipherData.base64EncodedString()
+    return randomData.base64EncodedString()
 }
 
-/* Function to generated a secure password using
- genereated encryption key and user password*/
+/* Function to generate a secure password using
+ random encoded data and password*/
 
-func generateSecurePassword(userPassword: String, salt: String) throws -> String
+func generateSecurePassword(password: String) throws -> String
 {
-    let encryptedKey = try getSalt(withPassword: salt)
-    let securePassword = userPassword.data(using: .utf8)!
-    let cipherData = RNCryptor.encrypt(data: securePassword, withPassword: encryptedKey)
-    return cipherData.base64EncodedString()
+    let encryptedKey = try getEncKey(ofLength:32)
+    let cipherData = password.data(using: .utf8)!
+    let securePassword = RNCryptor.encrypt(data: cipherData, withPassword: encryptedKey)
+    return securePassword.base64EncodedString()
 }
 
-/* Function to decrypt the password if user changes password,
- simply decrypt the key with the old password and re-encrypt it with the new password.*/
-
-func decryptPassword(securePassword: String, encryptKey: String) throws -> String
-        {
-        let encryptedPassword = Data.init(base64Encoded: securePassword)!
-        let decryptedData = try RNCryptor.decrypt(data: encryptedPassword, withPassword: encryptKey)
-        let decryptedString = String(data: decryptedData, encoding: .utf8)!
-        return decryptedString
-        }
+//to make validation function
 }
 

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/* Contact class to manage the mobilenumber, email and address of customers, owners , drivers */
 
 public class Contact
 {
