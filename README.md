@@ -41,12 +41,13 @@ We have used the following packages and classes to implement the above given str
 
 ### *Extensions Group*
 * **String+Extension**: Contains method for date formatting
+* **Float+Extension**: Contains method to format price
 
 ### *Exceptions Group*
 * Contains validations for json handling as well as verification of email address and phone numbers
 
 ### *Others*
-* **main**:Contains all object initializations as well as methods to display owner, driver and customer information along with their bookings
+* **main**: Contains all object initializations as well as methods to display owner, driver and customer information along with their bookings
 * **VehicleRent Class**: Contains renting information
 
 
