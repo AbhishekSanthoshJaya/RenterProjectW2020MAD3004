@@ -140,3 +140,6 @@ if let customerArray = customerReader.read(){
 driverObjects[1].display()
 }
 
+
+//-------------  ARRAY OF VEHICLE OBJECTS -------------
+var vehicleRentObjects = Array<VehicleRent>()
