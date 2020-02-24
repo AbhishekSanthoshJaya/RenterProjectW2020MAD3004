@@ -8,6 +8,8 @@
 
 import Foundation
 
+//Exceptions for email,phone number and invalid errors
+
 enum EmailValidationError: Error{
     case isNotValidEmail(email: String)
     case isEmpty(email: String)
@@ -25,6 +27,7 @@ public enum JsonValidationError: Error
 }
 
 
+//Structure for email and phone number validations
 
 struct Validations {
     private static let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
