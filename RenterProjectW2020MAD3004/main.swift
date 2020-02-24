@@ -46,7 +46,6 @@ if let motorCyclesArray = motorcyleReader.read(){
 //mcObjects[0].display()
 
 
-var personManager = ObjectManager.getInstance()
 //-------------  ARRAY OF BUS OBJECTS -------------
 var busReader = JsonHandler(fileName:"BusData")
 var busArray = busReader.read()
@@ -85,6 +84,8 @@ if let carArray = carReader.read(){
 // carObjects[0].display()
 
 
+var personManager = ObjectManager.getInstance()
+
 
 //-------------  ARRAY OF OWNER OBJECTS -------------
 var ownerReader = JsonHandler(fileName:"OwnerData")
@@ -95,7 +96,7 @@ if let ownerArray = ownerReader.read(){
     for ownerDict in ownerArray {
         do {
             let o = try Owner(ownerDict: ownerDict)
-            ownerObjects.append(o)
+            personManager.addObject(person: o)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -114,7 +115,7 @@ if let driverArray = driverReader.read(){
     for driverDict in driverArray {
         do {
             let o = try Driver(driverDict: driverDict)
-            driverObjects.append(o)
+            personManager.addObject(person: o)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -133,7 +134,7 @@ if let customerArray = customerReader.read(){
     for customerDict in customerArray {
         do {
             let o = try Customer(customerDict: customerDict)
-            customerObjects.append(o)
+            personManager.addObject(person: o)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -145,7 +146,6 @@ if let customerArray = customerReader.read(){
         }
     }
     
-driverObjects[1].display()
 }
 
 
