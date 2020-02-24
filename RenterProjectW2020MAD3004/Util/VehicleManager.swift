@@ -12,7 +12,7 @@ import Foundation
 struct VehicleManager{
     private init(){}
     
-    private static var vehicleObjects = Array<Vehicle>()
+    private static var vehicleObjects = [String :Vehicle]()
     
     private static var obj = VehicleManager()
     static func getInstance() -> VehicleManager{
@@ -20,11 +20,15 @@ struct VehicleManager{
     }
     
     static func getVehicleById( id: String) -> Vehicle? {
-        for vehicle in vehicleObjects{
+        for (_,vehicle) in vehicleObjects{
             if vehicle.vehicleId == id{
                 return vehicle
             }
         }
         return nil
+    }
+    
+    static func addVehicle(vehicle: Vehicle){
+        vehicleObjects.updateValue(vehicle, forKey: vehicle.vehicleId)
     }
 }

@@ -44,6 +44,8 @@ if let motorCyclesArray = motorcyleReader.read(){
 }
 //mcObjects[0].display()
 
+var vehicleManger = VehicleManager.getInstance()
+
 //-------------  ARRAY OF BUS OBJECTS -------------
 var busReader = JsonHandler(fileName:"BusData")
 var busArray = busReader.read()
