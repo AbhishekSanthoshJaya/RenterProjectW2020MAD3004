@@ -56,15 +56,16 @@ class Driver : Person
     
     override func display() {
         
-        print("\nID           : \(id)")
-        print("First Name     : \(firstName)")
-        print("Last Name      : \(lastName)")
-        print("Gender         : \(gender)")
-        print("Date of Birth  : \((birthDate ?? Date()).printFormat())")
-        print("Age            : \(age)")
-        print("Username       : \(userName)")
-        print("License Number : \(drivingLicenceNumber)")
-        print("Clean History  : \(isDrivingHistoryClean)")
+        var logger = Log()
+        print("\nID           : \(id)", to: &logger)
+        print("First Name     : \(firstName)", to: &logger)
+        print("Last Name      : \(lastName)", to: &logger)
+        print("Gender         : \(gender)", to: &logger)
+        print("Date of Birth  : \((birthDate ?? Date()).printFormat())", to: &logger)
+        print("Age            : \(age)", to: &logger)
+        print("Username       : \(userName)", to: &logger)
+        print("License Number : \(drivingLicenceNumber)", to: &logger)
+        print("Clean History  : \(isDrivingHistoryClean)", to: &logger)
 
     }
 

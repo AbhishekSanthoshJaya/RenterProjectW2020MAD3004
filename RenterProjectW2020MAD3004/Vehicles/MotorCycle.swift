@@ -46,12 +46,13 @@ class MotorCycle: Vehicle
     
     override func display()
     {
-        print("\nVehicle ID              : \(vehicleId)")
-        print("Description             : \(String(describing: description ?? ""))")
-        print("Manufacturer            : \(manufacturer)")
-        print("Type Of Fuel            : \(fuelType)")
-        print("Top Speed               : \(topSpeed)")
-        print("Mileage                 : \(mileage)")
-        print("Number Of Seats         : \(numberOfSeat)")
+        var logger = Log()
+        print("\nVehicle ID              : \(vehicleId)", to: &logger)
+        print("Description             : \(String(describing: description ?? ""))", to: &logger)
+        print("Manufacturer            : \(manufacturer)", to: &logger)
+        print("Type Of Fuel            : \(fuelType)", to: &logger)
+        print("Top Speed               : \(topSpeed)", to: &logger)
+        print("Mileage                 : \(mileage)", to: &logger)
+        print("Number Of Seats         : \(numberOfSeat)", to: &logger)
     }
 }

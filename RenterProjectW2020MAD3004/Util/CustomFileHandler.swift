@@ -9,13 +9,16 @@
 import Foundation
 
 
-struct JsonHandler {
+struct CustomFileHandler {
     var fileName: String
     var filePath: URL
-    
+     
     init(fileName: String, filePath: URL = URL(fileURLWithPath: ".")) {
         self.fileName = fileName
         self.filePath = filePath
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            self.filePath = dir.appendingPathComponent(fileName)
+        }
     }
     
     func read() -> [[String: Any]]? {
@@ -45,5 +48,19 @@ struct JsonHandler {
             return nil
         }
     }
+    
+    
+    mutating  func write(text: String){
+        
+        do{
+            try text.write(to: self.filePath, atomically: false, encoding: .utf8)
+        }
+        catch {
+            print("Error occured while writing to file")
+            let nsError = error as NSError
+            print(nsError.localizedDescription)
+        }
+    }
+    
 }
 

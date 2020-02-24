@@ -52,32 +52,34 @@ class Customer : Person
     
     override func display()
     {
-        print("\nID            : \(id)")
-        print("First Name     : \(firstName)")
-        print("Last Name      : \(lastName)")
-        print("Gender         : \(gender)")
-        print("Date of Birth  : \(birthDate ?? Date())")
-        print("Age            : \(age)")
-        print("Username       : \(userName)")
+        var logger = Log()
+        print("\nID            : \(id)", to: &logger)
+        print("First Name     : \(firstName)", to: &logger)
+        print("Last Name      : \(lastName)", to: &logger)
+        print("Gender         : \(gender)", to: &logger)
+        print("Date of Birth  : \(birthDate ?? Date())", to: &logger)
+        print("Age            : \(age)", to: &logger)
+        print("Username       : \(userName)", to: &logger)
 
     }
     
      func display(withBookings: Bool)
     {
-        print("\nID            : \(id)")
-        print("First Name     : \(firstName)")
-        print("Last Name      : \(lastName)")
-        print("Gender         : \(gender)")
-        print("Date of Birth  : \((birthDate ?? Date()).printFormat())")
-        print("Age            : \(age)")
-        print("Username       : \(userName)")
+        var logger = Log()
+        print("\nID            : \(id)", to: &logger)
+        print("First Name     : \(firstName)", to: &logger)
+        print("Last Name      : \(lastName)", to: &logger)
+        print("Gender         : \(gender)", to: &logger)
+        print("Date of Birth  : \((birthDate ?? Date()).printFormat())", to: &logger)
+        print("Age            : \(age)", to: &logger)
+        print("Username       : \(userName)", to: &logger)
         
         
         if withBookings{
             for (_,rent) in vehicleRents{
                 rent.display()
             }
-            print("**********TOTAL: \(totalBill.priceFormat())*********")
+            print("**********TOTAL: \(totalBill.priceFormat())*********", to: &logger)
         }
 
     }

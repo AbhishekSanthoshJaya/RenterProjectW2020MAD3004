@@ -62,13 +62,15 @@ import Foundation
     
     override func display()
     {
-           print("\nVehicle ID              : \(vehicleId)")
-           print("Bus Type                : \(busType)")
-           print("Description             : \(String(describing: description ?? ""))")
-           print("Manufacturer            : \(manufacturer)")
-           print("Type Of Fuel            : \(fuelType)")
-           print("Accessibility Services  : \(accessibilityServices)")
-           print("Standing Capacity       : \(standingCapacity) people")        
+            var logger = Log()
+
+           print("\nVehicle ID              : \(vehicleId)", to: &logger)
+           print("Bus Type                : \(busType)", to: &logger)
+           print("Description             : \(String(describing: description ?? ""))", to: &logger)
+           print("Manufacturer            : \(manufacturer)", to: &logger)
+           print("Type Of Fuel            : \(fuelType)", to: &logger)
+           print("Accessibility Services  : \(accessibilityServices)", to: &logger)
+           print("Standing Capacity       : \(standingCapacity) people", to: &logger)        
     }
     
 }

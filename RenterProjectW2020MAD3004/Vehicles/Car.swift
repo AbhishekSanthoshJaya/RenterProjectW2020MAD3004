@@ -44,12 +44,14 @@ class Car: Vehicle
     
     override func display()
     {
-        print("\nVehicle ID              : \(vehicleId)")
-        print("Description             : \(description ?? "")")
-        print("Manufacturer            : \(manufacturer)")
-        print("Type of fuel            : \(fuelType)")
-        print("Car Type                : \(carType)")
-        print("Car Color               : \(carColor)")
+        var logger = Log()
+
+        print("\nVehicle ID              : \(vehicleId)", to: &logger)
+        print("Description             : \(description ?? "")", to: &logger)
+        print("Manufacturer            : \(manufacturer)", to: &logger)
+        print("Type of fuel            : \(fuelType)", to: &logger)
+        print("Car Type                : \(carType)", to: &logger)
+        print("Car Color               : \(carColor)", to: &logger)
     }
     
 }

@@ -33,11 +33,12 @@ class VehicleRent: IDisplayDelegate, TypeName
     }
 
     func display(){
-        print("\nStart Date             : \(rentStartDate.printFormat())")
-        print("End Date                : \(rentEndDate.printFormat())")
-        print("Number Of Days          : \(numberOfDays)")
-        print("KM Driven               : \(kmDriven.distanceFormat())")
-        print("Total Bill              : \(totalBill.priceFormat())")
+        var logger = Log()
+        print("\nStart Date             : \(rentStartDate.printFormat())", to: &logger)
+        print("End Date                : \(rentEndDate.printFormat())", to: &logger)
+        print("Number Of Days          : \(numberOfDays)", to: &logger)
+        print("KM Driven               : \(kmDriven.distanceFormat())", to: &logger)
+        print("Total Bill              : \(totalBill.priceFormat())", to: &logger)
     }
     
     func calculateTotalBill() ->  Float{
