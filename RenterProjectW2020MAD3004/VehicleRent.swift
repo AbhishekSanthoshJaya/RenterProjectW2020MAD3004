@@ -21,14 +21,13 @@ class VehicleRent: IDisplayDelegate
         self.rentEndDate = rentEndDate
         self.rentStartDate = rentStartDate
         self.numberOfDays = calculateNumberOfDays(rentStartDate: rentStartDate, rentEndDate: rentEndDate) 
-        self.kmDriven = kmDriven
         self.vehicle = vehicle
         self.totalBill = calculateTotalBill() //Method to be written
     }
     
    func calculateNumberOfDays(rentStartDate: Date, rentEndDate:Date) -> Int
     {
-      return Calendar.current.dateComponents([.day], from: startDate, to: endDate).day!
+        return Calendar.current.dateComponents([.day], from: self.rentStartDate, to: self.rentEndDate).day!
     }
 
     func display(){
@@ -37,5 +36,9 @@ class VehicleRent: IDisplayDelegate
         print("Number Of Days          : \(numberOfDays)")
         print("KM Driven               : \(kmDriven)")
         print("Total Bill              : \(totalBill)")
+    }
+    
+    func calculateTotalBill() ->  Float{
+        return 0
     }
 }
