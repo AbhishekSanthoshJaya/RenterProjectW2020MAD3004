@@ -43,7 +43,7 @@ public class Contact
      }
 
     
-    internal init(mobileNumber: String, emailId: String, address: Address)
+    internal init(mobileNumber: String, emailId: String, address: Address) throws
        {
         if(mobileNumber.count == 10)
              {
@@ -52,7 +52,7 @@ public class Contact
            else
              {
              print("\nTHIS MOBILE NUMBER IS NOT VALID: \(mobileNumber)")
-             exit(0)
+             throw CustomErrors.invalidPhone
         }
         self.address = address
         self.emailId = emailId
@@ -62,8 +62,8 @@ public class Contact
         }
         else
         {
-        print("Please enter a valid email address")
-        exit(0)
+        print("\nTHIS EMAIL ADDRESS IS INVALID: \(emailId)")
+        throw CustomErrors.invalidEmail
         }
        }
     

@@ -17,14 +17,4 @@ public enum JsonValidationError: Error
 public enum CustomErrors: Error
 {
   case invalidEmail, invalidPhone
-
-   if isValid(emailAddressString: self.emailId)
-      {
-      self.emailId = emailId
-      }
-    else
-      {
-      print("\nTHIS EMAIL IS INVALID: \(emailId)")
-      throw CustomErrors.invalidEmail
-      }
 }
