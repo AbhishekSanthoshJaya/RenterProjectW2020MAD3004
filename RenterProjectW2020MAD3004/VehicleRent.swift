@@ -46,4 +46,8 @@ class VehicleRent: IDisplayDelegate, TypeName
         let perKmRate = self.vehicle.perKmRate
         return baseRate + (perKmRate * Float(numberOfDays))
     }
+    
+    func isLive() -> Bool{
+        return self.rentEndDate >= Date()
+    }
 }

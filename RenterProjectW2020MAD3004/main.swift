@@ -300,4 +300,15 @@ print("*****************************************************\n\n", to: &logger)
 
 
 
+/*
+ current live bookings
+ */
+print("Displaying All live bookings", to: &logger)
+print("*****************************************************", to: &logger)
+for rent in vehicleRentObjects{
+    if rent.isLive(){
+        rent.display()
+    }
+}
+print("*****************************************************\n\n", to: &logger)
 
