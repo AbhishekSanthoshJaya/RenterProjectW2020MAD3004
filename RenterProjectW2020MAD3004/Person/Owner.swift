@@ -25,7 +25,8 @@ class Owner : Person
     var vehicleList = [String: Vehicle]()
     
     init(id: String, firstName: String, lastName: String, gender: Gender, birthDate: Date?, age:Int,
-        userName: String, password: String, contact: Contact, companyTitle: String,  url: String)
+        userName: String, password: String, contact: Contact, companyTitle: String,  url: String,
+        vehicleList: [Vehicle])
     {
         self.id = id
         self.firstName = firstName
@@ -95,6 +96,8 @@ class Owner : Person
                className: String(describing:type(of: self)),
                memberName: "password")
        }
+        
+        
        
        guard let addressJson = ownerDict["address"] as? [String: String] else {
            throw JsonValidationError.isNotValidInput(
@@ -134,6 +137,23 @@ class Owner : Person
                 className: String(describing:type(of: self)),
                 memberName: "url")
         }
+        
+        // getVehicles
+        guard let vehicles = ownerDict["vehicles"] as? [String] else {
+            throw JsonValidationError.isNotValidInput(
+                className: String(describing:type(of: self)),
+                memberName: "vehicles")
+        }
+        vehicleManger = ObjectManager.getInstance()
+        var vehicleObjectList = [Vehicle]()
+        for vehicleId in vehicles{
+            if let vehicle = vehicleManger.getVehicleById(id: vehicleId){
+                vehicleObjectList.append(vehicle)
+            }
+        }
+        
+        
+        
         self.init(id: id,
                   firstName: firstName,
                   lastName: lastName,
@@ -144,7 +164,8 @@ class Owner : Person
                   password: password,
                   contact: contact!,
                   companyTitle: companyTitle,
-                  url: url)
+                  url: url,
+                  vehicleList: vehicleObjectList)
         
     }
     

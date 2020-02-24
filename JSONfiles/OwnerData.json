@@ -46,7 +46,8 @@
   ,
   "companyTitle": "Watsica and Sons",
   "url": "bbc.co.uk",
-  "password": "8ZNbvtze"
+  "password": "8ZNbvtze",
+  "vehicles": ["1D7RB1CT2BS745200"]
 }, {
   "id": "3",
   "firstName": "Paddy",
@@ -70,7 +71,8 @@
   ,
   "companyTitle": "Funk-Jerde",
   "url": "cargocollective.com",
-  "password": "BksD2kjb"
+  "password": "BksD2kjb",
+  "vehicles": ["3VW517AT7FM076063","WAUKF98E67A648746"]
 }, {
   "id": "4",
   "firstName": "Nanny",
@@ -94,7 +96,8 @@
   ,
   "companyTitle": "Daniel, Dach and Jones",
   "url": "cocolog-nifty.com",
-  "password": "RuV0UO"
+  "password": "RuV0UO",
+  "vehicles": ["4T1BD1EB5DU398278"]
 }, {
   "id": "5",
   "firstName": "Franky",
@@ -118,5 +121,6 @@
   ,
   "companyTitle": "Daugherty and Sons",
   "url": "bbc.co.uk",
-  "password": "sgqSRG81"
+  "password": "sgqSRG81",
+  "vehicles": ["1GKS1CE02ER511717","WAUVFAFH4DN164011","WBAGL83595D449282"]
 }]
