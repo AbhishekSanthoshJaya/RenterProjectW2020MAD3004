@@ -10,6 +10,7 @@ import Foundation
 
 class VehicleRent: IDisplayDelegate
 {
+    var id : String = "0"
     var rentStartDate: Date
     var rentEndDate: Date
     var numberOfDays: Int = 0

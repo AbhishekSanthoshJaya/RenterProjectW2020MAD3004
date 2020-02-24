@@ -24,7 +24,7 @@ do {
 //OUTPUT TO TXT END
 
 
-var vehicleManger = VehicleManager.getInstance()
+var vehicleManger = ObjectManager.getInstance()
 //-------------  ARRAY OF MOTORCYCLE OBJECTS -------------
 var motorcyleReader = JsonHandler(fileName:"MotorCycleData")
 var motorCyclesArray = motorcyleReader.read()
@@ -35,7 +35,7 @@ if let motorCyclesArray = motorcyleReader.read(){
 
         do{
             let mc = try MotorCycle(motorCycleDict: motorCycleDict)
-            vehicleManger.addVehicle(vehicle: mc)
+            vehicleManger.addObject(vehicle: mc)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -46,7 +46,7 @@ if let motorCyclesArray = motorcyleReader.read(){
 //mcObjects[0].display()
 
 
-
+var personManager = ObjectManager.getInstance()
 //-------------  ARRAY OF BUS OBJECTS -------------
 var busReader = JsonHandler(fileName:"BusData")
 var busArray = busReader.read()
@@ -56,7 +56,7 @@ if let busArray = busReader.read(){
     for busDict in busArray {
         do {
             let b = try Bus(busDict: busDict)
-            vehicleManger.addVehicle(vehicle: b)
+            vehicleManger.addObject(vehicle: b)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -64,7 +64,6 @@ if let busArray = busReader.read(){
         }
     }
 }
-vehicleManger.displayVehicle()
 
 //-------------  ARRAY OF CAR OBJECTS -------------
 var carReader = JsonHandler(fileName:"CarData")
@@ -75,7 +74,7 @@ if let carArray = carReader.read(){
     for carDict in carArray {
         do {
             let c = try Car(carDict: carDict)
-            vehicleManger.addVehicle(vehicle: c)
+            vehicleManger.addObject(vehicle: c)
         }
         catch JsonValidationError.isNotValidInput(let msgg){
             print("Could not create object. Error while reading from json: ")
@@ -84,6 +83,8 @@ if let carArray = carReader.read(){
     }
 }
 // carObjects[0].display()
+
+
 
 //-------------  ARRAY OF OWNER OBJECTS -------------
 var ownerReader = JsonHandler(fileName:"OwnerData")
@@ -262,4 +263,7 @@ var vr8 = VehicleRent(rentStartDate: "2020-01-19".toDate(),
                       rentEndDate:"2020-1-23".toDate(),
                       vehicle: vr8Vehicle)
 vehicleRentObjects.append(vr7)
+
+
+vehicleManger.display()
 
