@@ -60,3 +60,4 @@ We have used the following packages and classes to implement the above given str
 * [GitHub](https://github.com/RNCryptor/RNCryptor)- Imported Rncrpto for password encryption
 * [Knowlegde Stack](http://www.knowstack.com/swift-nsdateformatter/) - Reference for age calculation from birthdate
 * [Swift Developer Blog](http://swiftdeveloperblog.com/code-examples/validate-email-address-code-example-in-swift/) - For validating the email of customers.
+* [Stackoverflow](https://stackoverflow.com/questions/26845307/generate-random-alphanumeric-string-in-swift) - Used to generate salt for encryption.
