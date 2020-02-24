@@ -20,7 +20,7 @@ class Person : IDisplayDelegate, TypeName
      var lastName: String
      var gender: Gender
      var birthDate: Date?
-     var age: Int = 0
+     var age: Int {get{ self.birthDate?.age() ?? 0 }}
      var userName: String
      var password: String
      var contact: Contact

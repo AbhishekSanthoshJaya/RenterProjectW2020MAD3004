@@ -16,4 +16,14 @@ extension Date{
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
+    
+    func age() -> Int{
+        let formattedDate = DateFormatter()
+           formattedDate.dateFormat = "dd/MMM/yyyy"
+           let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
+           let now = Date()
+           let calcAge = calendar.components(.year, from: self, to: now, options: [])
+           let age = calcAge.year
+           return age!
+    }
 }

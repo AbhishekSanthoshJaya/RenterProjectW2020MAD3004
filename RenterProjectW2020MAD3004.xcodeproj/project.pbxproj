@@ -38,8 +38,6 @@
 		BD09D8C923F4FE7E0039A0A2 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD09D8C823F4FE7E0039A0A2 /* Driver.swift */; };
 		BD54FBF423FF23DA00282AD5 /* Gender .swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FBF323FF23DA00282AD5 /* Gender .swift */; };
 		BD54FBF823FF683700282AD5 /* PasswordUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FBF723FF683700282AD5 /* PasswordUtil.swift */; };
-		BD737C052400709D00FADF8E /* (Imported Proj)RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */; };
-		BDD84DFA240219FE0043DD03 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD84DF9240219FE0043DD03 /* Calculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,8 +101,6 @@
 		BD09D8C823F4FE7E0039A0A2 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		BD54FBF323FF23DA00282AD5 /* Gender .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gender .swift"; sourceTree = "<group>"; };
 		BD54FBF723FF683700282AD5 /* PasswordUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUtil.swift; sourceTree = "<group>"; };
-		BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "(Imported Proj)RNCryptor.swift"; sourceTree = "<group>"; };
-		BDD84DF9240219FE0043DD03 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,8 +209,6 @@
 			children = (
 				9B98781F23F4C09C00ECCBD5 /* IDisplay.swift */,
 				BD54FBF723FF683700282AD5 /* PasswordUtil.swift */,
-				BD737C042400709C00FADF8E /* (Imported Proj)RNCryptor.swift */,
-				BDD84DF9240219FE0043DD03 /* Calculation.swift */,
 				ABFCF0AB24003D6000B29A2D /* CustomFileHandler.swift */,
 				ABFCF0B22404291600B29A2D /* ObjectManager.swift */,
 				ABFCF0B424043F7500B29A2D /* TypeNameProtocol.swift */,
@@ -297,7 +291,6 @@
 				ABFCF0AC24003D6000B29A2D /* CustomFileHandler.swift in Sources */,
 				ABFCF0B82404750E00B29A2D /* Float+Extensions.swift in Sources */,
 				BD09D8C723F4FD230039A0A2 /* Customer.swift in Sources */,
-				BD737C052400709D00FADF8E /* (Imported Proj)RNCryptor.swift in Sources */,
 				9BF2931E2400BCFC0032C85B /* VehicleRent.swift in Sources */,
 				9B023FA323F608480086B6F1 /* Bus.swift in Sources */,
 				BD09D8C323F4F8200039A0A2 /* Address.swift in Sources */,
@@ -307,7 +300,6 @@
 				BD54FBF423FF23DA00282AD5 /* Gender .swift in Sources */,
 				9B98781923F4BD1D00ECCBD5 /* main.swift in Sources */,
 				9B023FA123F608250086B6F1 /* MotorCycle.swift in Sources */,
-				BDD84DFA240219FE0043DD03 /* Calculation.swift in Sources */,
 				ABFCF0B524043F7500B29A2D /* TypeNameProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
