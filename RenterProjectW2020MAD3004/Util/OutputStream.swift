@@ -10,10 +10,10 @@ import Foundation
 struct Log: TextOutputStream {
     func write(_ string: String) {
         let dFormatter = DateFormatter()
-        dFormatter.dateFormat = "yyyy-MM-"
+        dFormatter.dateFormat = "yyyy-MM-dd"
         let date = Date()
         let currentMonth = dFormatter.string(from: date)
-        
+        // FILE GOES TO DOCUMENTS FOLDER
         let fm = FileManager.default
         let log = fm.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(String(currentMonth) + "Log.txt")
         if let handle = try? FileHandle(forWritingTo: log) {

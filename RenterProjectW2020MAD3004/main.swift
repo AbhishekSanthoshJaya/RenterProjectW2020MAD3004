@@ -249,14 +249,11 @@ if let customerArray = customerReader.read(){
 }
 
 
-//personManager.display()
-
-
-// Queries
+//------------- QUERIES BEGIN HERE -------------
 
 
 /*
- Show all vehicles
+ ------------- Show all vehicles -------------
  */
 print("DISPLAYING ALL VEHICLES", to: &logger)
 print("*****************************************************", to: &logger)
@@ -265,7 +262,7 @@ print("*****************************************************\n\n", to: &logger)
 
 
 /*
- Show all customers with their bookings
+ ------------- Show all customers with their bookings -------------
  */
 print("DISPLAYING ALL CUSTOMERS AND THEIR BOOKINGS", to: &logger)
 print("*****************************************************", to: &logger)
@@ -277,7 +274,7 @@ print("*****************************************************\n\n", to: &logger)
 
 
 /*
- Show all owners with their vehicles
+ ------------- Show all owners with their vehicles -------------
  */
 print("DISPLAYING ALL OWNERS AND THEIR VEHICLES", to: &logger)
 print("*****************************************************", to: &logger)
@@ -289,7 +286,7 @@ print("*****************************************************\n\n", to: &logger)
 
 
 /*
- current live bookings
+ ------------- Current live bookings -------------
  */
 print("DISPLAYING ALL LIVE BOOKINGS", to: &logger)
 print("*****************************************************", to: &logger)
@@ -302,7 +299,7 @@ print("*****************************************************\n\n", to: &logger)
 
 
 /*
- Vehicles that are not rented yet
+ ------------- Vehicles that are not rented yet -------------
  */
 
 // get live bookings
