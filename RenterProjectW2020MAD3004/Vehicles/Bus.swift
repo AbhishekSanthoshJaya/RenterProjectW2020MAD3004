@@ -64,13 +64,13 @@ import Foundation
     {
             var logger = Log()
 
-           print("\nVehicle ID              : \(vehicleId)", to: &logger)
-           print("Bus Type                : \(busType)", to: &logger)
-           print("Description             : \(String(describing: description ?? ""))", to: &logger)
-           print("Manufacturer            : \(manufacturer)", to: &logger)
-           print("Type Of Fuel            : \(fuelType)", to: &logger)
-           print("Accessibility Services  : \(accessibilityServices)", to: &logger)
-           print("Standing Capacity       : \(standingCapacity) people", to: &logger)        
+           print("\n\t\tVehicle ID              : \(vehicleId)", to: &logger)
+           print("\t\tBus Type                : \(busType)", to: &logger)
+           print("\t\tDescription             : \(String(describing: description ?? ""))", to: &logger)
+           print("\t\tManufacturer            : \(manufacturer)", to: &logger)
+           print("\t\tType Of Fuel            : \(fuelType)", to: &logger)
+           print("\t\tAccessibility Services  : \(accessibilityServices)", to: &logger)
+           print("\t\tStanding Capacity       : \(standingCapacity) people", to: &logger)        
     }
     
 }

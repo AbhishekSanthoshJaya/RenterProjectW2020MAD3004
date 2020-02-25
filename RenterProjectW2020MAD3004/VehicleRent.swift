@@ -34,7 +34,7 @@ class VehicleRent: IDisplayDelegate, TypeName
 
     func display(){
         var logger = Log()
-        print("\nStart Date             : \(rentStartDate.printFormat())", to: &logger)
+        print("\nStart Date             \t: \(rentStartDate.printFormat())", to: &logger)
         print("End Date                : \(rentEndDate.printFormat())", to: &logger)
         print("Number Of Days          : \(numberOfDays)", to: &logger)
         print("KM Driven               : \(kmDriven.distanceFormat())", to: &logger)

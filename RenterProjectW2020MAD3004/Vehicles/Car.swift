@@ -46,12 +46,12 @@ class Car: Vehicle
     {
         var logger = Log()
 
-        print("\nVehicle ID              : \(vehicleId)", to: &logger)
-        print("Description             : \(description ?? "")", to: &logger)
-        print("Manufacturer            : \(manufacturer)", to: &logger)
-        print("Type of fuel            : \(fuelType)", to: &logger)
-        print("Car Type                : \(carType)", to: &logger)
-        print("Car Color               : \(carColor)", to: &logger)
+        print("\n\t\tVehicle ID              : \(vehicleId)", to: &logger)
+        print("\t\tDescription             : \(description ?? "")", to: &logger)
+        print("\t\tManufacturer            : \(manufacturer)", to: &logger)
+        print("\t\tType of fuel            : \(fuelType)", to: &logger)
+        print("\t\tCar Type                : \(carType)", to: &logger)
+        print("\t\tCar Color               : \(carColor)", to: &logger)
     }
     
 }
