@@ -312,3 +312,34 @@ for rent in vehicleRentObjects{
 }
 print("*****************************************************\n\n", to: &logger)
 
+
+/*
+ Vehicles that are not rented yet
+ */
+
+// get live bookings
+print("Displaying All not booked Vehicles", to: &logger)
+print("*****************************************************", to: &logger)
+var allBookedVehicles = Set<Vehicle>()
+for rent in vehicleRentObjects{
+    if rent.isLive(){
+        allBookedVehicles.insert(rent.vehicle)
+    }
+}
+
+var allVehicles = Set<Vehicle>()
+for vehicle in carObjects{
+    allVehicles.insert(vehicle)
+}
+for vehicle in busObjects{
+    allVehicles.insert(vehicle)
+}
+for vehicle in mcObjects{
+    allVehicles.insert(vehicle)
+}
+
+var notBookedVehicles = allVehicles.subtracting(allBookedVehicles)
+for v in notBookedVehicles{
+    v.display()
+}
+print("*****************************************************\n\n", to: &logger)

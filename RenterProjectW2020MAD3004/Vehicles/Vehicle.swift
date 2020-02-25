@@ -8,8 +8,10 @@
 
 import Foundation
 
-class Vehicle: IDisplayDelegate, TypeName
+class Vehicle: IDisplayDelegate, TypeName , Hashable
 {
+    
+    
      var vehicleId: String
      var description: String?
      var manufacturer:String
@@ -20,7 +22,13 @@ class Vehicle: IDisplayDelegate, TypeName
      var fuelType: FuelType
      var baseRate: Float
      var perKmRate: Float
-    var driver: Driver?
+     var driver: Driver?
+     var hashValue: Int {
+        return (vehicleId + typeName).hashValue
+    }
+    static func == (lhs: Vehicle, rhs: Vehicle) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
     
     init(vehicleId: String, description: String?, manufacturer: String, fuelType: FuelType,  isSelfDrive: Bool, isInsured: Bool, insuranceProviderName: String?, numberOfSeat: Int, baseRate: Float, perKmRate: Float, driver:Driver) {
         self.vehicleId = vehicleId
@@ -106,7 +114,7 @@ class Vehicle: IDisplayDelegate, TypeName
                 className: String(describing:type(of: self)),
                 memberName: "driverId")
         }
-        var driverManager = ObjectManager.getInstance()
+        let driverManager = ObjectManager.getInstance()
         var driverObj: Driver? = nil
         if let temp = driverManager.getPersonById(id: driver, typeName: Driver.typeSName) {
             driverObj = temp as! Driver
