@@ -258,7 +258,7 @@ if let customerArray = customerReader.read(){
 /*
  Show all vehicles
  */
-print("Displaying All vehicles", to: &logger)
+print("DISPLAYING ALL VEHICLES", to: &logger)
 print("*****************************************************", to: &logger)
 vehicleManger.display(type: Vehicle.typeSName)
 print("*****************************************************\n\n", to: &logger)
@@ -267,7 +267,7 @@ print("*****************************************************\n\n", to: &logger)
 /*
  Show all customers with their bookings
  */
-print("Displaying All Customers with their bookings", to: &logger)
+print("DISPLAYING ALL CUSTOMERS AND THEIR BOOKINGS", to: &logger)
 print("*****************************************************", to: &logger)
 for customer in customerObjects{
     customer.display(withBookings: true)
@@ -279,7 +279,7 @@ print("*****************************************************\n\n", to: &logger)
 /*
  Show all owners with their vehicles
  */
-print("Displaying All Owners with their vehicles", to: &logger)
+print("DISPLAYING ALL OWNERS AND THEIR VEHICLES", to: &logger)
 print("*****************************************************", to: &logger)
 for owner in ownerObjects{
     owner.display(withVehicles: true)
@@ -291,7 +291,7 @@ print("*****************************************************\n\n", to: &logger)
 /*
  current live bookings
  */
-print("Displaying All live bookings", to: &logger)
+print("DISPLAYING ALL LIVE BOOKINGS", to: &logger)
 print("*****************************************************", to: &logger)
 for rent in vehicleRentObjects{
     if rent.isLive(){
@@ -306,7 +306,7 @@ print("*****************************************************\n\n", to: &logger)
  */
 
 // get live bookings
-print("Displaying All not booked Vehicles", to: &logger)
+print("DISPLAYING ALL UNBOOKED VEHICLES", to: &logger)
 print("*****************************************************", to: &logger)
 var allBookedVehicles = Set<Vehicle>()
 for rent in vehicleRentObjects{

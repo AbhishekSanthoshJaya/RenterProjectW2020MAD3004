@@ -54,7 +54,7 @@ class Customer : Person
     override func display()
     {
         var logger = Log()
-        print("\nID            \t: \(id)", to: &logger)
+        print("\nID            : \(id)", to: &logger)
         print("First Name     : \(firstName)", to: &logger)
         print("Last Name      : \(lastName)", to: &logger)
         print("Gender         : \(gender)", to: &logger)
@@ -67,7 +67,7 @@ class Customer : Person
      func display(withBookings: Bool)
     {
         var logger = Log()
-        print("\nID           \t: \(id)", to: &logger)
+        print("\nID            : \(id)", to: &logger)
         print("First Name     : \(firstName)", to: &logger)
         print("Last Name      : \(lastName)", to: &logger)
         print("Gender         : \(gender)", to: &logger)
@@ -80,7 +80,7 @@ class Customer : Person
             for (_,rent) in vehicleRents{
                 rent.display()
             }
-            print("\t*********\tTOTAL: \(totalBill.priceFormat())\t*********", to: &logger)
+            print("\t*********TOTAL: \(totalBill.priceFormat())*********", to: &logger)
         }
 
     }

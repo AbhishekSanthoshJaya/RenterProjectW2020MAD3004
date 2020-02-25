@@ -21,6 +21,6 @@ extension Float{
     }
     
     func distanceFormat() -> String{
-        return " \(self) Km"
+        return "\(self) KM"
     }
 }
