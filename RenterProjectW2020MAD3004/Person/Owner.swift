@@ -67,7 +67,7 @@ class Owner : Person
     override func display()
     {
         var logger = Log()
-        print("\nID            : \(id)", to: &logger)
+        print("\nID          \t: \(id)", to: &logger)
         print("First Name     : \(firstName)", to: &logger)
         print("Last Name      : \(lastName)", to: &logger)
         print("Gender         : \(gender)", to: &logger)

@@ -94,10 +94,6 @@ if let carArray = carReader.read(){
 }
 // carObjects[0].display()
 
-
-
-
-
 //-------------  ARRAY OF OWNER OBJECTS -------------
 var ownerReader = CustomFileHandler(fileName:"OwnerData")
 var ownerArray = ownerReader.read()
@@ -116,14 +112,6 @@ if let ownerArray = ownerReader.read(){
         }
     }
 }
-
-
-
-
-
-
-
-
 
 
 

@@ -34,17 +34,17 @@ class VehicleRent: IDisplayDelegate, TypeName
 
     func display(){
         var logger = Log()
-        print("\nStart Date             : \(rentStartDate.printFormat())", to: &logger)
+        print("\nStart Date             \t: \(rentStartDate.printFormat())", to: &logger)
         print("End Date                : \(rentEndDate.printFormat())", to: &logger)
         print("Number Of Days          : \(numberOfDays)", to: &logger)
         print("KM Driven               : \(kmDriven.distanceFormat())", to: &logger)
-        print("Total Bill              : \(totalBill.priceFormat())", to: &logger)
+        print("Total Bill              : \(totalBill.priceFormat())  (Base Rate:\(vehicle.baseRate) * Number Of Days:\(numberOfDays)) + (Rate/KM:\(vehicle.perKmRate) * KM Driven:\(kmDriven))", to: &logger)
     }
     
     func calculateTotalBill() ->  Float{
         let baseRate = self.vehicle.baseRate
         let perKmRate = self.vehicle.perKmRate
-        return baseRate + (perKmRate * Float(numberOfDays))
+        return (baseRate * Float(numberOfDays)) + (perKmRate * Float(kmDriven))
     }
     
     func isLive() -> Bool{
